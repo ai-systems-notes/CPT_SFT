@@ -30,3 +30,5 @@ ai_coding_agent_cpt_data/scripts/filter_en_only.py
 *.tmp
 *.swp
 .DS_Store
+
+*.log

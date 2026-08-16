@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "generated_at_utc": "2026-08-15T11:20:24.065224+00:00",
+  "pair_validation": "ok",
+  "rows": [
+    {
+      "framework": "transformers_pytorch",
+      "mode": "full",
+      "status": "ok",
+      "optimizer_steps": 93,
+      "target_tokens": 1522190,
+      "measured_tokens_per_second": 4981.265737643635,
+      "training_seconds": 305.7189469909972,
+      "end_to_end_wall_seconds": 360.4755278019984,
+      "torch_peak_allocated_mib": 8474.05,
+      "torch_peak_reserved_mib": 9248.0,
+      "nvidia_smi_process_peak_mib": 9450.0,
+      "process_peak_rss_mib": 4619.54,
+      "baseline_test_loss": 2.540317780206653,
+      "post_test_loss": 2.1455673509886966,
+      "test_loss_delta": -0.39475042921795644,
+      "parameter_update_verified": true,
+      "torch": "2.11.0+cu128",
+      "transformers": "5.15.0",
+      "unsloth": null
+    },
+    {
+      "framework": "unsloth",
+      "mode": "full",
+      "status": "ok",
+      "optimizer_steps": 93,
+      "target_tokens": 1522190,
+      "measured_tokens_per_second": 4778.682171924606,
+      "training_seconds": 319.12497816799805,
+      "end_to_end_wall_seconds": 386.05098298899975,
+      "torch_peak_allocated_mib": 7672.57,
+      "torch_peak_reserved_mib": 7832.0,
+      "nvidia_smi_process_peak_mib": 8060.0,
+      "process_peak_rss_mib": 4364.41,
+      "baseline_test_loss": 2.5402007286715653,
+      "post_test_loss": 2.145477873830322,
+      "test_loss_delta": -0.39472285484124336,
+      "parameter_update_verified": true,
+      "torch": "2.11.0+cu130",
+      "transformers": "5.5.0",
+      "unsloth": "2026.8.18"
+    }
+  ],
+  "comparison": {
+    "full_training_run": true,
+    "formal_benchmark": false,
+    "unsloth_throughput_ratio": 0.9593309057599365,
+    "unsloth_peak_allocated_difference_mib": -801.4799999999996,
+    "unsloth_peak_allocated_ratio": 0.9054194865501148
+  },
+  "source_metrics": {
+    "transformers": "cpt_training/results/compare_full_20260815T110749Z/transformers_metrics.json",
+    "unsloth": "cpt_training/results/compare_full_20260815T110749Z/unsloth_metrics.json"
+  }
+}

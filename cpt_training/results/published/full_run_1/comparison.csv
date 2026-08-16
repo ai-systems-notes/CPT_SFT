@@ -1,0 +1,3 @@
+framework,mode,status,optimizer_steps,target_tokens,measured_tokens_per_second,training_seconds,end_to_end_wall_seconds,torch_peak_allocated_mib,torch_peak_reserved_mib,nvidia_smi_process_peak_mib,process_peak_rss_mib,baseline_test_loss,post_test_loss,test_loss_delta,parameter_update_verified,torch,transformers,unsloth
+transformers_pytorch,full,ok,93,1522190,4754.610993460596,321.1834654160011,381.6364242580021,8474.05,9248.0,9450.0,4662.88,2.540317780206653,2.145523604749782,-0.3947941754568709,True,2.11.0+cu128,5.15.0,
+unsloth,full,ok,93,1522190,4761.859002161532,320.5510085220012,387.9204916519993,7672.57,7832.0,8060.0,4364.0,2.5402007286715653,2.14546498010215,-0.3947357485694152,True,2.11.0+cu130,5.5.0,2026.8.18
