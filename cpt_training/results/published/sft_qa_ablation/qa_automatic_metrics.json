@@ -1,0 +1,67 @@
+{
+  "status": "ok",
+  "note": "Auxiliary generation metrics; they do not replace factual review or LLM-as-a-Judge.",
+  "items": 200,
+  "models": {
+    "base": {
+      "items": 200,
+      "nonempty_rate": 1.0,
+      "under_100_chars_rate": 0.1,
+      "average_answer_chars": 172.815,
+      "normalized_exact_match_rate": 0.0,
+      "keyword_recall": 0.3645833333333333,
+      "keyword_hits": 210,
+      "keyword_total": 576
+    },
+    "transformers_cpt": {
+      "items": 200,
+      "nonempty_rate": 1.0,
+      "under_100_chars_rate": 0.005,
+      "average_answer_chars": 991.19,
+      "normalized_exact_match_rate": 0.0,
+      "keyword_recall": 0.3350694444444444,
+      "keyword_hits": 193,
+      "keyword_total": 576
+    },
+    "unsloth_cpt": {
+      "items": 200,
+      "nonempty_rate": 1.0,
+      "under_100_chars_rate": 0.02,
+      "average_answer_chars": 930.97,
+      "normalized_exact_match_rate": 0.0,
+      "keyword_recall": 0.3333333333333333,
+      "keyword_hits": 192,
+      "keyword_total": 576
+    },
+    "base_sft": {
+      "items": 200,
+      "nonempty_rate": 1.0,
+      "under_100_chars_rate": 0.65,
+      "average_answer_chars": 92.305,
+      "normalized_exact_match_rate": 0.0,
+      "keyword_recall": 0.21180555555555555,
+      "keyword_hits": 122,
+      "keyword_total": 576
+    },
+    "transformers_cpt_sft": {
+      "items": 200,
+      "nonempty_rate": 1.0,
+      "under_100_chars_rate": 0.92,
+      "average_answer_chars": 79.23,
+      "normalized_exact_match_rate": 0.0,
+      "keyword_recall": 0.2482638888888889,
+      "keyword_hits": 143,
+      "keyword_total": 576
+    },
+    "unsloth_cpt_sft": {
+      "items": 200,
+      "nonempty_rate": 1.0,
+      "under_100_chars_rate": 0.945,
+      "average_answer_chars": 78.52,
+      "normalized_exact_match_rate": 0.0,
+      "keyword_recall": 0.2534722222222222,
+      "keyword_hits": 146,
+      "keyword_total": 576
+    }
+  }
+}
