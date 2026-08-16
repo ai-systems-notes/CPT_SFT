@@ -32,3 +32,8 @@ ai_coding_agent_cpt_data/scripts/filter_en_only.py
 .DS_Store
 
 *.log
+
+# Non-canonical or unfinished local helpers.
+cpt_training/run_aggregate_pilots.sh
+cpt_training/scripts/aggregate_results.py
+cpt_training/scripts/convert_to_gguf.py
