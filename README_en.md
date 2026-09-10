@@ -9,7 +9,8 @@ After CPT, the same general-purpose PEFT LoRA-SFT stage was applied to the base 
 The goal is not to publish a production model. The goal is to preserve reproducible code, configuration, procedures, and measurements for documentation collection, full-parameter CPT, LoRA-SFT, and QA generation on a consumer GPU.
 
 > [!IMPORTANT]
-> CPT, LoRA-SFT, and six-condition QA generation are complete. A full primary-source audit of the QA references and an external LLM-as-a-Judge evaluation have not been performed. This repository does not currently claim factual-accuracy improvements or name a “best model.”
+> CPT, LoRA-SFT, generation of 840 answers across 12 conditions, primary-source validation of the references, and two independent LLM-as-a-Judge runs are complete.
+> Per-domain knowledge gain is reported with confidence intervals, but at 70 questions and a single seed this repository still does not name a “best model.”
 
 ## Status
 
@@ -18,10 +19,20 @@ The goal is not to publish a production model. The goal is to preserve reproduci
 | Official web documentation collection and preprocessing | Complete |
 | Full-parameter CPT with Transformers and Unsloth | Complete |
 | LoRA-SFT from Base, Transformers-CPT, and Unsloth-CPT | Complete |
-| Six conditions × 200 rows, 1,200 generated answers | Complete |
+| Six conditions × 200 rows, 1,200 generated answers | Complete (superseded question set) |
 | Formatting and lexical metrics | Complete |
-| Primary-source audit of all QA references | Not performed |
-| External LLM-as-a-Judge | Not performed |
+| Question set rebuilt to 70 primary-source-backed items | Complete |
+| Twelve conditions × 70 questions, 840 generated answers | Complete |
+| Primary-source audit of all QA references | Complete (70/70; two unresolved, see below) |
+| External LLM-as-a-Judge | Complete (`gpt-5.6-terra` ×3 and `gemini-3.5-flash-lite`) |
+| Paired effect sizes with bootstrap confidence intervals | Complete |
+
+### How far the validation goes
+
+- Every one of the 70 questions records a source URL, the source document's SHA-256, an evidence excerpt and an automated validation result. All 70 pass "all required keywords present in a single official document", and the judges rated all 70 reference answers `good`.
+- **Two items remain unresolved.** `seen_codex_013` and `seen_codex_014` claim a source URL that is absent from the collected corpus, so their references are not backed by primary source.
+- Scoring used two independent judges: Pearson r = 0.8688 across 840 scores, with 24 of 25 significance calls matching.
+- Regenerate every number with `python3 cpt_training/scripts/analyze_blog_claims.py`; see [`cpt_training/results/published/qa70_dual_judge/`](cpt_training/results/published/qa70_dual_judge/).
 
 Reports and public artifacts:
 

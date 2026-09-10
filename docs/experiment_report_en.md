@@ -10,11 +10,18 @@ Completed:
 - 200 QA rows from each of six conditions, totaling 1,200 saved answers;
 - loss, throughput, GPU memory, answer length, and keyword-recall collection.
 
+Completed since:
+
+- the question set rebuilt to 70 primary-source-backed items, each recording a source URL, the source document's SHA-256 and an evidence excerpt;
+- primary-source validation of the references (70/70 pass automated validation; `seen_codex_013` and `seen_codex_014` remain unresolved because their claimed source URL is absent from the collected corpus);
+- external LLM-as-a-Judge, two independent runs (`gpt-5.6-terra` ×3 and `gemini-3.5-flash-lite`) over 12 conditions × 70 questions = 840 answers;
+- paired effect sizes with 95% bootstrap confidence intervals.
+
 Not completed:
 
-- item-by-item primary-source validation of all 200 QA rows;
-- external LLM-as-a-Judge;
-- factual-accuracy model ranking.
+- naming a single "best model" on factual accuracy: at 70 questions and one seed, differences below roughly 0.6 points are not resolvable;
+- multi-seed estimation of training variance;
+- replication at the 10B-30B scale.
 
 ## CPT measurements
 
