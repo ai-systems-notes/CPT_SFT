@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QA Six-Condition Answer Comparison Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="app-header">
+    <div class="header-left">
+      <div class="logo-icon">📊</div>
+      <div>
+        <h1 class="app-title">CPT LoRA QA Answer Comparison Dashboard</h1>
+        <p class="app-subtitle">Compare Base, CPT, and LoRA-SFT outputs across six conditions</p>
+      </div>
+    </div>
+    <div class="header-right">
+      <button id="btn-view-note" class="btn btn-secondary">
+        <span class="icon">📝</span> View Experiment Report
+      </button>
+      <div class="toggle-container">
+        <span class="toggle-label">Reveal Model Names</span>
+        <label class="switch">
+          <input type="checkbox" id="blind-toggle" checked>
+          <span class="slider round"></span>
+        </label>
+        <span class="toggle-status" id="mode-status-text">De-blind (Revealed)</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="app-container">
+    <!-- Metadata Summary Banner -->
+    <section class="summary-section" id="summary-section">
+      <div class="summary-card meta-card">
+        <h3><span class="icon">ℹ️</span> Experiment Overview</h3>
+        <div class="meta-grid" id="meta-grid">
+          <!-- Dynamic Content -->
+          <div class="skeleton-text">Loading metadata...</div>
+        </div>
+      </div>
+
+      <div class="summary-card runtime-card">
+        <h3><span class="icon">⚡</span> Model Runtime & VRAM Comparison</h3>
+        <div class="runtime-grid" id="runtime-grid">
+          <!-- Dynamic Content -->
+          <div class="skeleton-text">Loading runtime stats...</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Controls Bar -->
+    <section class="controls-section">
+      <div class="search-box">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="search-input" placeholder="Search questions, answers, topics, or keywords...">
+        <button id="search-clear" class="btn-clear" style="display:none;">✕</button>
+      </div>
+
+      <div class="filter-group">
+        <label for="category-filter">Category:</label>
+        <select id="category-filter">
+          <option value="all">All Categories</option>
+        </select>
+
+        <label for="jump-select">Jump to Q:</label>
+        <select id="jump-select">
+          <option value="">Select Question...</option>
+        </select>
+      </div>
+
+      <div class="results-count">
+        Showing <strong id="visible-count">0</strong> / <span id="total-count">0</span> items
+      </div>
+    </section>
+
+    <!-- Question Cards List -->
+    <section class="questions-list" id="questions-list">
+      <!-- Dynamic Question Cards Rendered Here -->
+      <div class="loading-spinner-container">
+        <div class="spinner"></div>
+        <p>Loading evaluation dataset...</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Experiment report modal -->
+  <div id="note-modal" class="modal-backdrop" style="display: none;">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2><span class="icon">📄</span> Experiment Report</h2>
+        <button id="modal-close" class="modal-close-btn">&times;</button>
+      </div>
+      <div class="modal-body">
+        <pre id="note-text-content">Loading note...</pre>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

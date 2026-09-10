@@ -1,0 +1,31 @@
+{
+  "artifact_type": "peft_lora_adapter",
+  "source_model": "checkpoints/transformers/current",
+  "source_model_revision": null,
+  "foundation_model_revision": "da87bfb608c14b7cf20ba1ce41287e8de496c0cd",
+  "sft_dataset": "ai_coding_agent_cpt_data/SFT_Dataset/sft_general_train.jsonl",
+  "sft_dataset_sha256": "559c6121bda08fc81fe5e005906ccd7008d7902c7481b0b46dfe983d335b6f56",
+  "prompt_template": "Answer in one short concise sentence (under 100 characters):\nQuestion: {instruction}\nAnswer:",
+  "hyperparameters": {
+    "learning_rate": 0.0002,
+    "epochs": 3,
+    "per_device_batch_size": 4,
+    "gradient_accumulation_steps": 4,
+    "effective_batch_size": 16,
+    "seed": 42,
+    "max_sequence_length": 512,
+    "lora_r": 16,
+    "lora_alpha": 32,
+    "lora_dropout": 0.05
+  },
+  "environment": {
+    "python": "3.12.3",
+    "torch": "2.11.0+cu128",
+    "transformers": "5.15.0",
+    "peft": "0.20.0",
+    "datasets": "5.0.1",
+    "cuda": "12.8",
+    "gpu": "NVIDIA GeForce RTX 4070",
+    "dtype": "bfloat16"
+  }
+}

@@ -1,0 +1,143 @@
+{
+  "cleaning": {
+    "cleaned_documents": 466,
+    "excluded_by_reason": {
+      "aggregate_document": 4,
+      "canonical_url_duplicate": 111,
+      "exact_content_duplicate": 1,
+      "short_stub": 18
+    },
+    "excluded_documents": 134,
+    "raw_documents": 600
+  },
+  "config": {
+    "eos_token_id": 151643,
+    "local_files_only": true,
+    "min_chars": 800,
+    "model": "Qwen/Qwen3-0.6B-Base",
+    "pad_token_id": 151643,
+    "requested_test_ratio": 0.25,
+    "seed": 20260815,
+    "sequence_length": 1024,
+    "tokenizer_class": "Qwen2Tokenizer"
+  },
+  "dataset_version": "cpt_v1",
+  "generated_at_utc": "2026-08-15T08:42:22.700050+00:00",
+  "input": {
+    "documents": 600,
+    "path": "ai_coding_agent_cpt_data/data/scraped_documents.jsonl",
+    "sha256": "3299966311cadfb01cc09f69fa953a5396205c45b5b98d87c6f066bd8cc1983b"
+  },
+  "outputs": {
+    "cleaned": {
+      "path": "artifacts/datasets/cpt_v1/cleaned.jsonl",
+      "sha256": "40821d2841a6bf8bd9c050e224b36f2add0dd136572f53caa1aca64476fc146c"
+    },
+    "excluded": {
+      "path": "artifacts/datasets/cpt_v1/excluded_documents.jsonl",
+      "sha256": "94c6b0535ce903959d4c45e89a132f0e7a71d07df1986faf75f58dd8a5b28d24"
+    },
+    "manifest": {
+      "path": "artifacts/datasets/cpt_v1/split_manifest.csv",
+      "sha256": "5e0956045ece287e283797b1c3f656c49c8239c8fd48bc2994c7b6c28cf3b493"
+    },
+    "packed_metadata": {
+      "path": "artifacts/datasets/cpt_v1/packed/seq1024/metadata.json",
+      "sha256": "75e8ba31551b0ae336dc63846bfc2b86e2ac8a793167106313f587736acc062c"
+    },
+    "test": {
+      "path": "artifacts/datasets/cpt_v1/test.jsonl",
+      "sha256": "a86556b3841c3a9cf9102c7ad4629690a666d226962a5efbfc10c1b9266342ef"
+    },
+    "test_packed": {
+      "path": "artifacts/datasets/cpt_v1/packed/seq1024/test.pt",
+      "sha256": "8bff867da714b4ef2d57d051824deed054aa56935bc78bd1c467526ba28c4871"
+    },
+    "train": {
+      "path": "artifacts/datasets/cpt_v1/train.jsonl",
+      "sha256": "c5bc5124d06d5205ce230ae6c3944d41572eb81678e2dc844c7f3b4c4fc7f3d8"
+    },
+    "train_packed": {
+      "path": "artifacts/datasets/cpt_v1/packed/seq1024/train.pt",
+      "sha256": "9e7a48bb508b9f5fc8e076576c72fd78089eae946eef01d909f1c733745a121e"
+    }
+  },
+  "packed": {
+    "eos_token_id": 151643,
+    "format": "torch tensors with int32 input_ids and bool attention_mask",
+    "pad_token_id": 151643,
+    "test": {
+      "blocks": 497,
+      "content_tokens": 508178,
+      "documents": 94,
+      "eos_tokens": 94,
+      "non_padding_tokens": 508272,
+      "padding_tokens": 656,
+      "sequence_length": 1024
+    },
+    "train": {
+      "blocks": 1489,
+      "content_tokens": 1524330,
+      "documents": 372,
+      "eos_tokens": 372,
+      "non_padding_tokens": 1524702,
+      "padding_tokens": 34,
+      "sequence_length": 1024
+    }
+  },
+  "qa": {
+    "items": 200,
+    "matched_source_urls": 85,
+    "missing_source_urls": [
+      "https://learn.chatgpt.com/docs/guides/ip-allowlist",
+      "https://learn.chatgpt.com/docs/guides/private-link",
+      "https://learn.chatgpt.com/docs/guides/realtime-vad",
+      "https://learn.chatgpt.com/docs/guides/terraform",
+      "https://learn.chatgpt.com/docs/guides/workload-identity-federation"
+    ],
+    "path": "ai_coding_agent_cpt_data/QA_Dataset/eval_qa_combined.jsonl",
+    "sha256": "239813d9c8ada00195fc023bb2520fd18c01e351dc905cf898361b58a8ef03dc",
+    "unique_source_urls": 90
+  },
+  "splits": {
+    "actual_test_document_ratio": 0.2017167381974249,
+    "actual_test_token_ratio": 0.2500250921521588,
+    "canonical_url_overlap": 0,
+    "test": {
+      "by_source": {
+        "claude_code_en": {
+          "characters": 1963828,
+          "content_tokens": 321419,
+          "documents": 28
+        },
+        "learn_chatgpt": {
+          "characters": 789926,
+          "content_tokens": 186759,
+          "documents": 66
+        }
+      },
+      "characters": 2753754,
+      "content_tokens": 508178,
+      "documents": 94,
+      "qa_source_documents": 0
+    },
+    "train": {
+      "by_source": {
+        "claude_code_en": {
+          "characters": 5118823,
+          "content_tokens": 964056,
+          "documents": 160
+        },
+        "learn_chatgpt": {
+          "characters": 2426800,
+          "content_tokens": 560274,
+          "documents": 212
+        }
+      },
+      "characters": 7545623,
+      "content_tokens": 1524330,
+      "documents": 372,
+      "qa_source_documents": 85
+    }
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "claude_054": {
+    "question": "In the Claude Code Agent SDK, how are custom tools registered?",
+    "reason": "The generated question accidentally embedded approximately 77 KB of source-document text between its prefix and suffix."
+  }
+}

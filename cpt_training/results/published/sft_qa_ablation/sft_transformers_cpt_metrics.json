@@ -1,0 +1,13 @@
+{
+  "status": "ok",
+  "is_smoke_test": false,
+  "train_loss": 0.6134916513394086,
+  "optimizer_steps": 39,
+  "observed_nonpadding_tokens": 29754,
+  "tokens_per_second": 2905.325635756788,
+  "training_seconds": 10.241192806000072,
+  "torch_peak_allocated_mib": 2518.99853515625,
+  "torch_peak_reserved_mib": 3338.0,
+  "trainable_parameters": 10092544,
+  "total_parameters_with_adapter": 606142464
+}

@@ -1,0 +1,11 @@
+# Install the CUDA build of PyTorch first:
+# uv pip install --python .venv-cpt/bin/python torch==2.11.0 \
+#   --index-url https://download.pytorch.org/whl/cu128
+accelerate==1.14.0
+bitsandbytes==0.50.1
+datasets==5.0.1
+peft==0.20.0
+psutil==7.2.2
+requests==2.34.2
+sentencepiece==0.2.2
+transformers==5.15.0

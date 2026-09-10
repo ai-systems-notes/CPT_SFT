@@ -1,0 +1,200 @@
+{"instruction": "How do I view git commit logs in a single line per commit?", "input": "", "output": "Run `git log --oneline` to display a compact git commit history."}
+{"instruction": "How do I stage all local changes for the next commit?", "input": "", "output": "Run `git add .` to stage all modified and untracked files in the repository."}
+{"instruction": "How do I create and switch to a new branch named 'dev'?", "input": "", "output": "Run `git checkout -b dev` or `git switch -c dev` to create and switch to the branch."}
+{"instruction": "How do I safely discard unstaged working directory changes?", "input": "", "output": "Run `git restore <filename>` to discard unstaged modifications in your working tree."}
+{"instruction": "How do I check current modified files in Git?", "input": "", "output": "Run `git status` to view working directory and staging area status."}
+{"instruction": "How do I push a new local branch to remote repository?", "input": "", "output": "Run `git push -u origin <branch_name>` to set the upstream remote tracking branch."}
+{"instruction": "How do I temporarily save uncommitted changes without committing?", "input": "", "output": "Run `git stash` to temporarily save uncommitted modifications to the stash stack."}
+{"instruction": "How do I restore the latest stashed modifications in Git?", "input": "", "output": "Run `git stash pop` to apply and remove the most recent stash entry."}
+{"instruction": "How do I check git commit history for a single file?", "input": "", "output": "Run `git log -p filename` to view commit history and diffs for that file."}
+{"instruction": "How do I change the message of the most recent commit?", "input": "", "output": "Run `git commit --amend -m 'new message'` to modify the latest commit message."}
+{"instruction": "How do I list all remote branches in Git?", "input": "", "output": "Run `git branch -r` to display all remote tracking branches."}
+{"instruction": "How do I delete a local branch named 'feature' safely?", "input": "", "output": "Run `git branch -d feature` to safely delete the local branch."}
+{"instruction": "How do I show differences between working directory and staging area?", "input": "", "output": "Run `git diff` to view unstaged modifications in your repository."}
+{"instruction": "How do I merge branch 'dev' into the current branch?", "input": "", "output": "Run `git merge dev` to integrate changes from the dev branch into your current branch."}
+{"instruction": "How do I unstage a file named 'app.py'?", "input": "", "output": "Run `git restore --staged app.py` to remove the file from the staging area."}
+{"instruction": "How do I download remote updates without merging them?", "input": "", "output": "Run `git fetch` to download objects and refs from the remote repository."}
+{"instruction": "How do I pull latest changes from remote and rebase?", "input": "", "output": "Run `git pull --rebase` to fetch remote commits and rebase local commits on top."}
+{"instruction": "How do I view commit history as an ASCII graph?", "input": "", "output": "Run `git log --graph --oneline` to display commit branching history graphically."}
+{"instruction": "How do I tag the current commit as 'v1.0.0'?", "input": "", "output": "Run `git tag v1.0.0` to create a lightweight tag on the current HEAD commit."}
+{"instruction": "How do I revert a specific commit safely by hash?", "input": "", "output": "Run `git revert <commit_hash>` to create a new commit that undoes specified changes."}
+{"instruction": "How do I clone a git repository recursively with submodules?", "input": "", "output": "Run `git clone --recursive <url>` to clone the repository along with all submodules."}
+{"instruction": "How do I inspect who last modified each line of a file?", "input": "", "output": "Run `git blame <filename>` to view author and revision information for each line."}
+{"instruction": "How do I apply a specific commit from another branch?", "input": "", "output": "Run `git cherry-pick <commit_hash>` to apply the changes from that commit."}
+{"instruction": "How do I check which branch contains a specific commit?", "input": "", "output": "Run `git branch --contains <commit_hash>` to list branches including that commit."}
+{"instruction": "How do I list saved stash entries in Git?", "input": "", "output": "Run `git stash list` to inspect all saved stash stack entries."}
+{"instruction": "How do I rename the current Git branch to 'main'?", "input": "", "output": "Run `git branch -M main` to rename your current active branch to main."}
+{"instruction": "How do I perform a dry-run check of untracked files before cleaning?", "input": "", "output": "Run `git clean -nd` to preview untracked files that would be removed."}
+{"instruction": "How do I check configured remote URLs in Git?", "input": "", "output": "Run `git remote -v` to list all configured remote repository names and URLs."}
+{"instruction": "How do I ignore file mode permission changes in Git?", "input": "", "output": "Run `git config core.fileMode false` to stop tracking file executable bit changes."}
+{"instruction": "How do I create a patch file from the latest commit?", "input": "", "output": "Run `git format-patch -1 HEAD` to generate a patch file from the last commit."}
+{"instruction": "How do I soft-reset the HEAD to the previous commit while keeping changes staged?", "input": "", "output": "Run `git reset --soft HEAD~1` to move HEAD back while preserving changes."}
+{"instruction": "How do I view the commit log for the last 5 commits?", "input": "", "output": "Run `git log -n 5 --oneline` to view the last 5 commits in short format."}
+{"instruction": "How do I compare commits between main and dev branches?", "input": "", "output": "Run `git diff main..dev` to inspect differences between main and dev branches."}
+{"instruction": "How do I show the contents of a specific commit?", "input": "", "output": "Run `git show <commit_hash>` to display details and diff of a commit."}
+{"instruction": "How do I check out a specific tag in Git?", "input": "", "output": "Run `git checkout v1.0.0` to inspect the code at tag v1.0.0."}
+{"instruction": "How do I list all local and remote branches in Git?", "input": "", "output": "Run `git branch -a` to display both local and remote tracking branches."}
+{"instruction": "How do I abort an in-progress merge conflict?", "input": "", "output": "Run `git merge --abort` to cancel the merge and restore pre-merge state."}
+{"instruction": "How do I abort an in-progress rebase?", "input": "", "output": "Run `git rebase --abort` to stop the rebase and return to original branch state."}
+{"instruction": "How do I set your Git user name globally?", "input": "", "output": "Run `git config --global user.name 'Your Name'` to configure global commit author."}
+{"instruction": "How do I set your Git user email globally?", "input": "", "output": "Run `git config --global user.email 'email@example.com'` to configure commit email."}
+{"instruction": "How do I search recursively for text 'ERROR' in log files?", "input": "", "output": "Run `grep -rn 'ERROR' /var/log/` to search recursively with line numbers."}
+{"instruction": "How do I find all Python files in current directory recursively?", "input": "", "output": "Run `find . -name '*.py'` to locate all Python source files in subdirectories."}
+{"instruction": "How do I make a shell script executable in Linux?", "input": "", "output": "Run `chmod +x script.sh` to grant execution permissions to the script file."}
+{"instruction": "How do I view real-time system process activity in Linux?", "input": "", "output": "Run `top` or `htop` to display active system processes and resource usage."}
+{"instruction": "How do I check available memory in human-readable units?", "input": "", "output": "Run `free -h` to display total, used, and available RAM and swap space."}
+{"instruction": "How do I check disk space usage of mounted filesystems?", "input": "", "output": "Run `df -h` to view disk capacity and usage for all mounted filesystems."}
+{"instruction": "How do I measure directory size in human-readable format?", "input": "", "output": "Run `du -sh /path/to/dir` to calculate total size of a directory."}
+{"instruction": "How do I continuously follow new lines added to a log file?", "input": "", "output": "Run `tail -f app.log` to stream new log output in real time."}
+{"instruction": "How do I send a graceful termination signal to process ID 1234?", "input": "", "output": "Run `kill -15 1234` to send a standard SIGTERM signal to process ID 1234."}
+{"instruction": "How do I print the active absolute working directory path?", "input": "", "output": "Run `pwd` to print the full path of your current working directory."}
+{"instruction": "How do I list all files including hidden files with details?", "input": "", "output": "Run `ls -la` to list all files, permissions, owners, and hidden dotfiles."}
+{"instruction": "How do I compress a folder named 'src' into a tar.gz archive?", "input": "", "output": "Run `tar -czvf src.tar.gz src/` to create a compressed gzipped tar archive."}
+{"instruction": "How do I extract a tar.gz archive named 'data.tar.gz'?", "input": "", "output": "Run `tar -xzvf data.tar.gz` to extract all contents from the tar archive."}
+{"instruction": "How do I check HTTP response headers for a URL using curl?", "input": "", "output": "Run `curl -I https://example.com` to fetch and display HTTP response headers."}
+{"instruction": "How do I check listening network ports on Linux?", "input": "", "output": "Run `ss -tulpn` to list all active listening TCP and UDP sockets."}
+{"instruction": "How do I check environment variables set in current shell?", "input": "", "output": "Run `env` or `printenv` to print all active shell environment variables."}
+{"instruction": "How do I create a symbolic link named 'link' to 'target'?", "input": "", "output": "Run `ln -s target link` to create a symbolic link pointing to the target file."}
+{"instruction": "How do I check Linux kernel version and architecture?", "input": "", "output": "Run `uname -a` to print system architecture, hostname, and kernel version."}
+{"instruction": "How do I measure command execution runtime in Bash?", "input": "", "output": "Prefix your command with `time`, such as `time python script.py`."}
+{"instruction": "How do I redirect stdout and stderr to the same log file?", "input": "", "output": "Run `command > output.log 2>&1` to redirect both output streams into one file."}
+{"instruction": "How do I locate the binary path of an installed command?", "input": "", "output": "Run `which python3` to display the executable path for the specified command."}
+{"instruction": "How do I count total lines in a CSV text file?", "input": "", "output": "Run `wc -l dataset.csv` to count the total number of lines in the file."}
+{"instruction": "How do I sort lines in a file and remove duplicates?", "input": "", "output": "Run `sort file.txt | uniq` to sort lines and output unique entries."}
+{"instruction": "How do I filter out lines containing the string 'DEBUG'?", "input": "", "output": "Run `grep -v 'DEBUG' log.txt` to invert match and exclude matching lines."}
+{"instruction": "How do I send a POST HTTP request with JSON payload using curl?", "input": "", "output": "Run `curl -X POST https://api.example.com/data -H 'Content-Type: application/json' -d '{\"a\":1}'`."}
+{"instruction": "How do I recursively change directory ownership to user 'ubuntu'?", "input": "", "output": "Run `sudo chown -R ubuntu:ubuntu /path/to/dir` to recursively change owner."}
+{"instruction": "How do I check Linux system uptime and load average?", "input": "", "output": "Run `uptime` to view system running time, active users, and load averages."}
+{"instruction": "How do I safely remove a file with confirmation prompt?", "input": "", "output": "Run `rm -i filename` to remove the file with an interactive confirmation prompt."}
+{"instruction": "How do I view differences between two text files line by line?", "input": "", "output": "Run `diff file1.txt file2.txt` to compare line differences between two files."}
+{"instruction": "How do I monitor NVIDIA GPU memory and utilization?", "input": "", "output": "Run `nvidia-smi` to inspect NVIDIA GPU memory consumption and GPU load."}
+{"instruction": "How do I create a directory hierarchy recursively in Linux?", "input": "", "output": "Run `mkdir -p /path/to/nested/dir` to create parent directories as needed."}
+{"instruction": "How do I search for text ignoring case in grep?", "input": "", "output": "Run `grep -i 'pattern' file.txt` to perform a case-insensitive search."}
+{"instruction": "How do I view first 20 lines of a text file?", "input": "", "output": "Run `head -n 20 file.txt` to display the first 20 lines of the file."}
+{"instruction": "How do I view last 20 lines of a text file?", "input": "", "output": "Run `tail -n 20 file.txt` to display the last 20 lines of the file."}
+{"instruction": "How do I change file permissions to read-only for all?", "input": "", "output": "Run `chmod 444 file.txt` to set read-only permissions for owner, group, and others."}
+{"instruction": "How do I display line numbers when viewing a file with cat?", "input": "", "output": "Run `cat -n file.txt` to print file contents with line numbers."}
+{"instruction": "How do I search for active processes owned by user 'ubuntu'?", "input": "", "output": "Run `ps -u ubuntu` to list all active processes belonging to user ubuntu."}
+{"instruction": "How do I check memory usage in megabytes in Linux?", "input": "", "output": "Run `free -m` to view total and available memory in megabytes."}
+{"instruction": "How do I print environment variable PATH in Bash?", "input": "", "output": "Run `echo $PATH` to print current executable search path entries."}
+{"instruction": "How do I alias a shell command in Bash?", "input": "", "output": "Add `alias ll='ls -la'` to your `~/.bashrc` file to create a command alias."}
+{"instruction": "How do I read and parse a JSON file in Python?", "input": "", "output": "Use `json.load()` within a `with open('data.json') as f:` context block."}
+{"instruction": "How do I write a Python dictionary to a formatted JSON file?", "input": "", "output": "Use `json.dump(data, f, indent=2)` to serialize dictionary data to JSON."}
+{"instruction": "How do I send an HTTP GET request in Python using requests?", "input": "", "output": "Use `requests.get('https://example.com')` to fetch data from an HTTP endpoint."}
+{"instruction": "How do I create a Python virtual environment in directory '.venv'?", "input": "", "output": "Run `python3 -m venv .venv` to initialize a new Python virtual environment."}
+{"instruction": "How do I install dependencies listed in requirements.txt?", "input": "", "output": "Run `pip install -r requirements.txt` to install all listed packages."}
+{"instruction": "How do I handle runtime exceptions gracefully in Python?", "input": "", "output": "Wrap execution inside a `try:` block and catch errors using `except Exception as e:`."}
+{"instruction": "How do I parse command line flags using argparse in Python?", "input": "", "output": "Initialize `argparse.ArgumentParser()`, add args with `add_argument()`, and call `parse_args()`."}
+{"instruction": "How do I measure precise execution time in Python?", "input": "", "output": "Import `time` and compute elapsed time using `time.perf_counter()`."}
+{"instruction": "How do I access operating system environment variables in Python?", "input": "", "output": "Import `os` and retrieve variables using `os.getenv('VAR_NAME', 'default')`."}
+{"instruction": "How do I define a data class in Python?", "input": "", "output": "Decorate your class definition with `@dataclass` from the `dataclasses` module."}
+{"instruction": "How do I check if a key exists in a Python dictionary?", "input": "", "output": "Use the `in` operator, such as `if 'key' in my_dict:`."}
+{"instruction": "How do I merge two dictionaries in Python 3.9+?", "input": "", "output": "Use the union operator, such as `merged_dict = dict1 | dict2`."}
+{"instruction": "How do I convert a list of strings into a single comma-separated string?", "input": "", "output": "Use the string join method, such as `', '.join(string_list)`."}
+{"instruction": "How do I remove leading and trailing whitespace from a Python string?", "input": "", "output": "Call `.strip()` on the string instance, such as `cleaned_text = raw_text.strip()`."}
+{"instruction": "How do I sort a list of dictionaries by a specific key in Python?", "input": "", "output": "Use `sorted(data, key=lambda x: x['key_name'])` or `data.sort(key=...)`."}
+{"instruction": "How do I create a shallow copy of a list in Python?", "input": "", "output": "Use `.copy()` method or slice syntax, such as `new_list = old_list.copy()`."}
+{"instruction": "How do I flatten a 2D list into a 1D list in Python?", "input": "", "output": "Use a list comprehension, such as `[item for sublist in matrix for item in sublist]`."}
+{"instruction": "How do I read lines of a text file into a list in Python?", "input": "", "output": "Use `with open('file.txt') as f: lines = f.read().splitlines()`."}
+{"instruction": "How do I check the length of a list or string in Python?", "input": "", "output": "Pass the object to the built-in function `len()`, such as `len(my_list)`."}
+{"instruction": "How do I convert a string representation of an integer to an int?", "input": "", "output": "Pass the string to `int()`, such as `num = int('123')`."}
+{"instruction": "How do I iterate over index and element simultaneously in Python?", "input": "", "output": "Use `enumerate()`, such as `for idx, item in enumerate(my_list):`."}
+{"instruction": "How do I define an asynchronous function in Python?", "input": "", "output": "Prefix the function declaration with `async def my_func():`."}
+{"instruction": "How do I run an async function in Python 3.7+?", "input": "", "output": "Import `asyncio` and execute `asyncio.run(my_async_function())`."}
+{"instruction": "How do I get unique elements from a list while preserving order in Python?", "input": "", "output": "Use `list(dict.fromkeys(my_list))` to deduplicate elements while retaining order."}
+{"instruction": "How do I check if all elements in a list satisfy a condition in Python?", "input": "", "output": "Use the built-in `all()` function with a generator expression."}
+{"instruction": "How do I check if at least one element satisfies a condition in Python?", "input": "", "output": "Use the built-in `any()` function with a generator expression."}
+{"instruction": "How do I filter elements in a list in Python?", "input": "", "output": "Use list comprehension, such as `filtered = [x for x in data if x > 0]`."}
+{"instruction": "How do I set a default value when getting a missing dictionary key?", "input": "", "output": "Use `.get('key', default_value)` method on the dictionary instance."}
+{"instruction": "How do I execute a shell command from Python and get output?", "input": "", "output": "Import `subprocess` and run `subprocess.run(['ls', '-l'], capture_output=True, text=True)`."}
+{"instruction": "How do I load environment variables from a .env file in Python?", "input": "", "output": "Import `dotenv` and execute `dotenv.load_dotenv()` at startup."}
+{"instruction": "How do I convert a string to lowercase in Python?", "input": "", "output": "Call `.lower()` on the string, such as `text.lower()`."}
+{"instruction": "How do I convert a string to uppercase in Python?", "input": "", "output": "Call `.upper()` on the string, such as `text.upper()`."}
+{"instruction": "How do I check if a string starts with a prefix in Python?", "input": "", "output": "Call `.startswith('prefix')` on the string instance."}
+{"instruction": "How do I check if a string ends with a suffix in Python?", "input": "", "output": "Call `.endswith('suffix')` on the string instance."}
+{"instruction": "How do I replace substrings in a Python string?", "input": "", "output": "Call `.replace('old', 'new')` on the target string instance."}
+{"instruction": "How do I convert a list of integers to a set in Python?", "input": "", "output": "Pass the list to `set()`, such as `my_set = set(my_list)`."}
+{"instruction": "How do I write a binary file in Python?", "input": "", "output": "Open the file with `'wb'` mode, such as `with open('file.bin', 'wb') as f: f.write(data)`."}
+{"instruction": "How do I read a binary file in Python?", "input": "", "output": "Open the file with `'rb'` mode, such as `with open('file.bin', 'rb') as f: data = f.read()`."}
+{"instruction": "How do I import a module dynamically in Python?", "input": "", "output": "Import `importlib` and execute `importlib.import_module('module_name')`."}
+{"instruction": "How do I format float numbers to 2 decimal places in Python?", "input": "", "output": "Use f-string formatting, such as `f'{value:.2f}'`."}
+{"instruction": "How do I list running Docker containers?", "input": "", "output": "Run `docker ps` to display all currently active Docker containers."}
+{"instruction": "How do I list all Docker containers including stopped ones?", "input": "", "output": "Run `docker ps -a` to list all active and exited Docker containers."}
+{"instruction": "How do I build a Docker image from a Dockerfile in current folder?", "input": "", "output": "Run `docker build -t myapp:latest .` to compile the image."}
+{"instruction": "How do I stop a running Docker container named 'web'?", "input": "", "output": "Run `docker stop web` to send a graceful shutdown signal to the container."}
+{"instruction": "How do I view logs from a Docker container named 'api'?", "input": "", "output": "Run `docker logs -f api` to stream live output logs from the container."}
+{"instruction": "How do I execute an interactive bash shell inside a running container?", "input": "", "output": "Run `docker exec -it <container_id> /bin/bash` to enter the container."}
+{"instruction": "How do I remove an unused Docker image?", "input": "", "output": "Run `docker rmi <image_id>` or `docker image prune` to delete unused images."}
+{"instruction": "How do I start services defined in a docker-compose.yml file?", "input": "", "output": "Run `docker-compose up -d` to launch all defined services in background mode."}
+{"instruction": "How do I stop services defined in docker-compose.yml?", "input": "", "output": "Run `docker-compose down` to stop and remove containers, networks, and volumes."}
+{"instruction": "How do I inspect details of a Docker container?", "input": "", "output": "Run `docker inspect <container_id>` to view full JSON metadata of the container."}
+{"instruction": "How do I select all columns from a table named 'users' in SQL?", "input": "", "output": "Execute `SELECT * FROM users;` in your SQL database client."}
+{"instruction": "How do I filter rows where age is greater than 18 in SQL?", "input": "", "output": "Execute `SELECT * FROM users WHERE age > 18;` in SQL."}
+{"instruction": "How do I count total records in a table named 'orders' in SQL?", "input": "", "output": "Execute `SELECT COUNT(*) FROM orders;` to get total row count."}
+{"instruction": "How do I update a user's email safely in SQL?", "input": "", "output": "Execute `UPDATE users SET email = 'new@example.com' WHERE id = 1;`."}
+{"instruction": "How do I query inactive users in SQL?", "input": "", "output": "Execute `SELECT * FROM users WHERE status = 'inactive';` in your SQL client."}
+{"instruction": "How do I sort SQL query results by creation date descending?", "input": "", "output": "Append `ORDER BY created_at DESC` to your SQL SELECT query."}
+{"instruction": "How do I limit SQL query results to 10 rows?", "input": "", "output": "Append `LIMIT 10` to your SQL query statement."}
+{"instruction": "How do I join two tables 'orders' and 'users' on user_id in SQL?", "input": "", "output": "Use `SELECT * FROM orders JOIN users ON orders.user_id = users.id;`."}
+{"instruction": "How do I create a primary key index on table 'products' in SQL?", "input": "", "output": "Use `ALTER TABLE products ADD PRIMARY KEY (id);`."}
+{"instruction": "How do I insert a new row into table 'users' in SQL?", "input": "", "output": "Execute `INSERT INTO users (name, email) VALUES ('Alice', 'alice@example.com');`."}
+{"instruction": "How do I send a JSON POST request in JavaScript fetch API?", "input": "", "output": "Call `fetch(url, {method: 'POST', headers: {'Content-Type': 'application/json'}, body: data})`."}
+{"instruction": "How do I parse a JSON string into an object in JavaScript?", "input": "", "output": "Use `JSON.parse(json_string)` to deserialize JSON into a JavaScript object."}
+{"instruction": "How do I convert a JavaScript object into a JSON string?", "input": "", "output": "Use `JSON.stringify(object)` to serialize an object into a JSON string."}
+{"instruction": "How do I declare an async function in JavaScript?", "input": "", "output": "Use syntax `async function fetchData() { const res = await fetch(url); }`."}
+{"instruction": "How do I handle rejected promises in JavaScript async/await?", "input": "", "output": "Wrap your await call in a `try { ... } catch (error) { ... }` block."}
+{"instruction": "How do I add an element to the end of an array in JavaScript?", "input": "", "output": "Call `.push(element)` on the array instance, such as `arr.push('item')`."}
+{"instruction": "How do I remove the last element of an array in JavaScript?", "input": "", "output": "Call `.pop()` on the array instance, such as `const last = arr.pop()`."}
+{"instruction": "How do I iterate over an array in JavaScript with element and index?", "input": "", "output": "Use `array.forEach((item, index) => { ... })`."}
+{"instruction": "How do I map array elements to a new array in JavaScript?", "input": "", "output": "Use `array.map(x => x * 2)` to transform each element."}
+{"instruction": "How do I filter array elements matching a condition in JavaScript?", "input": "", "output": "Use `array.filter(x => x > 10)` to extract matching items."}
+{"instruction": "How do I check container port mappings in Docker?", "input": "", "output": "Run `docker port <container_id>` to view published container ports."}
+{"instruction": "How do I restart a running Docker container?", "input": "", "output": "Run `docker restart <container_id>` to restart the container."}
+{"instruction": "How do I view Docker resource stats in real time?", "input": "", "output": "Run `docker stats` to monitor CPU, memory, and network usage per container."}
+{"instruction": "How do I pause execution of a running Docker container?", "input": "", "output": "Run `docker pause <container_id>` to suspend container execution."}
+{"instruction": "How do I unpause a suspended Docker container?", "input": "", "output": "Run `docker unpause <container_id>` to resume execution of a paused container."}
+{"instruction": "How do I create a new network in Docker?", "input": "", "output": "Run `docker network create my_network` to create an isolated bridge network."}
+{"instruction": "How do I list all Docker networks?", "input": "", "output": "Run `docker network ls` to inspect all configured Docker networks."}
+{"instruction": "How do I create a named Docker volume?", "input": "", "output": "Run `docker volume create my_volume` to allocate a persistent storage volume."}
+{"instruction": "How do I list all named Docker volumes?", "input": "", "output": "Run `docker volume ls` to list existing persistent Docker volumes."}
+{"instruction": "How do I select unique values of a column in SQL?", "input": "", "output": "Execute `SELECT DISTINCT column_name FROM table_name;` in SQL."}
+{"instruction": "How do I connect to a remote server using SSH on port 2222?", "input": "", "output": "Run `ssh -p 2222 user@hostname` to connect via SSH on a custom port."}
+{"instruction": "How do I copy a local file to a remote server using SCP?", "input": "", "output": "Run `scp -P 2222 file.txt user@hostname:/remote/path/`."}
+{"instruction": "How do I generate a 4096-bit RSA SSH key pair?", "input": "", "output": "Run `ssh-keygen -t rsa -b 4096 -C 'email@example.com'`."}
+{"instruction": "How do I copy my public SSH key to a remote server for passwordless login?", "input": "", "output": "Run `ssh-copy-id -i ~/.ssh/id_rsa.pub user@hostname`."}
+{"instruction": "How do I test DNS resolution for a domain name using dig?", "input": "", "output": "Run `dig example.com +short` to perform a DNS lookup."}
+{"instruction": "How do I trace network packet routing hops to a target server?", "input": "", "output": "Run `traceroute example.com` or `mtr example.com` to trace network paths."}
+{"instruction": "How do I check latency and packet loss to a host?", "input": "", "output": "Run `ping -c 4 example.com` to send 4 ICMP echo requests."}
+{"instruction": "How do I check systemd service status for nginx?", "input": "", "output": "Run `systemctl status nginx` to inspect systemd unit status."}
+{"instruction": "How do I restart a systemd service named 'postgresql'?", "input": "", "output": "Run `sudo systemctl restart postgresql` to restart the service."}
+{"instruction": "How do I enable a systemd service to start automatically on boot?", "input": "", "output": "Run `sudo systemctl enable nginx` to enable auto-start at boot time."}
+{"instruction": "How do I view systemd journal logs for unit 'docker'?", "input": "", "output": "Run `journalctl -u docker -n 50 --no-pager` to view recent unit logs."}
+{"instruction": "How do I check current firewall status in Ubuntu using ufw?", "input": "", "output": "Run `sudo ufw status verbose` to view active firewall rules."}
+{"instruction": "How do I allow incoming port 443 in ufw firewall?", "input": "", "output": "Run `sudo ufw allow 443/tcp` to permit incoming HTTPS traffic."}
+{"instruction": "How do I generate an MD5 checksum of a file in Linux?", "input": "", "output": "Run `md5sum filename` to compute the MD5 hash digest."}
+{"instruction": "How do I generate a SHA256 checksum of a file?", "input": "", "output": "Run `sha256sum filename` to compute the SHA256 hash digest."}
+{"instruction": "How do I check SSL certificate expiration date for a domain?", "input": "", "output": "Run `openssl s_client -connect example.com:443 | openssl x509 -noout -dates`."}
+{"instruction": "How do I create a self-signed SSL certificate using OpenSSL?", "input": "", "output": "Run `openssl req -x509 -newkey rsa:2048 -keyout key.pem -out cert.pem -days 365 -nodes`."}
+{"instruction": "How do I monitor disk I/O activity per process in Linux?", "input": "", "output": "Run `sudo iotop` to monitor real-time disk read/write bandwidth by process."}
+{"instruction": "How do I monitor network throughput per interface in Linux?", "input": "", "output": "Run `iftop` or `nload` to monitor real-time network traffic per interface."}
+{"instruction": "How do I find which process is using port 8080?", "input": "", "output": "Run `lsof -i :8080` or `fuser 8080/tcp` to identify the owning process."}
+{"instruction": "How do I send a term signal to the process using port 8080?", "input": "", "output": "Run `fuser -k -15 8080/tcp` to send a graceful term signal to the process."}
+{"instruction": "How do I check system kernel messages using dmesg?", "input": "", "output": "Run `dmesg -T | tail -n 50` to print recent kernel ring buffer messages."}
+{"instruction": "How do I reload Nginx configuration without dropping connections?", "input": "", "output": "Run `sudo systemctl reload nginx` or `nginx -s reload`."}
+{"instruction": "How do I test Nginx configuration syntax for errors?", "input": "", "output": "Run `sudo nginx -t` to verify configuration syntax before reloading."}
+{"instruction": "How do I list active crontab scheduled jobs for current user?", "input": "", "output": "Run `crontab -l` to view all configured cron jobs for your user."}
+{"instruction": "How do I edit active crontab scheduled jobs?", "input": "", "output": "Run `crontab -e` to open the cron schedule configuration in your editor."}
+{"instruction": "How do I schedule a script to run every day at midnight in cron?", "input": "", "output": "Add line `0 0 * * * /path/to/script.sh` to your crontab file."}
+{"instruction": "How do I schedule a script to run every 5 minutes in cron?", "input": "", "output": "Add line `*/5 * * * * /path/to/script.sh` to your crontab file."}
+{"instruction": "How do I set environment variable PATH permanently in Bash?", "input": "", "output": "Add `export PATH=\"/new/path:$PATH\"` to your `~/.bashrc` file."}
+{"instruction": "How do I reload shell configuration after modifying .bashrc?", "input": "", "output": "Run `source ~/.bashrc` to apply the updated environment configuration."}
+{"instruction": "How do I create a zip archive of a directory in Linux?", "input": "", "output": "Run `zip -r archive.zip folder_name/` to create a zip file."}
+{"instruction": "How do I unzip a zip file named 'archive.zip'?", "input": "", "output": "Run `unzip archive.zip` to extract files from the zip archive."}
+{"instruction": "How do I download a web page source HTML using wget?", "input": "", "output": "Run `wget -O page.html https://example.com` to download page source."}
+{"instruction": "How do I sync files from local directory to remote server using rsync?", "input": "", "output": "Run `rsync -avz /local/dir/ user@remote:/remote/dir/`."}
+{"instruction": "How do I perform a dry run of an rsync sync command?", "input": "", "output": "Run `rsync -avz --dry-run /local/dir/ user@remote:/remote/dir/`."}
+{"instruction": "How do I check open file descriptor limits in Linux?", "input": "", "output": "Run `ulimit -n` to view the maximum allowed open file descriptors per process."}
+{"instruction": "How do I temporarily increase open file descriptor limit to 65536?", "input": "", "output": "Run `ulimit -n 65536` in your current shell session."}
+{"instruction": "How do I view CPU model and core information in Linux?", "input": "", "output": "Run `lscpu` or `cat /proc/cpuinfo` to inspect CPU hardware details."}
+{"instruction": "How do I check current system hostname in Linux?", "input": "", "output": "Run `hostname` or `hostnamectl` to display the machine hostname."}
+{"instruction": "How do I change machine hostname permanently in Ubuntu?", "input": "", "output": "Run `sudo hostnamectl set-hostname new-hostname` to update machine name."}

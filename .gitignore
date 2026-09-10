@@ -1,0 +1,39 @@
+.venv-data/
+.venv-cpt/
+.venv-unsloth/
+.cache/
+artifacts/
+checkpoints/
+unsloth_compiled_cache/
+cpt_training/results/current/
+__pycache__/
+*.pyc
+*.gguf
+.env
+**/.env
+
+# Internal experiment notes are not part of the public repository.
+notes/
+
+# Raw scraped document bodies are regenerated locally and are not published.
+ai_coding_agent_cpt_data/data/*.jsonl
+ai_coding_agent_cpt_data/data/*.csv
+
+# Local, non-canonical qualitative review helpers.
+ai_coding_agent_cpt_data/scripts/antigravity_*.py
+ai_coding_agent_cpt_data/scripts/analyze_answers.py
+ai_coding_agent_cpt_data/scripts/inspect_new_answers.py
+ai_coding_agent_cpt_data/scripts/print_10_examples.py
+ai_coding_agent_cpt_data/scripts/filter_en_only.py
+
+# Temporary and editor files.
+*.tmp
+*.swp
+.DS_Store
+
+*.log
+
+# Non-canonical or unfinished local helpers.
+cpt_training/run_aggregate_pilots.sh
+cpt_training/scripts/aggregate_results.py
+cpt_training/scripts/convert_to_gguf.py
