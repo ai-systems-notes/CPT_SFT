@@ -1,0 +1,62 @@
+{
+  "status": "ok",
+  "scope": "Structural and continuation audit only; no factual correctness judgment.",
+  "qa": {
+    "rows": 70,
+    "unique_exact_question_strings": 70,
+    "duplicate_question_groups": 0,
+    "rows_in_duplicate_question_groups": 0,
+    "largest_duplicate_groups": []
+  },
+  "answers": {
+    "rows": 70,
+    "models": [
+      "base",
+      "transformers_cpt",
+      "unsloth_cpt",
+      "base_sft_v1",
+      "transformers_cpt_sft_v1",
+      "unsloth_cpt_sft_v1",
+      "base_sft_v2",
+      "transformers_cpt_sft_v2",
+      "unsloth_cpt_sft_v2",
+      "base_sft_v3",
+      "transformers_cpt_sft_v3",
+      "unsloth_cpt_sft_v3"
+    ],
+    "nonempty_rows": {
+      "base": 70,
+      "transformers_cpt": 70,
+      "unsloth_cpt": 70,
+      "base_sft_v1": 70,
+      "transformers_cpt_sft_v1": 70,
+      "unsloth_cpt_sft_v1": 70,
+      "base_sft_v2": 70,
+      "transformers_cpt_sft_v2": 70,
+      "unsloth_cpt_sft_v2": 70,
+      "base_sft_v3": 70,
+      "transformers_cpt_sft_v3": 70,
+      "unsloth_cpt_sft_v3": 70
+    },
+    "question_marker_after_character_20": {
+      "base": 0,
+      "transformers_cpt": 1,
+      "unsloth_cpt": 1,
+      "base_sft_v1": 0,
+      "transformers_cpt_sft_v1": 0,
+      "unsloth_cpt_sft_v1": 0,
+      "base_sft_v2": 0,
+      "transformers_cpt_sft_v2": 0,
+      "unsloth_cpt_sft_v2": 0,
+      "base_sft_v3": 0,
+      "transformers_cpt_sft_v3": 0,
+      "unsloth_cpt_sft_v3": 0
+    },
+    "pairwise_exact_answer_matches": {
+      "transformers_cpt__unsloth_cpt": 36,
+      "transformers_cpt_sft_v1__unsloth_cpt_sft_v1": 49,
+      "transformers_cpt_sft_v2__unsloth_cpt_sft_v2": 37,
+      "transformers_cpt_sft_v3__unsloth_cpt_sft_v3": 36
+    }
+  }
+}

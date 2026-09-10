@@ -30,11 +30,31 @@ from transformers import (
 REPO_ROOT = Path(__file__).resolve().parents[2]
 DEFAULT_DATASET = REPO_ROOT / "ai_coding_agent_cpt_data/SFT_Dataset/sft_general_train.jsonl"
 FOUNDATION_REVISION = "da87bfb608c14b7cf20ba1ce41287e8de496c0cd"
-PROMPT_TEMPLATE = (
+SHORT_PROMPT_TEMPLATE = (
     "Answer in one short concise sentence (under 100 characters):\n"
     "Question: {instruction}\n"
     "Answer:"
 )
+COMPLETE_PROMPT_TEMPLATE = (
+    "Answer directly in 1 to 3 concise sentences, preferably within 300 characters. "
+    "Preserve exact commands, option names, parameter values, and required conditions. "
+    "Do not generate another question.\n"
+    "Question: {instruction}\n"
+    "Answer:"
+)
+V3_PROMPT_TEMPLATE = (
+    "Answer directly and completely using only supported information.\n"
+    "Use one concise sentence when sufficient and up to three sentences when necessary.\n"
+    "Preserve exact commands, option names, paths, parameter values, and required conditions.\n"
+    "Do not invent missing details, repeat the question, or continue with another Q&A.\n"
+    "Question: {instruction}\n"
+    "Answer:"
+)
+PROMPT_TEMPLATES = {
+    "short": SHORT_PROMPT_TEMPLATE,
+    "complete": COMPLETE_PROMPT_TEMPLATE,
+    "v3": V3_PROMPT_TEMPLATE,
+}
 
 
 class TokenCountingTrainer(Trainer):
@@ -71,6 +91,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--grad-accum", type=int, default=4)
     parser.add_argument("--seed", type=int, default=42)
     parser.add_argument("--max-seq-length", type=int, default=512)
+    parser.add_argument("--prompt-style", choices=tuple(PROMPT_TEMPLATES), default="short")
     parser.add_argument("--smoke-test", action="store_true")
     parser.add_argument("--confirm-full", action="store_true")
     args = parser.parse_args()
@@ -118,12 +139,15 @@ def load_rows(path: Path) -> list[dict[str, str]]:
 
 
 def preprocess_batch(
-    examples: dict[str, list[str]], tokenizer: Any, max_seq_length: int
+    examples: dict[str, list[str]],
+    tokenizer: Any,
+    max_seq_length: int,
+    prompt_template: str,
 ) -> dict[str, list[list[int]]]:
     input_ids_list: list[list[int]] = []
     labels_list: list[list[int]] = []
     for instruction, output in zip(examples["instruction"], examples["output"]):
-        prompt = PROMPT_TEMPLATE.format(instruction=instruction) + " "
+        prompt = prompt_template.format(instruction=instruction) + " "
         prompt_ids = tokenizer.encode(prompt, add_special_tokens=False)
         full_ids = tokenizer.encode(prompt + output + tokenizer.eos_token, add_special_tokens=False)
         full_ids = full_ids[:max_seq_length]
@@ -196,9 +220,12 @@ def main() -> int:
     model.print_trainable_parameters()
 
     rows = load_rows(dataset_path)
+    prompt_template = PROMPT_TEMPLATES[args.prompt_style]
     raw_dataset = Dataset.from_list(rows)
     tokenized_dataset = raw_dataset.map(
-        lambda batch: preprocess_batch(batch, tokenizer, args.max_seq_length),
+        lambda batch: preprocess_batch(
+            batch, tokenizer, args.max_seq_length, prompt_template
+        ),
         batched=True,
         remove_columns=raw_dataset.column_names,
         desc="Tokenizing SFT dataset",
@@ -258,7 +285,8 @@ def main() -> int:
         "foundation_model_revision": FOUNDATION_REVISION,
         "sft_dataset": portable_path(dataset_path),
         "sft_dataset_sha256": dataset_sha256,
-        "prompt_template": PROMPT_TEMPLATE,
+        "prompt_style": args.prompt_style,
+        "prompt_template": prompt_template,
         "hyperparameters": {
             "learning_rate": args.learning_rate,
             "epochs": args.epochs,

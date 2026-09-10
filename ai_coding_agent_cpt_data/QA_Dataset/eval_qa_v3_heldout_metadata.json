@@ -1,0 +1,1340 @@
+{
+  "schema_version": 2,
+  "status": "candidate_requires_manual_fact_review",
+  "description": "Conservative held-out candidate dataset for SFT v3 comparison",
+  "original_combined_count": 200,
+  "heldout_candidate_count": 17,
+  "excluded_count": 183,
+  "file_sha256": "f80ba94efe1f432b6aadd09ccb9094a7c5b72a87eb5dacec2030b9325ac1a506",
+  "selection_does_not_prove_semantic_correctness": true,
+  "audit_log": [
+    {
+      "id": "claude_001",
+      "question": "Which next-generation Anthropic models are supported in Claude Code for complex reasoning and enterprise tasks?",
+      "status": "excluded",
+      "reason": "Claimed source does not contain every keyword and reference code token",
+      "missing_keywords": [
+        "Opus 4",
+        "Mythos",
+        "Fable"
+      ],
+      "missing_reference_tokens": []
+    },
+    {
+      "id": "claude_002",
+      "question": "What is the purpose of the `/code-review ultra` command in Claude Code?",
+      "status": "accepted",
+      "reason": "Held-out candidate: unique, no detected SFT v3 overlap, and all keywords/code tokens occur in the claimed source",
+      "source_url": "https://code.claude.com/docs/en/ultrareview.md",
+      "source_sha256": "7ecc070bd31bb57e6bd6456e9c6287b5e39d9f70082939afd9215a4f00c434ea",
+      "manual_review_required": true
+    },
+    {
+      "id": "claude_003",
+      "question": "How can you teleport a local Claude Code session to the cloud or mobile app?",
+      "status": "excluded",
+      "reason": "Fact-level relationship declared for an SFT v3 domain item"
+    },
+    {
+      "id": "claude_004",
+      "question": "How do you run Claude Code programmatically without an interactive terminal GUI?",
+      "status": "excluded",
+      "reason": "Claimed source does not contain every keyword and reference code token",
+      "missing_keywords": [
+        "headless"
+      ],
+      "missing_reference_tokens": []
+    },
+    {
+      "id": "claude_005",
+      "question": "What feature allows running Claude Code tasks automatically on a recurring timer or in response to GitHub webhooks?",
+      "status": "accepted",
+      "reason": "Held-out candidate: unique, no detected SFT v3 overlap, and all keywords/code tokens occur in the claimed source",
+      "source_url": "https://code.claude.com/docs/en/routines.md",
+      "source_sha256": "af0f2ae713adc046b3e32f9eabd06ddb1bec6dbaa3e13d9eeb39631dc66831cb",
+      "manual_review_required": true
+    },
+    {
+      "id": "claude_006",
+      "question": "What does the `/goal` command do in a Claude Code interactive session?",
+      "status": "accepted",
+      "reason": "Held-out candidate: unique, no detected SFT v3 overlap, and all keywords/code tokens occur in the claimed source",
+      "source_url": "https://code.claude.com/docs/en/goal.md",
+      "source_sha256": "c7ebe248b168505bc163d4aea720df9696e631802a9d373bcff7337de98f991c",
+      "manual_review_required": true
+    },
+    {
+      "id": "claude_007",
+      "question": "Where does Claude Code look for persistent instruction files in a project hierarchy?",
+      "status": "excluded",
+      "reason": "Fact-level relationship declared for an SFT v3 domain item"
+    },
+    {
+      "id": "claude_008",
+      "question": "What event types can trigger custom shell commands in Claude Code hooks?",
+      "status": "excluded",
+      "reason": "Fact-level relationship declared for an SFT v3 domain item"
+    },
+    {
+      "id": "claude_009",
+      "question": "What CLI flag isolates parallel Claude Code sessions into independent Git worktrees?",
+      "status": "excluded",
+      "reason": "Fact-level relationship declared for an SFT v3 domain item"
+    },
+    {
+      "id": "claude_010",
+      "question": "What is the purpose of the `security-guidance` plugin in Claude Code?",
+      "status": "accepted",
+      "reason": "Held-out candidate: unique, no detected SFT v3 overlap, and all keywords/code tokens occur in the claimed source",
+      "source_url": "https://code.claude.com/docs/en/security-guidance.md",
+      "source_sha256": "b78879a3f4379e917862239d329ba249bac360a47a95b9ce29b3b931dabbbf07",
+      "manual_review_required": true
+    },
+    {
+      "id": "claude_011",
+      "question": "Why does switching models during an active Claude Code session trigger a cache miss?",
+      "status": "excluded",
+      "reason": "Claimed source does not contain every keyword and reference code token",
+      "missing_keywords": [
+        "cache miss"
+      ],
+      "missing_reference_tokens": []
+    },
+    {
+      "id": "claude_012",
+      "question": "What permission modes does Claude Code support and how can a user switch between them?",
+      "status": "accepted",
+      "reason": "Held-out candidate: unique, no detected SFT v3 overlap, and all keywords/code tokens occur in the claimed source",
+      "source_url": "https://code.claude.com/docs/en/permission-modes.md",
+      "source_sha256": "d88fefa65aff6118109532a1f7312395a142dd1483d9ec219bfa5395b0d388ac",
+      "manual_review_required": true
+    },
+    {
+      "id": "claude_013",
+      "question": "How does Claude Code Desktop handle parallel session isolation?",
+      "status": "excluded",
+      "reason": "Fact-level relationship declared for an SFT v3 domain item"
+    },
+    {
+      "id": "claude_014",
+      "question": "How does Claude Code Desktop handle parallel session isolation?",
+      "status": "excluded",
+      "reason": "Exact duplicate question in original combined dataset"
+    },
+    {
+      "id": "claude_015",
+      "question": "How does Claude Code Desktop handle parallel session isolation?",
+      "status": "excluded",
+      "reason": "Exact duplicate question in original combined dataset"
+    },
+    {
+      "id": "claude_016",
+      "question": "How does Claude Code Desktop handle parallel session isolation?",
+      "status": "excluded",
+      "reason": "Exact duplicate question in original combined dataset"
+    },
+    {
+      "id": "claude_017",
+      "question": "How does Claude Code Desktop handle parallel session isolation?",
+      "status": "excluded",
+      "reason": "Exact duplicate question in original combined dataset"
+    },
+    {
+      "id": "claude_018",
+      "question": "How does Claude Code Desktop handle parallel session isolation?",
+      "status": "excluded",
+      "reason": "Exact duplicate question in original combined dataset"
+    },
+    {
+      "id": "claude_019",
+      "question": "Where are custom subagent definitions stored in a Claude Code workspace?",
+      "status": "excluded",
+      "reason": "Fact-level relationship declared for an SFT v3 domain item"
+    },
+    {
+      "id": "claude_020",
+      "question": "What features does the Claude Apps Gateway provide for enterprise deployments?",
+      "status": "excluded",
+      "reason": "Claimed source does not contain every keyword and reference code token",
+      "missing_keywords": [
+        "Vertex AI"
+      ],
+      "missing_reference_tokens": []
+    },
+    {
+      "id": "claude_021",
+      "question": "What features does the Claude Apps Gateway provide for enterprise deployments?",
+      "status": "excluded",
+      "reason": "Exact duplicate question in original combined dataset"
+    },
+    {
+      "id": "claude_022",
+      "question": "What features does the Claude Apps Gateway provide for enterprise deployments?",
+      "status": "excluded",
+      "reason": "Exact duplicate question in original combined dataset"
+    },
+    {
+      "id": "claude_023",
+      "question": "What features does the Claude Apps Gateway provide for enterprise deployments?",
+      "status": "excluded",
+      "reason": "Exact duplicate question in original combined dataset"
+    },
+    {
+      "id": "claude_024",
+      "question": "What features does the Claude Apps Gateway provide for enterprise deployments?",
+      "status": "excluded",
+      "reason": "Exact duplicate question in original combined dataset"
+    },
+    {
+      "id": "claude_025",
+      "question": "What features does the Claude Apps Gateway provide for enterprise deployments?",
+      "status": "excluded",
+      "reason": "Exact duplicate question in original combined dataset"
+    },
+    {
+      "id": "claude_026",
+      "question": "In the Claude Code Agent SDK (overview.md), how are custom tools registered?",
+      "status": "excluded",
+      "reason": "Known malformed or mechanically duplicated evaluation topic"
+    },
+    {
+      "id": "claude_027",
+      "question": "In the Claude Code Agent SDK (quickstart.md), how are custom tools registered?",
+      "status": "excluded",
+      "reason": "Known malformed or mechanically duplicated evaluation topic"
+    },
+    {
+      "id": "claude_028",
+      "question": "In the Claude Code Agent SDK (examples.md), how are custom tools registered?",
+      "status": "excluded",
+      "reason": "Known malformed or mechanically duplicated evaluation topic"
+    },
+    {
+      "id": "claude_029",
+      "question": "In the Claude Code Agent SDK (troubleshooting.md), how are custom tools registered?",
+      "status": "excluded",
+      "reason": "Known malformed or mechanically duplicated evaluation topic"
+    },
+    {
+      "id": "claude_030",
+      "question": "In the Claude Code Agent SDK (agent-loop.md), how are custom tools registered?",
+      "status": "excluded",
+      "reason": "Known malformed or mechanically duplicated evaluation topic"
+    },
+    {
+      "id": "claude_031",
+      "question": "In the Claude Code Agent SDK (claude-code-features.md), how are custom tools registered?",
+      "status": "excluded",
+      "reason": "Known malformed or mechanically duplicated evaluation topic"
+    },
+    {
+      "id": "claude_032",
+      "question": "In the Claude Code Agent SDK (sessions.md), how are custom tools registered?",
+      "status": "excluded",
+      "reason": "Known malformed or mechanically duplicated evaluation topic"
+    },
+    {
+      "id": "claude_033",
+      "question": "In the Claude Code Agent SDK (session-storage.md), how are custom tools registered?",
+      "status": "excluded",
+      "reason": "Known malformed or mechanically duplicated evaluation topic"
+    },
+    {
+      "id": "claude_034",
+      "question": "In the Claude Code Agent SDK (streaming-vs-single-mode.md), how are custom tools registered?",
+      "status": "excluded",
+      "reason": "Known malformed or mechanically duplicated evaluation topic"
+    },
+    {
+      "id": "claude_035",
+      "question": "In the Claude Code Agent SDK (user-input.md), how are custom tools registered?",
+      "status": "excluded",
+      "reason": "Known malformed or mechanically duplicated evaluation topic"
+    },
+    {
+      "id": "claude_036",
+      "question": "In the Claude Code Agent SDK (streaming-output.md), how are custom tools registered?",
+      "status": "excluded",
+      "reason": "Known malformed or mechanically duplicated evaluation topic"
+    },
+    {
+      "id": "claude_037",
+      "question": "In the Claude Code Agent SDK (structured-outputs.md), how are custom tools registered?",
+      "status": "excluded",
+      "reason": "Known malformed or mechanically duplicated evaluation topic"
+    },
+    {
+      "id": "claude_038",
+      "question": "In the Claude Code Agent SDK (custom-tools.md), how are custom tools registered?",
+      "status": "excluded",
+      "reason": "Known malformed or mechanically duplicated evaluation topic"
+    },
+    {
+      "id": "claude_039",
+      "question": "In the Claude Code Agent SDK (mcp.md), how are custom tools registered?",
+      "status": "excluded",
+      "reason": "Known malformed or mechanically duplicated evaluation topic"
+    },
+    {
+      "id": "claude_040",
+      "question": "In the Claude Code Agent SDK (tool-search.md), how are custom tools registered?",
+      "status": "excluded",
+      "reason": "Known malformed or mechanically duplicated evaluation topic"
+    },
+    {
+      "id": "claude_041",
+      "question": "In the Claude Code Agent SDK (subagents.md), how are custom tools registered?",
+      "status": "excluded",
+      "reason": "Known malformed or mechanically duplicated evaluation topic"
+    },
+    {
+      "id": "claude_042",
+      "question": "In the Claude Code Agent SDK (modifying-system-prompts.md), how are custom tools registered?",
+      "status": "excluded",
+      "reason": "Known malformed or mechanically duplicated evaluation topic"
+    },
+    {
+      "id": "claude_043",
+      "question": "In the Claude Code Agent SDK (slash-commands.md), how are custom tools registered?",
+      "status": "excluded",
+      "reason": "Known malformed or mechanically duplicated evaluation topic"
+    },
+    {
+      "id": "claude_044",
+      "question": "In the Claude Code Agent SDK (skills.md), how are custom tools registered?",
+      "status": "excluded",
+      "reason": "Known malformed or mechanically duplicated evaluation topic"
+    },
+    {
+      "id": "claude_045",
+      "question": "In the Claude Code Agent SDK (plugins.md), how are custom tools registered?",
+      "status": "excluded",
+      "reason": "Known malformed or mechanically duplicated evaluation topic"
+    },
+    {
+      "id": "claude_046",
+      "question": "In the Claude Code Agent SDK (permissions.md), how are custom tools registered?",
+      "status": "excluded",
+      "reason": "Known malformed or mechanically duplicated evaluation topic"
+    },
+    {
+      "id": "claude_047",
+      "question": "In the Claude Code Agent SDK (hooks.md), how are custom tools registered?",
+      "status": "excluded",
+      "reason": "Known malformed or mechanically duplicated evaluation topic"
+    },
+    {
+      "id": "claude_048",
+      "question": "In the Claude Code Agent SDK (file-checkpointing.md), how are custom tools registered?",
+      "status": "excluded",
+      "reason": "Known malformed or mechanically duplicated evaluation topic"
+    },
+    {
+      "id": "claude_049",
+      "question": "In the Claude Code Agent SDK (cost-tracking.md), how are custom tools registered?",
+      "status": "excluded",
+      "reason": "Known malformed or mechanically duplicated evaluation topic"
+    },
+    {
+      "id": "claude_050",
+      "question": "In the Claude Code Agent SDK (observability.md), how are custom tools registered?",
+      "status": "excluded",
+      "reason": "Known malformed or mechanically duplicated evaluation topic"
+    },
+    {
+      "id": "claude_051",
+      "question": "In the Claude Code Agent SDK (todo-tracking.md), how are custom tools registered?",
+      "status": "excluded",
+      "reason": "Known malformed or mechanically duplicated evaluation topic"
+    },
+    {
+      "id": "claude_052",
+      "question": "In the Claude Code Agent SDK (hosting.md), how are custom tools registered?",
+      "status": "excluded",
+      "reason": "Known malformed or mechanically duplicated evaluation topic"
+    },
+    {
+      "id": "claude_053",
+      "question": "In the Claude Code Agent SDK (secure-deployment.md), how are custom tools registered?",
+      "status": "excluded",
+      "reason": "Known malformed or mechanically duplicated evaluation topic"
+    },
+    {
+      "id": "claude_054",
+      "question": "In the Claude Code Agent SDK (` tag. `url` targets an existing artifact to update in place instead of minting a new one, and `force` is a last-resort overwrite that discards another session's published version; on a 409 conflict the normal fix is to re-read, merge, and publish again rather than pass `force`. Pass `\"list\"` to enumerate the user's published artifacts; only `limit` and `scope` may accompany it. `scope` defaults to `\"mine\"`, which lists artifacts the user owns; `\"shared\"` lists artifacts other people shared with the user, and `\"all\"` lists both. The types are exported, but the tool is off by default in Agent SDK sessions. Publishing also requires every condition in the [artifacts availability table](/docs/en/artifacts#availability), which sessions authenticated with an API key don't meet. ### Projects **Tool name:** `Projects` ```typescript theme={null} type ProjectsInput = { method: | \"project_info\" | \"project_read\" | \"project_search\" | \"project_write\" | \"project_delete\"; path?: string; content?: string; local_path?: string; present_to_user?: boolean; query?: string; n?: number; }; ``` Reads and writes the claude.ai Project attached to the session. Dispatches on `method`: * `project_info`: returns project metadata and the doc list. * `project_read`: reads one doc by `path`. * `project_search`: queries the project's knowledge base with `query`. `n` caps the hits and defaults to 5. * `project_write`: creates or replaces a doc at `path` from exactly one of `content`, which carries inline text, or `local_path`, which names a file inside the working directory. `present_to_user: true` marks the written doc as the deliverable the user needs to see. * `project_delete`: deletes a doc by `path`. ### ReadMcpResourceDir **Tool name:** `ReadMcpResourceDirTool` ```typescript theme={null} type ReadMcpResourceDirInput = { server: string; uri: string; }; ``` Lists the direct children of a directory resource on an MCP server. Only usable against a server that has declared support for directory listing; the listing isn't recursive. Directory listing isn't enabled in every session: when it's off, the call returns an empty `resources` list and the `error` field reports that directory listing isn't enabled. ### RefreshMcpTools **Tool name:** `RefreshMcpTools` ```typescript theme={null} type RefreshMcpToolsInput = { server?: string; // refresh only this server; omit to refresh all connected servers }; ``` Re-queries the tool list of connected MCP servers and applies any changes. The types are exported, but Claude Code registers the tool only when you set `CLAUDE_CODE_ENABLE_REFRESH_MCP_TOOLS=1` in the [`env` option](#options), and only in sessions with at least one MCP server. Requires Claude Code v2.1.211 or later. ### ShowOnboardingRolePicker **Tool name:** `ShowOnboardingRolePicker` ```typescript theme={null} type ShowOnboardingRolePickerInput = {}; ``` Renders a clickable role-picker chip row during Cowork onboarding so the user can pick their role and get a matching plugin installed. Takes no arguments; the role list is defined by the client. The call blocks until the user responds. ### McpInput **Tool name:** dynamic MCP tool names of the form `mcp__<server>__<tool>` ```typescript theme={null} type McpInput = { [k: string]: unknown; }; ``` MCP tool arguments are an open object: each server defines its own parameters, so the type places no constraints on field names or values. Consult the server's own tool schema for the fields a specific tool accepts. ## Tool Output Types Documentation of output schemas for all built-in Claude Code tools. These types are exported from `@anthropic-ai/claude-agent-sdk` and represent the actual response data returned by each tool. ### `ToolOutputSchemas` Union of tool output types exported from `@anthropic-ai/claude-agent-sdk`; members include: ```typescript theme={null} type ToolOutputSchemas = | AgentOutput | ArtifactOutput | AskUserQuestionOutput | BashOutput | CronCreateOutput | CronDeleteOutput | CronListOutput | EnterPlanModeOutput | EnterWorktreeOutput | ExitPlanModeOutput | ExitWorktreeOutput | FileEditOutput | FileReadOutput | FileWriteOutput | GlobOutput | GrepOutput | ListMcpResourcesOutput | McpOutput | MonitorOutput | NotebookEditOutput | ProjectsOutput | PushNotificationOutput | ReadMcpResourceDirOutput | ReadMcpResourceOutput | RefreshMcpToolsOutput | RemoteTriggerOutput | REPLOutput | ReportFindingsOutput | ScheduleWakeupOutput | ShowOnboardingRolePickerOutput | TaskCreateOutput | TaskGetOutput | TaskListOutput | TaskStopOutput | TaskUpdateOutput | TodoWriteOutput | WebFetchOutput | WebSearchOutput | WorkflowOutput; ``` ### Agent **Tool name:** `Agent`. The previous name `Task` is still accepted as an alias, and the `tools` array in the [`SDKSystemMessage`](#sdksystemmessage) init message currently lists this tool as `Task` for backward compatibility. ```typescript theme={null} type AgentOutput = | { status: \"completed\"; agentId: string; agentType?: string; content: Array<{ type: \"text\"; text: string; citations?: unknown[] | null }>; resolvedModel?: string; modelsUsed?: string[]; totalToolUseCount: number; totalDurationMs: number; totalTokens: number; usage: { input_tokens: number; output_tokens: number; cache_creation_input_tokens: number | null; cache_read_input_tokens: number | null; server_tool_use: { web_search_requests: number; web_fetch_requests: number; } | null; service_tier: string | null; cache_creation: { ephemeral_1h_input_tokens: number; ephemeral_5m_input_tokens: number; } | null; inference_geo?: string | null; speed?: string | null; iterations?: unknown; output_tokens_details?: { thinking_tokens?: number | null; } | null; }; toolStats?: { readCount: number; searchCount: number; bashCount: number; editFileCount: number; linesAdded: number; linesRemoved: number; otherToolCount: number; frameCount?: number; }; prompt: string; worktreePath?: string; worktreeBranch?: string; } | { status: \"async_launched\"; isAsync?: true; agentId: string; description: string; resolvedModel?: string; modelsUsed?: string[]; prompt: string; outputFile: string; canReadOutputFile?: boolean; } | { status: \"remote_launched\"; taskId: string; sessionUrl: string; description: string; prompt: string; outputFile: string; }; ``` Returns the result from the subagent. Discriminated on the `status` field: `\"completed\"` for finished tasks, `\"async_launched\"` for background tasks, and `\"remote_launched\"` for tasks Claude Code dispatched to a remote cloud session, where `sessionUrl` links to that session and `taskId` identifies it. On the `completed` variant, `resolvedModel` names the model the subagent started on, which can differ from the requested `model` input when [`availableModels`](/docs/en/model-config#restrict-model-selection) or another override applies. This field requires Claude Code v2.1.174 or later. On `async_launched`, it names the model in use when the task moved to the background. `modelsUsed` lists the models the subagent used, in order. The field is present only when a mid-run swap happened, and a model appears again when the run swapped back to it. On `async_launched`, the list covers the models used before backgrounding. Both `modelsUsed` and the backgrounding behavior of `resolvedModel` require Claude Code v2.1.212 or later. If Claude Code [kept the subagent's isolated worktree](/docs/en/worktrees#isolate-subagents-with-worktrees), `worktreePath` on the `completed` result is where to find it. `worktreeBranch` is its branch, present when Claude Code created the worktree with git. Claude Code fills `usage` and `totalTokens` from the subagent's final API request, not from the whole run, so `usage.service_tier` is the service tier string the API reported on that request. When present, `usage.output_tokens_details.thinking_tokens` is the number of that request's output tokens that were thinking tokens. The `output_tokens_details` field requires TypeScript SDK v0.3.228 or later, which bundles Claude Code v2.1.228. Before v2.1.207, the published type was narrower. It omitted `worktreePath`, `worktreeBranch`, `citations`, `toolStats.frameCount`, and the `inference_geo`, `speed`, and `iterations` usage fields, and it typed `service_tier` as `\"standard\" | \"priority\" | \"batch\"`. Fields the type marks optional can be absent on results recorded by earlier versions. ### AskUserQuestion **Tool name:** `AskUserQuestion` ```typescript theme={null} type AskUserQuestionOutput = { questions: Array<{ question: string; header: string; options: Array<{ label: string; description: string; preview?: string }>; multiSelect: boolean; }>; answers: Record<string, string>; response?: string; annotations?: Record<string, { preview?: string; notes?: string }>; afkTimeoutMs?: number; }; ``` Returns the questions asked and the user's answers. `response` is set when the user typed a freeform reply instead of answering the structured questions; when present, Claude receives \"The user responded: ...\" instead of the per-question answer list. ### Bash **Tool name:** `Bash` ```typescript theme={null} type BashOutput = { stdout: string; stderr: string; rawOutputPath?: string; interrupted: boolean; isImage?: boolean; backgroundTaskId?: string; backgroundedByUser?: boolean; timedOutAfterMs?: number; backgroundCwdHint?: string; backgroundEndsWithFinalResponse?: true; dangerouslyDisableSandbox?: boolean; returnCodeInterpretation?: string; noOutputExpected?: boolean; structuredContent?: unknown[]; persistedOutputPath?: string; persistedOutputSize?: number; staleReadFileStateHint?: string; ghRateLimitHint?: string; gitOperation?: { commit?: { sha: string; kind: \"committed\" | \"amended\" | \"cherry-picked\" }; push?: { branch: string }; branch?: { ref: string; action: \"merged\" | \"rebased\" }; pr?: { number: number; url?: string; action: \"created\" | \"edited\" | \"merged\" | \"commented\" | \"closed\" | \"ready\" | \"draft\" | \"auto-merge-enabled\" | \"auto-merge-disabled\"; }; }; }; ``` The `stdout`, `stderr`, and `backgroundTaskId` fields carry: | Field | What it carries | | ------------------ | ----------------------------------------------------------------------------------------------- | | `stdout` | The command's stdout and stderr, merged into one interleaved stream | | `stderr` | Notices the tool itself adds, such as a shell working-directory reset, not the command's stderr | | `backgroundTaskId` | Present for background commands | `timedOutAfterMs` is the timeout in milliseconds, set when the command reached its timeout and moved to the background rather than starting there explicitly. `backgroundCwdHint` is set when the backgrounded command contained a directory-change builtin such as `cd`, `pushd`, `popd`, or `chdir`, and notes that the session working directory didn't change. Both fields require Claude Code v2.1.210 or later. When a subagent running in the foreground owns a backgrounded command, Claude Code terminates the command when that subagent gives its final response. Claude Code sets `backgroundEndsWithFinalResponse` to `true` on such commands, and omits the field when the command survives the turn, as commands started by the main conversation or by background subagents do. The field requires Claude Code v2.1.227 or later. ### Monitor **Tool name:** `Monitor` ```typescript theme={null} type MonitorOutput = { taskId: string; timeoutMs: number; persistent?: boolean; }; ``` Returns the background task ID for the running monitor. Use this ID with `TaskStop` to cancel the watch early. ### Edit **Tool name:** `Edit` ```typescript theme={null} type FileEditOutput = { filePath: string; oldString: string; newString: string; originalFile: string | null; structuredPatch: Array<{ oldStart: number; oldLines: number; newStart: number; newLines: number; lines: string[]; }>; userModified: boolean; replaceAll: boolean; gitDiff?: { filename: string; status: \"modified\" | \"added\"; additions: number; deletions: number; changes: number; patch: string; repository?: string | null; }; }; ``` Returns the structured diff of the edit operation. ### Read **Tool name:** `Read` ```typescript theme={null} type FileReadOutput = | { type: \"text\"; file: { filePath: string; content: string; numLines: number; startLine: number; totalLines: number; /** True when a whole-file read was auto-paginated because it exceeded the token cap (the content is a partial first page). */ truncatedByTokenCap?: boolean; }; } | { type: \"image\"; file: { base64: string; type: \"image/jpeg\" | \"image/png\" | \"image/gif\" | \"image/webp\"; originalSize: number; dimensions?: { originalWidth?: number; originalHeight?: number; displayWidth?: number; displayHeight?: number; }; }; } | { type: \"notebook\"; file: { filePath: string; cells: unknown[]; }; } | { type: \"pdf\"; file: { filePath: string; base64: string; originalSize: number; }; } | { type: \"parts\"; file: { filePath: string; originalSize: number; count: number; outputDir: string; }; } | { type: \"file_unchanged\"; file: { filePath: string; }; /** Set when the dedup matched a startup-seeded entry (CLAUDE.md / nested memory) rather than a prior Read tool_result. */ source?: \"seeded\"; }; ``` Returns file contents in a format appropriate to the file type. Discriminated on the `type` field. ### Write **Tool name:** `Write` ```typescript theme={null} type FileWriteOutput = { type: \"create\" | \"update\"; filePath: string; content: string; structuredPatch: Array<{ oldStart: number; oldLines: number; newStart: number; newLines: number; lines: string[]; }>; originalFile: string | null; gitDiff?: { filename: string; status: \"modified\" | \"added\"; additions: number; deletions: number; changes: number; patch: string; repository?: string | null; }; userModified?: boolean; }; ``` Returns the write result with structured diff information. ### Glob **Tool name:** `Glob` ```typescript theme={null} type GlobOutput = { durationMs: number; numFiles: number; filenames: string[]; truncated: boolean; totalMatches?: number; countIsComplete?: boolean; }; ``` Returns file paths matching the glob pattern, sorted by modification time. `totalMatches` and `countIsComplete` require Claude Code v2.1.191 or later. `totalMatches` reports the number of matching files before truncation. When `countIsComplete` is false, `totalMatches` is a lower bound because the underlying search truncated its own output. ### Grep **Tool name:** `Grep` ```typescript theme={null} type GrepOutput = { mode?: \"content\" | \"files_with_matches\" | \"count\"; numFiles: number; filenames: string[]; content?: string; numLines?: number; numMatches?: number; totalFiles?: number; totalLines?: number; appliedLimit?: number; appliedOffset?: number; }; ``` Returns search results. The shape varies by `mode`: file list, content with matches, or match counts. In `count` mode, `numFiles` and `numMatches` are totals over the full result set, not the paginated slice. Before v2.1.208, a `head_limit` or `offset` that truncated the listed entries also truncated those totals. `totalFiles` requires Claude Code v2.1.208 or later and reports the total number of results before `head_limit` and `offset` pagination in `files_with_matches` mode. `totalLines` requires Claude Code v2.1.210 or later and reports the total number of lines before pagination in `content` mode. ### TaskStop **Tool name:** `TaskStop` ```typescript theme={null} type TaskStopOutput = { message: string; task_id: string; task_type: string; command?: string; }; ``` Returns confirmation after stopping the background task. ### NotebookEdit **Tool name:** `NotebookEdit` ```typescript theme={null} type NotebookEditOutput = { new_source: string; old_source?: string; cell_id?: string; cell_type: \"code\" | \"markdown\"; language: string; edit_mode: string; error?: string; notebook_path: string; original_file: string; updated_file: string; }; ``` Returns the result of the notebook edit with original and updated file contents. ### WebFetch **Tool name:** `WebFetch` ```typescript theme={null} type WebFetchOutput = { bytes: number; code: number; codeText: string; result: string; durationMs: number; url: string; artifactRead?: { slug: string; ver?: string; }; }; ``` Returns the fetched content with HTTP status and metadata. ### WebSearch **Tool name:** `WebSearch` ```typescript theme={null} type WebSearchOutput = { query: string; results: Array< | { tool_use_id: string; content: Array<{ title: string; url: string }>; } | string >; durationSeconds: number; searchCount?: number; }; ``` Returns search results from the web. ### Workflow **Tool name:** `Workflow` ```typescript theme={null} type WorkflowOutput = { status: \"async_launched\" | \"remote_launched\"; taskId: string; taskType?: \"local_workflow\" | \"remote_agent\"; workflowName?: string; runId?: string; summary?: string; transcriptDir?: string; scriptPath?: string; sessionUrl?: string; // set when the workflow launched as a remote session warning?: string; error?: string; }; ``` Returns immediately after the tool accepts the invocation. The final result arrives later as a task completion. Check `error` before treating the run as started: a script that fails its syntax check returns `status: \"async_launched\"` with `error` set, and never runs. | Field | Type | Description | | --------------- | --------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- | | `status` | `\"async_launched\" \\| \"remote_launched\"` | The tool accepted the invocation. `\"async_launched\"` for in-process runs, `\"remote_launched\"` for runs dispatched to a remote session instead of running in-process | | `taskId` | `string` | Background task identifier for the run | | `taskType` | `\"local_workflow\" \\| \"remote_agent\"` | Task type of the registered background task, matching the `status` arm | | `workflowName` | `string` | The `meta.name` from the workflow script | | `runId` | `string` | Workflow run identifier to pass as `resumeFromRunId` on a later invocation. Absent for `remote_launched` runs, where the cloud session URL is the resume handle | | `summary` | `string` | One-line description of what the workflow does | | `transcriptDir` | `string` | Directory where subagent transcripts are written during execution | | `scriptPath` | `string` | Path to the persisted workflow script for this run. Edit it and pass back as `scriptPath` to rerun without resending the script | | `sessionUrl` | `string` | Cloud session URL, set when `status` is `\"remote_launched\"` | | `warning` | `string` | Non-blocking heads-up, such as local git state diverging from the pushed branch a cloud session will clone | | `error` | `string` | Set when the script fails its syntax check. When present, the run did not start despite the launched status | ### TodoWrite **Tool name:** `TodoWrite` ```typescript theme={null} type TodoWriteOutput = { oldTodos: Array<{ content: string; status: \"pending\" | \"in_progress\" | \"completed\"; activeForm: string; }>; newTodos: Array<{ content: string; status: \"pending\" | \"in_progress\" | \"completed\"; activeForm: string; }>; }; ``` Returns the previous and updated task lists. <Note> On TypeScript Agent SDK 0.3.233 and later, the following tools aren't available on Opus 4.8, Sonnet 5, Fable 5, Mythos 5, or later versions of those families unless you opt in: * `TodoWrite` * `TaskCreate` * `TaskGet` * `TaskUpdate` * `TaskList` On other models, Claude Code provides the Task tools by default and `TodoWrite` only when you set `CLAUDE_CODE_ENABLE_TASKS=0`. See [Model availability](/docs/en/agent-sdk/todo-tracking#model-availability) to opt in and [Migrate to Task tools](/docs/en/agent-sdk/todo-tracking#migrate-to-task-tools) to update your monitoring code. </Note> ### TaskCreate **Tool name:** `TaskCreate` ```typescript theme={null} type TaskCreateOutput = { task: { id: string; subject: string; }; }; ``` Returns the created task with its assigned ID. ### TaskUpdate **Tool name:** `TaskUpdate` ```typescript theme={null} type TaskUpdateOutput = { success: boolean; taskId: string; updatedFields: string[]; error?: string; statusChange?: { from: string; to: string; }; }; ``` Returns the update result, including which fields changed. ### TaskGet **Tool name:** `TaskGet` ```typescript theme={null} type TaskGetOutput = { task: { id: string; subject: string; description: string; status: \"pending\" | \"in_progress\" | \"completed\"; blocks: string[]; blockedBy: string[]; } | null; }; ``` Returns the full task record, or `null` when the ID is not found. ### TaskList **Tool name:** `TaskList` ```typescript theme={null} type TaskListOutput = { tasks: Array<{ id: string; subject: string; status: \"pending\" | \"in_progress\" | \"completed\"; owner?: string; blockedBy: string[]; }>; }; ``` Returns a snapshot of all tasks in the current list. ### ExitPlanMode **Tool name:** `ExitPlanMode` ```typescript theme={null} type ExitPlanModeOutput = { plan: string | null; isAgent: boolean; filePath?: string; hasTaskTool?: boolean; planWasEdited?: boolean; awaitingLeaderApproval?: boolean; requestId?: string; }; ``` Returns the plan state after exiting plan mode. ### ListMcpResources **Tool name:** `ListMcpResourcesTool` ```typescript theme={null} type ListMcpResourcesOutput = Array<{ uri: string; name: string; mimeType?: string; description?: string; server: string; }>; ``` Returns an array of available MCP resources. ### ReadMcpResource **Tool name:** `ReadMcpResourceTool` ```typescript theme={null} type ReadMcpResourceOutput = { contents: Array<{ uri: string; mimeType?: string; text?: string; blobSavedTo?: string; }>; error?: string; }; ``` Returns the contents of the requested MCP resource. ### EnterWorktree **Tool name:** `EnterWorktree` ```typescript theme={null} type EnterWorktreeOutput = { worktreePath: string; worktreeBranch?: string; message: string; }; ``` Returns information about the git worktree. ### ExitWorktree **Tool name:** `ExitWorktree` ```typescript theme={null} type ExitWorktreeOutput = { action: \"keep\" | \"remove\"; originalCwd: string; worktreePath: string; worktreeBranch?: string; tmuxSessionName?: string; discardedFiles?: number; discardedCommits?: number; message: string; }; ``` Returns the action taken and details about the worktree that was exited. ### EnterPlanMode **Tool name:** `EnterPlanMode` ```typescript theme={null} type EnterPlanModeOutput = { message: string; }; ``` Returns a confirmation that plan mode was entered. ### CronCreate **Tool name:** `CronCreate` ```typescript theme={null} type CronCreateOutput = { id: string; humanSchedule: string; recurring: boolean; durable?: boolean; // true when persisted to .claude/scheduled_tasks.json; false when session-only }; ``` Returns the job ID and a human-readable description of the schedule. ### CronDelete **Tool name:** `CronDelete` ```typescript theme={null} type CronDeleteOutput = { id: string; }; ``` Returns the ID of the deleted job. ### CronList **Tool name:** `CronList` ```typescript theme={null} type CronListOutput = { jobs: { id: string; cron: string; humanSchedule: string; prompt: string; recurring?: boolean; durable?: boolean; }[]; }; ``` Returns the scheduled cron jobs: durable jobs from `.claude/scheduled_tasks.json` and session-only jobs from the current session. A session-only job carries `durable: false`; jobs read from disk omit the field. ### ScheduleWakeup **Tool name:** `ScheduleWakeup` ```typescript theme={null} type ScheduleWakeupOutput = { scheduledFor: number; clampedDelaySeconds: number; wasClamped: boolean; stopped?: boolean; cancelledWakeups?: number; }; ``` Returns when the wake-up will fire as an epoch millisecond timestamp, the delay actually used, and whether the requested delay was clamped. The `stopped` field is `true` when the call ended the loop with `stop: true`. It requires Claude Code v2.1.202 or later. The `cancelledWakeups` field counts how many pending wakeups a `stop: true` call cancelled. A value of 0 means nothing was pending, and a recurring `/loop` cron isn't cancelled by `stop: true`. It requires Claude Code v2.1.206 or later. ### RemoteTrigger **Tool name:** `RemoteTrigger` ```typescript theme={null} type RemoteTriggerOutput = { status: number; json: string; summary?: string; }; ``` Returns the API response status and body for the trigger operation. ### PushNotification **Tool name:** `PushNotification` ```typescript theme={null} type PushNotificationOutput = { message: string; pushSent?: boolean; localSent?: boolean; disabledReason?: \"config_off\" | \"user_present\" | \"no_transport\"; sentAt?: string; }; ``` Returns delivery details, including whether a push or local notification was sent and why delivery was skipped. ### REPL **Tool name:** `REPL` ```typescript theme={null} type REPLOutput = { code: string; result: { [k: string]: unknown; }; stdout: string; stderr: string; error?: string; registeredTools?: string[]; images?: { base64: string; mediaType: string; }[]; documents?: { base64: string; }[]; }; ``` Returns the execution result, captured console output, and any images or documents surfaced by inner `Read` calls. ### ReportFindings **Tool name:** `ReportFindings` ```typescript theme={null} type ReportFindingsOutput = { count: number; level?: \"low\" | \"medium\" | \"high\" | \"xhigh\" | \"max\"; findings: Array<{ file: string; line?: number; summary: string; failure_scenario: string; short_summary?: string; category?: string; verdict?: \"CONFIRMED\" | \"PLAUSIBLE\"; outcome?: \"fixed\" | \"skipped\" | \"no_change_needed\"; }>; }; ``` Returns the number of findings reported, the effort level the review ran at, and the findings echoed back for the result body. Requires Claude Code v2.1.196 or later. The echoed `short_summary` field requires Claude Code v2.1.212 or later. ### Artifact **Tool name:** `Artifact` ```typescript theme={null} type ArtifactOutput = | { url: string; path: string; title?: string; version?: string; capabilities?: unknown; stored?: { contract: string; capabilities?: Record<string, unknown>; }; warnings?: string[]; contract?: string; updated?: boolean; liveSubscription?: string; } | { artifacts: Array<{ title: string; url: string; updatedAt?: string; rel?: \"mine\" | \"shared\"; }>; truncated?: boolean; scope?: \"shared\" | \"all\"; }; ``` Returns the published page's `url` and the local `path` that was published for the publish action, with `updated` set to true when the publish redeployed an existing artifact, and `warnings` carrying any publish-time advisories. The list action returns the `artifacts` rows instead, with `truncated` set when more artifacts exist than the requested limit. On listings whose scope isn't `\"mine\"`, each row carries `rel` marking whether the user owns the artifact or it was shared with them, and the output's `scope` records which non-default scope produced the listing; both are absent on default listings. ### Projects **Tool name:** `Projects` ```typescript theme={null} type ProjectsOutput = | { method: \"project_info\"; notice?: string; name: string; description: string; instructions: string; docs: Array<{ path: string; created_at: string | null }>; files?: Array<{ path: string; file_kind: string; created_at: string | null; }>; sync_sources?: Array<{ type: string | null; config: Record<string, unknown>; }>; knowledge: { knowledge_size: number; max_knowledge_size: number; }; } | { method: \"project_read\"; notice?: string; path: string; file_kind?: string; content?: string; local_file?: string; created_at: string | null; } | { method: \"project_search\"; notice?: string; rag: boolean; hits?: Array<{ name?: string; doc_uuid?: string; text?: string }>; docs?: string[]; } | { method: \"project_write\"; notice?: string; path: string; doc_uuid: string; replaced: boolean; present_to_user?: boolean; local_path?: string; } | { method: \"project_delete\"; notice?: string; path: string; deleted: boolean; }; ``` Discriminated on the `method` field, mirroring the input. `project_read` returns small text docs inline in `content` and writes larger docs to a `local_file` path instead; `project_search` returns RAG `hits` with `rag: true` when the project's index is available and falls back to a `docs` path list otherwise. ### ReadMcpResourceDir **Tool name:** `ReadMcpResourceDirTool` ```typescript theme={null} type ReadMcpResourceDirOutput = { resources: Array<{ uri: string; name: string; mimeType?: string; }>; error?: string; }; ``` Returns the direct children of the directory resource. Subdirectories appear with mimeType `\"inode/directory\"`; `error` carries a human-readable message when the server couldn't list the directory. ### RefreshMcpTools **Tool name:** `RefreshMcpTools` ```typescript theme={null} type RefreshMcpToolsOutput = Array<{ server: string; status: \"refreshed\" | \"error\" | \"not_connected\"; toolCount?: number; // tools now available from this server added?: string[]; // tool names this refresh added removed?: string[]; // tool names this refresh removed error?: string; // why the refresh failed or the server was unavailable }>; ``` Returns one entry per server: `refreshed` means the re-queried tool list was applied, `error` means the re-query failed and the previous tool set was kept, and `not_connected` means the server has no live connection to query. ### ShowOnboardingRolePicker **Tool name:** `ShowOnboardingRolePicker` ```typescript theme={null} type ShowOnboardingRolePickerOutput = { role?: string; dismissed?: boolean; }; ``` Returns the user's selection: `role` when they picked a role chip or typed one, and `dismissed: true` when they closed the picker. An empty object means the user approved the call without picking a role. ### McpOutput **Tool name:** dynamic MCP tool names of the form `mcp__<server>__<tool>` ```typescript theme={null} type McpOutput = | string | { type: string; [k: string]: unknown; }[] | { [k: string]: unknown; }; ``` MCP tool results are returned as a string or an array of content blocks, depending on the server. The trailing plain-object branch in the exported type is a schema-generation artifact: the SDK doesn't return a bare object, because a server's structured output is serialized to a JSON string before being returned. At runtime the value may also be `undefined`, although the exported type doesn't model this. ## Permission Types ### `PermissionUpdate` Operations for updating permissions. ```typescript theme={null} type PermissionUpdate = | { type: \"addRules\"; rules: PermissionRuleValue[]; behavior: PermissionBehavior; destination: PermissionUpdateDestination; } | { type: \"replaceRules\"; rules: PermissionRuleValue[]; behavior: PermissionBehavior; destination: PermissionUpdateDestination; } | { type: \"removeRules\"; rules: PermissionRuleValue[]; behavior: PermissionBehavior; destination: PermissionUpdateDestination; } | { type: \"setMode\"; mode: PermissionMode; destination: PermissionUpdateDestination; } | { type: \"addDirectories\"; directories: string[]; destination: PermissionUpdateDestination; } | { type: \"removeDirectories\"; directories: string[]; destination: PermissionUpdateDestination; }; ``` ### `PermissionBehavior` ```typescript theme={null} type PermissionBehavior = \"allow\" | \"deny\" | \"ask\"; ``` ### `PermissionUpdateDestination` ```typescript theme={null} type PermissionUpdateDestination = | \"userSettings\" // Global user settings | \"projectSettings\" // Per-directory project settings | \"localSettings\" // Local project settings | \"session\" // Current session only | \"cliArg\"; // CLI argument ``` ### `PermissionRuleValue` ```typescript theme={null} type PermissionRuleValue = { toolName: string; ruleContent?: string; }; ``` ## Other Types ### `ApiKeySource` ```typescript theme={null} type ApiKeySource = \"user\" | \"project\" | \"org\" | \"temporary\" | \"oauth\"; ``` <Note> At runtime, the `apiKeySource` field on the [`SDKSystemMessage`](#sdksystemmessage) init message can also be the string `\"none\"` when no API key is in use, for example when the session authenticates with an OAuth token. Handle values outside this union defensively. </Note> ### `SdkBeta` Available beta features that can be enabled via the `betas` option. See [Beta headers](https://platform.claude.com/docs/en/api/beta-headers) for more information. ```typescript theme={null} type SdkBeta = \"context-1m-2025-08-07\"; ``` <Warning> The `context-1m-2025-08-07` beta is retired as of April 30, 2026. Passing this value with Claude Sonnet 4.5 or Sonnet 4 has no effect, and requests that exceed the standard 200k-token context window return an error. To use a 1M-token context window, migrate to [Claude Opus 5, Claude Sonnet 5, Claude Sonnet 4.6, Claude Opus 4.6, Claude Opus 4.7, or Claude Opus 4.8](https://platform.claude.com/docs/en/about-claude/models/overview), which include 1M context at standard pricing with no beta header required. </Warning> ### `SlashCommand` Information about an available slash command. ```typescript theme={null} type SlashCommand = { name: string; description: string; argumentHint: string; aliases?: string[]; }; ``` ### `ModelInfo` Information about an available model. ```typescript theme={null} type ModelInfo = { value: string; resolvedModel?: string; displayName: string; description: string; supportsEffort?: boolean; supportedEffortLevels?: (\"low\" | \"medium\" | \"high\" | \"xhigh\" | \"max\")[]; supportsAdaptiveThinking?: boolean; supportsFastMode?: boolean; supportsAutoMode?: boolean; }; ``` | Field | Type | Description | | :------------------------- | :----------------------------------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | | `value` | `string` | Model identifier to pass in API calls | | `resolvedModel` | `string \\| undefined` | Canonical wire model ID that this entry's `value` resolves to. An alias entry such as `sonnet` resolves to an explicit model ID such as `claude-sonnet-5`, so a host can match a stored explicit model ID against the alias entry that covers it. Requires Claude Code v2.1.197 or later. | | `displayName` | `string` | Human-readable display name | | `description` | `string` | Description of the model's capabilities | | `supportsEffort` | `boolean \\| undefined` | Whether this model supports effort levels | | `supportedEffortLevels` | `(\"low\" \\| \"medium\" \\| \"high\" \\| \"xhigh\" \\| \"max\")[] \\| undefined` | Effort levels this model accepts | | `supportsAdaptiveThinking` | `boolean \\| undefined` | Whether this model supports adaptive thinking, where Claude decides when and how much to think | | `supportsFastMode` | `boolean \\| undefined` | Whether this model supports fast mode | | `supportsAutoMode` | `boolean \\| undefined` | Whether this model supports auto mode | ### `AgentInfo` Information about an available subagent that can be invoked via the Agent tool. ```typescript theme={null} type AgentInfo = { name: string; description: string; model?: string; }; ``` | Field | Type | Description | | :------------ | :-------------------- | :------------------------------------------------------------------- | | `name` | `string` | Agent type identifier (e.g., `\"Explore\"`, `\"general-purpose\"`) | | `description` | `string` | Description of when to use this agent | | `model` | `string \\| undefined` | Model alias this agent uses. If omitted, inherits the parent's model | ### `McpServerStatus` Status of a connected MCP server. ```typescript theme={null} type McpServerStatus = { name: string; status: \"connected\" | \"failed\" | \"needs-auth\" | \"pending\" | \"disabled\"; serverInfo?: { name: string; version: string; }; error?: string; config?: McpServerStatusConfig; scope?: string; tools?: { name: string; description?: string; annotations?: { readOnly?: boolean; destructive?: boolean; openWorld?: boolean; }; }[]; }; ``` ### `McpServerStatusConfig` The configuration of an MCP server as reported by `mcpServerStatus()`. This is the union of all MCP server transport types. ```typescript theme={null} type McpServerStatusConfig = | McpStdioServerConfig | McpSSEServerConfig | McpHttpServerConfig | McpSdkServerConfig | McpClaudeAIProxyServerConfig; ``` See [`McpServerConfig`](#mcpserverconfig) for details on each transport type. ### `AccountInfo` Account information for the authenticated user. ```typescript theme={null} type AccountInfo = { email?: string; organization?: string; subscriptionType?: string; tokenSource?: string; apiKeySource?: string; }; ``` ### `ModelUsage` Per-model usage statistics returned in result messages. The `costUSD` value is a client-side estimate. See [Track cost and usage](/docs/en/agent-sdk/cost-tracking) for billing caveats. ```typescript theme={null} type ModelUsage = { inputTokens: number; outputTokens: number; cacheReadInputTokens: number; cacheCreationInputTokens: number; webSearchRequests: number; costUSD: number; contextWindow: number; maxOutputTokens: number; canonicalModel?: string; provider?: string; }; ``` The `canonicalModel` and `provider` fields require Claude Code v2.1.218 or later. `canonicalModel` is the canonical model ID that the pricing lookup uses; it can differ from the raw model string that keys the entry, for example when that string is a provider-specific ID or an alias. `provider` names the API backend that served the model, such as `firstParty`, `bedrock`, `vertex`, `foundry`, `anthropicAws`, `mantle`, or `gateway`. ### `ConfigScope` ```typescript theme={null} type ConfigScope = \"local\" | \"user\" | \"project\"; ``` ### `NonNullableUsage` A version of [`Usage`](#usage) with all nullable fields made non-nullable. ```typescript theme={null} type NonNullableUsage = { [K in keyof Usage]: NonNullable<Usage[K]>; }; ``` ### `Usage` Token usage statistics. This is the `BetaUsage` type from `@anthropic-ai/sdk`. ```typescript theme={null} type Usage = { input_tokens: number; output_tokens: number; cache_creation_input_tokens: number | null; cache_read_input_tokens: number | null; cache_creation: { ephemeral_5m_input_tokens: number; ephemeral_1h_input_tokens: number; } | null; server_tool_use: BetaServerToolUsage | null; service_tier: \"standard\" | \"priority\" | \"batch\" | null; speed: \"standard\" | \"fast\" | null; inference_geo: string | null; iterations: BetaIterationsUsage | null; }; ``` `BetaServerToolUsage` and `BetaIterationsUsage` are defined in `@anthropic-ai/sdk`. ### `CallToolResult` MCP tool result type (from `@modelcontextprotocol/sdk/types.js`). `structuredContent` is a JSON object that can be returned alongside `content`, including image blocks. See [Return structured data](/docs/en/agent-sdk/custom-tools#return-structured-data). ```typescript theme={null} type CallToolResult = { content: Array<{ type: \"text\" | \"image\" | \"audio\" | \"resource\" | \"resource_link\"; // Additional fields vary by type }>; structuredContent?: Record<string, unknown>; isError?: boolean; }; ``` ### `ThinkingConfig` Controls Claude's thinking/reasoning behavior. Takes precedence over the deprecated `maxThinkingTokens`. ```typescript theme={null} type ThinkingDisplay = \"summarized\" | \"omitted\"; type ThinkingConfig = | { type: \"adaptive\"; display?: ThinkingDisplay } // The model determines when and how much to reason (Opus 4.6+) | { type: \"enabled\"; budgetTokens?: number; display?: ThinkingDisplay } // Fixed thinking token budget | { type: \"disabled\" }; // No extended thinking ``` The optional `display` field controls whether thinking text is returned `\"summarized\"` or `\"omitted\"`. On Claude Opus 4.7 and later, the API default is `\"omitted\"`, so set `\"summarized\"` to receive thinking content in `thinking` blocks. Claude Code doesn't send `display` to Amazon Bedrock or Google Cloud's Agent Platform, so on those providers Opus 4.7 and later return empty `thinking` blocks even when you set `display` to `\"summarized\"`. ### `SpawnedProcess` Interface for custom process spawning (used with `spawnClaudeCodeProcess` option). `ChildProcess` already satisfies this interface. ```typescript theme={null} interface SpawnedProcess { stdin: Writable; stdout: Readable; readonly killed: boolean; readonly exitCode: number | null; kill(signal: NodeJS.Signals): boolean; on( event: \"exit\", listener: (code: number | null, signal: NodeJS.Signals | null) => void ): void; on(event: \"error\", listener: (error: Error) => void): void; once( event: \"exit\", listener: (code: number | null, signal: NodeJS.Signals | null) => void ): void; once(event: \"error\", listener: (error: Error) => void): void; off( event: \"exit\", listener: (code: number | null, signal: NodeJS.Signals | null) => void ): void; off(event: \"error\", listener: (error: Error) => void): void; } ``` ### `SpawnOptions` Options passed to the custom spawn function. ```typescript theme={null} interface SpawnOptions { command: string; args: string[]; cwd?: string; env: Record<string, string | undefined>; signal: AbortSignal; } ``` <Note> The `signal` field tells your spawn function when to tear down the process. Pass it as the `signal` option to Node's `spawn()`, or pass it to your VM or container teardown handler. This signal does not fire the instant [`Options.abortController`](#options) aborts. The SDK first closes the process's stdin and waits about two seconds so the CLI can shut down cleanly, then aborts this signal. To react the moment the caller aborts instead, listen on your own `Options.abortController.signal`, which your spawn function can reference from its enclosing scope. </Note> ### `McpSetServersResult` Result of a `setMcpServers()` operation. ```typescript theme={null} type McpSetServersResult = { added: string[]; removed: string[]; errors: Record<string, string>; }; ``` ### `RewindFilesResult` Result of a `rewindFiles()` operation. ```typescript theme={null} type RewindFilesResult = { canRewind: boolean; error?: string; filesChanged?: string[]; insertions?: number; deletions?: number; skippedLinks?: number; }; ``` `skippedLinks` counts the tracked paths the rewind refused to restore or delete for link safety: a symlink, hard link, or other non-regular file at the tracked path, a parent directory that no longer resolves to where it pointed when the checkpoint was taken, or a backup that couldn't be read safely. The field requires Claude Code v2.1.216 or later. A preview call with `rewindFiles(userMessageId, { dryRun: true })` never sets it. ### `SDKStatusMessage` Status update message (e.g., compacting). ```typescript theme={null} type SDKStatusMessage = { type: \"system\"; subtype: \"status\"; status: \"compacting\" | null; permissionMode?: PermissionMode; uuid: UUID; session_id: string; }; ``` ### `SDKTaskNotificationMessage` Notification when a background task completes, fails, or is stopped. Background tasks include `run_in_background` Bash commands, [Monitor](#monitor) watches, and background subagents. ```typescript theme={null} type SDKTaskNotificationMessage = { type: \"system\"; subtype: \"task_notification\"; task_id: string; tool_use_id?: string; status: \"completed\" | \"failed\" | \"stopped\"; output_file: string; summary: string; usage?: { total_tokens: number; tool_uses: number; duration_ms: number; }; uuid: UUID; session_id: string; }; ``` Claude Code prepends a notice to every task notification it sends to the model, except deliveries stamped with the [`scheduled-trigger` subkind](#task-notification-subkinds), which carry an assigned-task framing instead. The notice states that no human input has occurred, so the model doesn't treat the notification as a user instruction or approval. To detect a task-notification turn, check `origin.kind === \"task-notification\"` on the [`SDKUserMessage`](#sdkusermessage) or [`SDKResultMessage`](#sdkresultmessage) rather than matching on the notice text. Read `subkind` from the same field if you need to know what raised it. Before v2.1.205, Claude Code left the notice off notifications that arrived while the session was idle. ### `SDKToolUseSummaryMessage` Summary of tool usage in a conversation. ```typescript theme={null} type SDKToolUseSummaryMessage = { type: \"tool_use_summary\"; summary: string; preceding_tool_use_ids: string[]; uuid: UUID; session_id: string; }; ``` ### `SDKHookStartedMessage` Emitted when a hook begins executing. Claude Code delivers this message, [`SDKHookProgressMessage`](#sdkhookprogressmessage), and [`SDKHookResponseMessage`](#sdkhookresponsemessage) to the message stream immediately, including while a `SessionStart` or `Setup` hook is still running during session startup. Claude Code v2.1.169 through v2.1.203 delivered these messages in one batch after a `SessionStart` or `Setup` hook completed; v2.1.204 restored live delivery. ```typescript theme={null} type SDKHookStartedMessage = { type: \"system\"; subtype: \"hook_started\"; hook_id: string; hook_name: string; hook_event: string; uuid: UUID; session_id: string; }; ``` ### `SDKHookProgressMessage` Emitted while a hook is running, with stdout/stderr output. ```typescript theme={null} type SDKHookProgressMessage = { type: \"system\"; subtype: \"hook_progress\"; hook_id: string; hook_name: string; hook_event: string; stdout: string; stderr: string; output: string; uuid: UUID; session_id: string; }; ``` ### `SDKHookResponseMessage` Emitted when a hook finishes executing. ```typescript theme={null} type SDKHookResponseMessage = { type: \"system\"; subtype: \"hook_response\"; hook_id: string; hook_name: string; hook_event: string; output: string; stdout: string; stderr: string; exit_code?: number; outcome: \"success\" | \"error\" | \"cancelled\"; uuid: UUID; session_id: string; }; ``` ### `SDKToolProgressMessage` Emitted periodically while a tool is executing to indicate progress. ```typescript theme={null} type SDKToolProgressMessage = { type: \"tool_progress\"; tool_use_id: string; tool_name: string; parent_tool_use_id: string | null; elapsed_time_seconds: number; task_id?: string; heartbeat?: boolean; subagent_type?: string; subagent_retry?: { agent_id: string; attempt: number; max_retries: number; retry_delay_ms: number; error_status: number | null; error_category: string; }; uuid: UUID; session_id: string; }; ``` While a tool call runs in the main conversation, Claude Code emits a `tool_progress` message every 30 seconds with `heartbeat: true`. Each heartbeat carries the tool name and elapsed seconds, so you can distinguish a long-running call from a stalled session. Claude Code doesn't emit heartbeats for the Agent tool, whose subagents stream their own progress, or for tool calls inside a subagent. The `heartbeat` field requires Agent SDK v0.3.214 or later. On `tool_progress` messages for the Agent tool, `subagent_type` names the running subagent type, such as `general-purpose`. `subagent_retry` is present while that subagent waits out an API error backoff, such as a rate limit or overload, with one message per retry attempt. Both fields require Agent SDK v0.3.214 or later. To render a retry indicator from `subagent_retry`: * Track the indicator by `parent_tool_use_id`, which is unique per subagent. `tool_use_id` is shared by parallel subagents from one assistant turn, so tracking by it would let one subagent's update clear another's indicator. * Clear the indicator when a later `tool_progress` for the same `parent_tool_use_id` arrives without the field, or when the tool's result message arrives. `attempt` can exceed `max_retries` under persistent retry, so don't derive clearing from the counters. * Treat `error_category` as a closed set of tokens for choosing your own message text, not as display text: `rate_limit`, `overloaded`, `authentication_failed`, `server_error`, or `unknown`. ### `SDKAuthStatusMessage` Emitted during authentication flows. ```typescript theme={null} type SDKAuthStatusMessage = { type: \"auth_status\"; isAuthenticating: boolean; output: string[]; error?: string; uuid: UUID; session_id: string; }; ``` ### `SDKTaskStartedMessage` Emitted when a background task begins. The `task_type` field is `\"local_bash\"` for background Bash commands and [Monitor](#monitor) watches, `\"local_agent\"` for subagents, or `\"remote_agent\"`. ```typescript theme={null} type SDKTaskStartedMessage = { type: \"system\"; subtype: \"task_started\"; task_id: string; tool_use_id?: string; description: string; task_type?: string; uuid: UUID; session_id: string; }; ``` ### `SDKTaskProgressMessage` Emitted periodically while a subagent or background task is running. The `summary` field is populated only when [`agentProgressSummaries`](#options) is enabled. ```typescript theme={null} type SDKTaskProgressMessage = { type: \"system\"; subtype: \"task_progress\"; task_id: string; tool_use_id?: string; description: string; subagent_type?: string; usage: { total_tokens: number; tool_uses: number; duration_ms: number; }; last_tool_name?: string; summary?: string; uuid: UUID; session_id: string; }; ``` ### `SDKTaskUpdatedMessage` Emitted when a background task's state changes, such as when it transitions from `running` to `completed`. Merge `patch` into your local task map keyed by `task_id`. The `end_time` field is a Unix epoch timestamp in milliseconds, comparable with `Date.now()`. ```typescript theme={null} type SDKTaskUpdatedMessage = { type: \"system\"; subtype: \"task_updated\"; task_id: string; patch: { status?: \"pending\" | \"running\" | \"completed\" | \"failed\" | \"killed\"; description?: string; end_time?: number; total_paused_ms?: number; error?: string; is_backgrounded?: boolean; }; uuid: UUID; session_id: string; }; ``` ### `SDKBackgroundTasksChangedMessage` Emitted whenever the set of live background tasks changes: a task starts, completes, is killed, or a foreground agent is backgrounded. The `tasks` array is the full live set. Replace any cached set with each payload instead of pairing `task_started` and `task_notification` events, so the next membership change corrects any event you missed. Ordering relative to those per-task events is unspecified, so don't correlate the two streams. Nothing is emitted at startup. Reset to an empty set whenever the session's CLI process starts or restarts and let the next membership change repopulate it. Requires Claude Code v2.1.203 or later. ```typescript theme={null} type SDKBackgroundTasksChangedMessage = { type: \"system\"; subtype: \"background_tasks_changed\"; tasks: { task_id: string; task_type: string; description: string; }[]; uuid: UUID; session_id: string; }; ``` ### `SDKThinkingTokensMessage` Emitted while Claude is producing a thinking block, including a redacted one, carrying a running estimate of the thinking tokens generated so far. `estimated_tokens` is the running total for the current thinking block and `estimated_tokens_delta` is the increment carried by this frame. Use it for progress display. The final count for the top-level agent loop is the result message's `usage.output_tokens`, which [doesn't include subagent tokens](/docs/en/agent-sdk/cost-tracking#get-the-total-cost-of-a-query); use [`modelUsage`](#modelusage) for whole-tree accounting. Requires Claude Code v2.1.153 or later. ```typescript theme={null} type SDKThinkingTokensMessage = { type: \"system\"; subtype: \"thinking_tokens\"; estimated_tokens: number; estimated_tokens_delta: number; uuid: UUID; session_id: string; }; ``` ### `SDKFilesPersistedEvent` Emitted when file checkpoints are persisted to disk. ```typescript theme={null} type SDKFilesPersistedEvent = { type: \"system\"; subtype: \"files_persisted\"; files: { filename: string; file_id: string }[]; failed: { filename: string; error: string }[]; processed_at: string; uuid: UUID; session_id: string; }; ``` ### `SDKRateLimitEvent` Emitted when the session encounters a rate limit. ```typescript theme={null} type SDKRateLimitEvent = { type: \"rate_limit_event\"; rate_limit_info: { status: \"allowed\" | \"allowed_warning\" | \"rejected\"; resetsAt?: number; utilization?: number; errorCode?: \"credits_required\"; canUserPurchaseCredits?: boolean; hasChargeableSavedPaymentMethod?: boolean; }; uuid: UUID; session_id: string; }; ``` When `errorCode` is `\"credits_required\"`, the rejection is from a claude.ai subscription whose included usage is exhausted, and the session cannot continue until the user buys usage credits. `canUserPurchaseCredits` indicates whether the authenticated user can buy credits for the account, and `hasChargeableSavedPaymentMethod` indicates whether a saved payment method is on file. All three fields are absent on rate-limit events that are not credits-required rejections. Requires Claude Code v2.1.181 or later. ### `SDKLocalCommandOutputMessage` Output from a local command such as `/voice` or `/usage`. Displayed as assistant-style text in the transcript. ```typescript theme={null} type SDKLocalCommandOutputMessage = { type: \"system\"; subtype: \"local_command_output\"; content: string; uuid: UUID; session_id: string; }; ``` ### `SDKCommandsChangedMessage` Emitted when the set of available commands changes mid-session, such as when Claude Code discovers skills as the agent enters a subdirectory. The `commands` array is the full updated list, so replace any cached command list with this payload. Calling [`supportedCommands()`](#query-object) after this message returns the same updated list, because the method tracks the latest push; this requires Agent SDK v0.3.216 or later. In earlier SDK versions, `supportedCommands()` returns the snapshot captured at initialization and never reflects mid-session changes. ```typescript theme={null} type SDKCommandsChangedMessage = { type: \"system\"; subtype: \"commands_changed\"; commands: SlashCommand[]; uuid: UUID; session_id: string; }; ``` ### `SDKPromptSuggestionMessage` Emitted after each turn when `promptSuggestions` is enabled. Contains a predicted next user prompt. ```typescript theme={null} type SDKPromptSuggestionMessage = { type: \"prompt_suggestion\"; suggestion: string; uuid: UUID; session_id: string; }; ``` ### `SDKConversationResetMessage` Emitted when the session's conversation is replaced without ending the session. In a `query()` call, only `/clear` and its aliases produce this message. Mount an empty transcript under `new_conversation_id` and discard any cached session title. ```typescript theme={null} type SDKConversationResetMessage = { type: \"conversation_reset\"; new_conversation_id: UUID; uuid: UUID; session_id: string; }; ``` The SDK's published typings declare `SDKConversationResetMessage` in Claude Code v2.1.203 and later. Before v2.1.203, `SDKMessage` referenced the type without declaring it, so narrowing on `type === \"conversation_reset\"` failed to typecheck when `skipLibCheck` was disabled. ### `AbortError` Custom error class for abort operations. ```typescript theme={null} class AbortError extends Error {} ``` ## Sandbox Configuration ### `SandboxSettings` Configuration for sandbox behavior. Use this to enable command sandboxing and configure network restrictions programmatically. ```typescript theme={null} type SandboxSettings = { enabled?: boolean; failIfUnavailable?: boolean; autoAllowBashIfSandboxed?: boolean; excludedCommands?: string[]; allowUnsandboxedCommands?: boolean; network?: SandboxNetworkConfig; filesystem?: SandboxFilesystemConfig; ignoreViolations?: Record<string, string[]>; enableWeakerNestedSandbox?: boolean; ripgrep?: { command: string; args?: string[] }; }; ``` | Property | Type | Default | Description | | :-------------------------- | :---------------------------------------------------- | :---------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | | `enabled` | `boolean` | `false` | Enable sandbox mode for command execution | | `failIfUnavailable` | `boolean` | `true` | Stop at startup if `enabled` is `true` but the sandbox can't start. Set `false` to fall back to unsandboxed execution with a warning on stderr | | `autoAllowBashIfSandboxed` | `boolean` | `true` | Auto-approve bash commands when sandbox is enabled | | `excludedCommands` | `string[]` | `[]` | Commands that always bypass sandbox restrictions (e.g., `['docker']`). These run unsandboxed automatically without model involvement | | `allowUnsandboxedCommands` | `boolean` | `true` | Allow the model to request running commands outside the sandbox. When `true`, the model can set `dangerouslyDisableSandbox` in tool input, which falls back to the [permissions system](#permissions-fallback-for-unsandboxed-commands) | | `network` | [`SandboxNetworkConfig`](#sandboxnetworkconfig) | `undefined` | Network-specific sandbox configuration | | `filesystem` | [`SandboxFilesystemConfig`](#sandboxfilesystemconfig) | `undefined` | Filesystem-specific sandbox configuration for read/write restrictions | | `ignoreViolations` | `Record<string, string[]>` | `undefined` | Map of violation categories to patterns to ignore (e.g., `{ file: ['/tmp/*'], network: ['localhost'] }`) | | `enableWeakerNestedSandbox` | `boolean` | `false` | Enable a weaker nested sandbox for compatibility | | `ripgrep` | `{ command: string; args?: string[] }` | `undefined` | Custom ripgrep binary configuration for sandbox environments | <Note> The sandbox depends on platform support and, on Linux, tools like `bubblewrap` and `socat`. When `enabled` is `true` and the sandbox can't start, `query()` reports a `result` message with `subtype: \"error_during_execution\"` and the reason in `errors`. For a single message `query()` call, the SDK throws after yielding that error result, so wrap the loop in a try block to continue past it. See [Handle the result](/docs/en/agent-sdk/agent-loop#handle-the-result) for the error contract. To run unsandboxed instead, set `failIfUnavailable: false`. </Note> #### Example usage ```typescript theme={null} import { query } from \"@anthropic-ai/claude-agent-sdk\"; try { for await (const message of query({ prompt: \"Build and test my project\", options: { sandbox: { enabled: true, autoAllowBashIfSandboxed: true, network: { allowLocalBinding: true } } } })) { if (\"result\" in message) console.log(message.result); } } catch (error) { // A single-shot query() throws after yielding an error result, // such as when the sandbox can't start (failIfUnavailable defaults to true). console.log(`Session ended with an error: ${error}`); } ``` <Warning> **Unix socket security:** The `allowUnixSockets` option can grant access to powerful system services. For example, allowing `/var/run/docker.sock` effectively grants full host system access through the Docker API, bypassing sandbox isolation. Only allow Unix sockets that are strictly necessary and understand the security implications of each. </Warning> ### `SandboxNetworkConfig` Network-specific configuration for sandbox mode. These settings apply to sandboxed Bash commands when `enabled` is `true` in the parent [`SandboxSettings`](#sandboxsettings). They do not restrict the WebFetch tool, which uses [permission rules](/docs/en/permissions#webfetch) instead. ```typescript theme={null} type SandboxNetworkConfig = { allowedDomains?: string[]; deniedDomains?: string[]; strictAllowlist?: boolean; allowManagedDomainsOnly?: boolean; allowLocalBinding?: boolean; allowUnixSockets?: string[]; allowAllUnixSockets?: boolean; httpProxyPort?: number; socksProxyPort?: number; }; ``` | Property | Type | Default | Description | | :------------------------ | :--------- | :---------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | | `allowedDomains` | `string[]` | `[]` | Domain names that sandboxed processes can access | | `deniedDomains` | `string[]` | `[]` | Domain names that sandboxed processes cannot access. Takes precedence over `allowedDomains` | | `strictAllowlist` | `boolean` | `false` | Deny sandboxed commands access to hosts outside the [network allowlist](/docs/en/sandboxing#network-isolation) instead of prompting. Enforced for sandboxed commands only; in-process tools such as WebFetch aren't gated by it. Only honored from user, managed, or CLI `--settings` settings; project settings are ignored. Requires Claude Code v2.1.219 or later | | `allowManagedDomainsOnly` | `boolean` | `false` | Managed-settings only. When set in [managed settings](/docs/en/permissions#managed-settings), only `allowedDomains` entries and `WebFetch(domain:...)` allow rules from managed settings are honored, and allow entries from user, project, or local settings are ignored. Has no effect when set via SDK options | | `allowLocalBinding` | `boolean` | `false` | Allow processes to bind to local ports (e.g., for dev servers) | | `allowUnixSockets` | `string[]` | `[]` | Unix socket paths that processes can access (e.g., Docker socket) | | `allowAllUnixSockets` | `boolean` | `false` | Allow access to all Unix sockets | | `httpProxyPort` | `number` | `undefined` | HTTP proxy port for network requests | | `socksProxyPort` | `number` | `undefined` | SOCKS proxy port for network requests | <Note> The built-in sandbox proxy enforces `allowedDomains` based on the requested hostname and does not terminate or inspect TLS traffic, so techniques such as [domain fronting](https://en.wikipedia.org/wiki/Domain_fronting) can potentially bypass it. See [Sandboxing security limitations](/docs/en/sandboxing#security-limitations) for details and [Secure deployment](/docs/en/agent-sdk/secure-deployment#traffic-forwarding) for configuring a TLS-terminating proxy. </Note> ### `SandboxFilesystemConfig` Filesystem-specific configuration for sandbox mode. ```typescript theme={null} type SandboxFilesystemConfig = { allowWrite?: string[]; denyWrite?: string[]; denyRead?: string[]; }; ``` | Property | Type | Default | Description | | :----------- | :--------- | :------ | :------------------------------------------ | | `allowWrite` | `string[]` | `[]` | File path patterns to allow write access to | | `denyWrite` | `string[]` | `[]` | File path patterns to deny write access to | | `denyRead` | `string[]` | `[]` | File path patterns to deny read access to | ### Permissions Fallback for Unsandboxed Commands When `allowUnsandboxedCommands` is enabled, the model can request to run commands outside the sandbox by setting `dangerouslyDisableSandbox: true` in the tool input. These requests fall back to the existing permissions system, meaning your `canUseTool` handler is invoked, allowing you to implement custom authorization logic. In the example below, `isCommandAuthorized` stands in for an authorization check you define. <Note> **`excludedCommands` vs `allowUnsandboxedCommands`:** * `excludedCommands`: A static list of commands that always bypass the sandbox automatically (e.g., `['docker']`). The model has no control over this. * `allowUnsandboxedCommands`: Lets the model decide at runtime whether to request unsandboxed execution by setting `dangerouslyDisableSandbox: true` in the tool input. </Note> ```typescript theme={null} import { query } from \"@anthropic-ai/claude-agent-sdk\"; for await (const message of query({ prompt: \"Deploy my application\", options: { sandbox: { enabled: true, allowUnsandboxedCommands: true // Model can request unsandboxed execution }, permissionMode: \"default\", canUseTool: async (tool, input) => { // Check if the model is requesting to bypass the sandbox if (tool === \"Bash\" && input.dangerouslyDisableSandbox) { // The model is requesting to run this command outside the sandbox console.log(`Unsandboxed command requested: ${input.command}`); if (isCommandAuthorized(input.command)) { return { behavior: \"allow\" as const, updatedInput: input }; } return { behavior: \"deny\" as const, message: \"Command not authorized for unsandboxed execution\" }; } return { behavior: \"allow\" as const, updatedInput: input }; } } })) { if (\"result\" in message) console.log(message.result); } ``` <Warning> Commands running with `dangerouslyDisableSandbox: true` have full system access. Ensure your `canUseTool` handler validates these requests carefully. If `permissionMode` is set to `bypassPermissions` and `allowUnsandboxedCommands` is enabled, the model can autonomously execute commands outside the sandbox without approval prompts (an explicit [`ask` rule](/docs/en/agent-sdk/permissions#how-permissions-are-evaluated) still forces one). This combination effectively allows the model to escape sandbox isolation silently. </Warning> ## See also * [SDK overview](/docs/en/agent-sdk/overview) - General SDK concepts * [Python SDK reference](/docs/en/agent-sdk/python) - Python SDK documentation * [CLI reference](/docs/en/cli-reference) - Command-line interface * [Common workflows](/docs/en/common-workflows) - Step-by-step guides), how are custom tools registered?",
+      "status": "excluded",
+      "reason": "Known malformed or mechanically duplicated evaluation topic"
+    },
+    {
+      "id": "claude_055",
+      "question": "In the Claude Code Agent SDK (typescript-v2-preview.md), how are custom tools registered?",
+      "status": "excluded",
+      "reason": "Known malformed or mechanically duplicated evaluation topic"
+    },
+    {
+      "id": "claude_056",
+      "question": "In the Claude Code Agent SDK (python.md), how are custom tools registered?",
+      "status": "excluded",
+      "reason": "Known malformed or mechanically duplicated evaluation topic"
+    },
+    {
+      "id": "claude_057",
+      "question": "In the Claude Code Agent SDK (migration-guide.md), how are custom tools registered?",
+      "status": "excluded",
+      "reason": "Known malformed or mechanically duplicated evaluation topic"
+    },
+    {
+      "id": "claude_058",
+      "question": "In the Claude Code Agent SDK (Agent SDK overview - Claude Code Docs), how are custom tools registered?",
+      "status": "excluded",
+      "reason": "Known malformed or mechanically duplicated evaluation topic"
+    },
+    {
+      "id": "claude_059",
+      "question": "Why does switching models during an active Claude Code session trigger a cache miss?",
+      "status": "excluded",
+      "reason": "Exact duplicate question in original combined dataset"
+    },
+    {
+      "id": "claude_060",
+      "question": "What permission modes does Claude Code support and how can a user switch between them?",
+      "status": "excluded",
+      "reason": "Exact duplicate question in original combined dataset"
+    },
+    {
+      "id": "claude_061",
+      "question": "How does Claude Code Desktop handle parallel session isolation?",
+      "status": "excluded",
+      "reason": "Exact duplicate question in original combined dataset"
+    },
+    {
+      "id": "claude_062",
+      "question": "Where are custom subagent definitions stored in a Claude Code workspace?",
+      "status": "excluded",
+      "reason": "Exact duplicate question in original combined dataset"
+    },
+    {
+      "id": "claude_063",
+      "question": "How does Claude Code Desktop handle parallel session isolation?",
+      "status": "excluded",
+      "reason": "Exact duplicate question in original combined dataset"
+    },
+    {
+      "id": "claude_064",
+      "question": "How does Claude Code Desktop handle parallel session isolation?",
+      "status": "excluded",
+      "reason": "Exact duplicate question in original combined dataset"
+    },
+    {
+      "id": "claude_065",
+      "question": "What features does the Claude Apps Gateway provide for enterprise deployments?",
+      "status": "excluded",
+      "reason": "Exact duplicate question in original combined dataset"
+    },
+    {
+      "id": "claude_066",
+      "question": "How does Claude Code Desktop handle parallel session isolation?",
+      "status": "excluded",
+      "reason": "Exact duplicate question in original combined dataset"
+    },
+    {
+      "id": "claude_067",
+      "question": "What features does the Claude Apps Gateway provide for enterprise deployments?",
+      "status": "excluded",
+      "reason": "Exact duplicate question in original combined dataset"
+    },
+    {
+      "id": "claude_068",
+      "question": "What does the `/compact` command do in Claude Code?",
+      "status": "accepted",
+      "reason": "Held-out candidate: unique, no detected SFT v3 overlap, and all keywords/code tokens occur in the claimed source",
+      "source_url": "https://code.claude.com/docs/en/context-window.md",
+      "source_sha256": "473a2c87edd387c6294c1e6cd7f517b62ce9c58db24a2a715a2265dfb3f2d0b2",
+      "manual_review_required": true
+    },
+    {
+      "id": "claude_069",
+      "question": "What is the purpose of the `/doctor` command in Claude Code?",
+      "status": "accepted",
+      "reason": "Held-out candidate: unique, no detected SFT v3 overlap, and all keywords/code tokens occur in the claimed source",
+      "source_url": "https://code.claude.com/docs/en/debug-your-config.md",
+      "source_sha256": "3f532f7f242b04a0e88314fec1f7a04230d136ad50e29aff490e4fe1b23efc0a",
+      "manual_review_required": true
+    },
+    {
+      "id": "claude_070",
+      "question": "How do you inspect active Model Context Protocol servers in Claude Code?",
+      "status": "excluded",
+      "reason": "Fact-level relationship declared for an SFT v3 domain item"
+    },
+    {
+      "id": "claude_071",
+      "question": "What does the `--from-pr` CLI flag do when launching Claude Code?",
+      "status": "accepted",
+      "reason": "Held-out candidate: unique, no detected SFT v3 overlap, and all keywords/code tokens occur in the claimed source",
+      "source_url": "https://code.claude.com/docs/en/sessions.md",
+      "source_sha256": "0fed5bb65e2449207843c20c8bbf60b2108def3dd95a5bbee20d3156ab3b9fd4",
+      "manual_review_required": true
+    },
+    {
+      "id": "claude_072",
+      "question": "How do you resume the most recent Claude Code session from the terminal?",
+      "status": "excluded",
+      "reason": "Claimed source does not contain every keyword and reference code token",
+      "missing_keywords": [
+        "resume session"
+      ],
+      "missing_reference_tokens": [
+        "claude -c"
+      ]
+    },
+    {
+      "id": "claude_073",
+      "question": "How can administrators restrict allowable MCP servers across an organization?",
+      "status": "excluded",
+      "reason": "Fact-level relationship declared for an SFT v3 domain item"
+    },
+    {
+      "id": "claude_074",
+      "question": "What configuration controls auto mode execution boundaries in Claude Code?",
+      "status": "excluded",
+      "reason": "Claimed source does not contain every keyword and reference code token",
+      "missing_keywords": [
+        "trusted repos"
+      ],
+      "missing_reference_tokens": []
+    },
+    {
+      "id": "claude_075",
+      "question": "What capabilities does connecting Claude Code to Chrome provide?",
+      "status": "accepted",
+      "reason": "Held-out candidate: unique, no detected SFT v3 overlap, and all keywords/code tokens occur in the claimed source",
+      "source_url": "https://code.claude.com/docs/en/chrome.md",
+      "source_sha256": "35a740060ebcb050e1e548780c1006932b47e190ed0e7f33f04d45ae4c868c06",
+      "manual_review_required": true
+    },
+    {
+      "id": "claude_076",
+      "question": "What does enabling computer use in Claude Code CLI allow?",
+      "status": "accepted",
+      "reason": "Held-out candidate: unique, no detected SFT v3 overlap, and all keywords/code tokens occur in the claimed source",
+      "source_url": "https://code.claude.com/docs/en/computer-use.md",
+      "source_sha256": "eacb3fe381815950cf15573c58e9ce406c185f9a1212392ce309514c06c39166",
+      "manual_review_required": true
+    },
+    {
+      "id": "claude_077",
+      "question": "How does Claude Code interact with issues when mentioned in GitHub Actions?",
+      "status": "accepted",
+      "reason": "Held-out candidate: unique, no detected SFT v3 overlap, and all keywords/code tokens occur in the claimed source",
+      "source_url": "https://code.claude.com/docs/en/github-actions.md",
+      "source_sha256": "b91351a6c12abe470483352fed2f3d411c4e33aaa02b384adb0a0d6988b3259a",
+      "manual_review_required": true
+    },
+    {
+      "id": "claude_078",
+      "question": "What does the `/compact` command do in Claude Code?",
+      "status": "excluded",
+      "reason": "Exact duplicate question in original combined dataset"
+    },
+    {
+      "id": "claude_079",
+      "question": "What is the purpose of the `/doctor` command in Claude Code?",
+      "status": "excluded",
+      "reason": "Exact duplicate question in original combined dataset"
+    },
+    {
+      "id": "claude_080",
+      "question": "How do you inspect active Model Context Protocol servers in Claude Code?",
+      "status": "excluded",
+      "reason": "Exact duplicate question in original combined dataset"
+    },
+    {
+      "id": "claude_081",
+      "question": "What does the `--from-pr` CLI flag do when launching Claude Code?",
+      "status": "excluded",
+      "reason": "Exact duplicate question in original combined dataset"
+    },
+    {
+      "id": "claude_082",
+      "question": "How do you resume the most recent Claude Code session from the terminal?",
+      "status": "excluded",
+      "reason": "Exact duplicate question in original combined dataset"
+    },
+    {
+      "id": "claude_083",
+      "question": "How can administrators restrict allowable MCP servers across an organization?",
+      "status": "excluded",
+      "reason": "Exact duplicate question in original combined dataset"
+    },
+    {
+      "id": "claude_084",
+      "question": "What configuration controls auto mode execution boundaries in Claude Code?",
+      "status": "excluded",
+      "reason": "Exact duplicate question in original combined dataset"
+    },
+    {
+      "id": "claude_085",
+      "question": "What capabilities does connecting Claude Code to Chrome provide?",
+      "status": "excluded",
+      "reason": "Exact duplicate question in original combined dataset"
+    },
+    {
+      "id": "claude_086",
+      "question": "What does enabling computer use in Claude Code CLI allow?",
+      "status": "excluded",
+      "reason": "Exact duplicate question in original combined dataset"
+    },
+    {
+      "id": "claude_087",
+      "question": "How does Claude Code interact with issues when mentioned in GitHub Actions?",
+      "status": "excluded",
+      "reason": "Exact duplicate question in original combined dataset"
+    },
+    {
+      "id": "claude_088",
+      "question": "What does the `/compact` command do in Claude Code?",
+      "status": "excluded",
+      "reason": "Exact duplicate question in original combined dataset"
+    },
+    {
+      "id": "claude_089",
+      "question": "What is the purpose of the `/doctor` command in Claude Code?",
+      "status": "excluded",
+      "reason": "Exact duplicate question in original combined dataset"
+    },
+    {
+      "id": "claude_090",
+      "question": "How do you inspect active Model Context Protocol servers in Claude Code?",
+      "status": "excluded",
+      "reason": "Exact duplicate question in original combined dataset"
+    },
+    {
+      "id": "claude_091",
+      "question": "What does the `--from-pr` CLI flag do when launching Claude Code?",
+      "status": "excluded",
+      "reason": "Exact duplicate question in original combined dataset"
+    },
+    {
+      "id": "claude_092",
+      "question": "How do you resume the most recent Claude Code session from the terminal?",
+      "status": "excluded",
+      "reason": "Exact duplicate question in original combined dataset"
+    },
+    {
+      "id": "claude_093",
+      "question": "How can administrators restrict allowable MCP servers across an organization?",
+      "status": "excluded",
+      "reason": "Exact duplicate question in original combined dataset"
+    },
+    {
+      "id": "claude_094",
+      "question": "What configuration controls auto mode execution boundaries in Claude Code?",
+      "status": "excluded",
+      "reason": "Exact duplicate question in original combined dataset"
+    },
+    {
+      "id": "claude_095",
+      "question": "What capabilities does connecting Claude Code to Chrome provide?",
+      "status": "excluded",
+      "reason": "Exact duplicate question in original combined dataset"
+    },
+    {
+      "id": "claude_096",
+      "question": "What does enabling computer use in Claude Code CLI allow?",
+      "status": "excluded",
+      "reason": "Exact duplicate question in original combined dataset"
+    },
+    {
+      "id": "claude_097",
+      "question": "How does Claude Code interact with issues when mentioned in GitHub Actions?",
+      "status": "excluded",
+      "reason": "Exact duplicate question in original combined dataset"
+    },
+    {
+      "id": "claude_098",
+      "question": "What does the `/compact` command do in Claude Code?",
+      "status": "excluded",
+      "reason": "Exact duplicate question in original combined dataset"
+    },
+    {
+      "id": "claude_099",
+      "question": "What is the purpose of the `/doctor` command in Claude Code?",
+      "status": "excluded",
+      "reason": "Exact duplicate question in original combined dataset"
+    },
+    {
+      "id": "claude_100",
+      "question": "How do you inspect active Model Context Protocol servers in Claude Code?",
+      "status": "excluded",
+      "reason": "Exact duplicate question in original combined dataset"
+    },
+    {
+      "id": "codex_001",
+      "question": "Which next-generation OpenAI models power Codex developer capabilities?",
+      "status": "excluded",
+      "reason": "Claimed source does not contain every keyword and reference code token",
+      "missing_keywords": [
+        "GPT-5",
+        "GPT-5-Codex",
+        "O3-mini"
+      ],
+      "missing_reference_tokens": []
+    },
+    {
+      "id": "codex_002",
+      "question": "What file format and filename does Codex use for project-level custom agent instructions?",
+      "status": "excluded",
+      "reason": "Fact-level relationship declared for an SFT v3 domain item"
+    },
+    {
+      "id": "codex_003",
+      "question": "What is the Codex App Server protocol?",
+      "status": "excluded",
+      "reason": "Fact-level relationship declared for an SFT v3 domain item"
+    },
+    {
+      "id": "codex_004",
+      "question": "What capability do Appshots provide in ChatGPT / Codex on macOS?",
+      "status": "accepted",
+      "reason": "Held-out candidate: unique, no detected SFT v3 overlap, and all keywords/code tokens occur in the claimed source",
+      "source_url": "https://learn.chatgpt.com/docs/appshots.md",
+      "source_sha256": "d7b61517661edf221b348d3acd525e392219e0da469476445097509dcab36046",
+      "manual_review_required": true
+    },
+    {
+      "id": "codex_005",
+      "question": "In Codex, how are command approval rules defined in `config.toml`?",
+      "status": "accepted",
+      "reason": "Held-out candidate: unique, no detected SFT v3 overlap, and all keywords/code tokens occur in the claimed source",
+      "source_url": "https://learn.chatgpt.com/docs/config-file/config-advanced.md",
+      "source_sha256": "6759491a83ab8dd4c0b52a6378f95cb04b65b69d3af1e0f0476a4d83bf17dba5",
+      "manual_review_required": true
+    },
+    {
+      "id": "codex_006",
+      "question": "How can network access be controlled for Codex cloud execution environments?",
+      "status": "excluded",
+      "reason": "Fact-level relationship declared for an SFT v3 domain item"
+    },
+    {
+      "id": "codex_007",
+      "question": "What parameter controls the depth of reasoning in GPT-5 / O3 models within Codex?",
+      "status": "excluded",
+      "reason": "Claimed source does not contain every keyword and reference code token",
+      "missing_keywords": [
+        "O3"
+      ],
+      "missing_reference_tokens": []
+    },
+    {
+      "id": "codex_008",
+      "question": "How can developers programmatically invoke local Codex agents in Python or TypeScript?",
+      "status": "accepted",
+      "reason": "Held-out candidate: unique, no detected SFT v3 overlap, and all keywords/code tokens occur in the claimed source",
+      "source_url": "https://learn.chatgpt.com/docs/codex-sdk.md",
+      "source_sha256": "45e1f4245873718b3004ba53ef95d2ecf02c2843f1dbd2e19b0a7828140ef6c8",
+      "manual_review_required": true
+    },
+    {
+      "id": "codex_009",
+      "question": "How can Codex connect to enterprise cloud providers without static API keys?",
+      "status": "excluded",
+      "reason": "Expected one claimed source document, found 0"
+    },
+    {
+      "id": "codex_010",
+      "question": "How do custom subagents operate within a Codex task?",
+      "status": "excluded",
+      "reason": "Claimed source does not contain every keyword and reference code token",
+      "missing_keywords": [
+        "isolation"
+      ],
+      "missing_reference_tokens": []
+    },
+    {
+      "id": "codex_011",
+      "question": "What slash commands are available in the Codex terminal client?",
+      "status": "excluded",
+      "reason": "Fact-level relationship declared for an SFT v3 domain item"
+    },
+    {
+      "id": "codex_012",
+      "question": "How does the Codex desktop app execute shell commands on Windows?",
+      "status": "excluded",
+      "reason": "Claimed source does not contain every keyword and reference code token",
+      "missing_keywords": [
+        "WSL 2"
+      ],
+      "missing_reference_tokens": []
+    },
+    {
+      "id": "codex_013",
+      "question": "Where is the main user configuration file located for Codex CLI?",
+      "status": "excluded",
+      "reason": "Claimed source does not contain every keyword and reference code token",
+      "missing_keywords": [],
+      "missing_reference_tokens": [
+        "~/.config/codex/config.toml",
+        "%APPDATA%\\Codex\\config.toml"
+      ]
+    },
+    {
+      "id": "codex_014",
+      "question": "What is a Codex Skill and how is it defined?",
+      "status": "accepted",
+      "reason": "Held-out candidate: unique, no detected SFT v3 overlap, and all keywords/code tokens occur in the claimed source",
+      "source_url": "https://learn.chatgpt.com/docs/build-skills.md",
+      "source_sha256": "3a30af6f0d08eb1dd96635dcd1b3bd3a18a551a52b2aefb3122cac0d576e4f7a",
+      "manual_review_required": true
+    },
+    {
+      "id": "codex_015",
+      "question": "How do Codex Plugins extend agent functionality?",
+      "status": "excluded",
+      "reason": "Claimed source does not contain every keyword and reference code token",
+      "missing_keywords": [
+        "distribution"
+      ],
+      "missing_reference_tokens": []
+    },
+    {
+      "id": "codex_016",
+      "question": "How can Codex be configured to use OpenAI models via Amazon Bedrock?",
+      "status": "accepted",
+      "reason": "Held-out candidate: unique, no detected SFT v3 overlap, and all keywords/code tokens occur in the claimed source",
+      "source_url": "https://learn.chatgpt.com/docs/amazon-bedrock.md",
+      "source_sha256": "7d58cb5011641914b891fe8c8b1df4034890fa3bbc9050fd54c18bb3258c9a99",
+      "manual_review_required": true
+    },
+    {
+      "id": "codex_017",
+      "question": "What document types can be created and rendered inside the ChatGPT Artifacts Viewer?",
+      "status": "excluded",
+      "reason": "Claimed source does not contain every keyword and reference code token",
+      "missing_keywords": [
+        "Artifacts Viewer",
+        "SVG",
+        "web apps"
+      ],
+      "missing_reference_tokens": []
+    },
+    {
+      "id": "codex_018",
+      "question": "What sandbox modes does Codex provide for local execution?",
+      "status": "accepted",
+      "reason": "Held-out candidate: unique, no detected SFT v3 overlap, and all keywords/code tokens occur in the claimed source",
+      "source_url": "https://learn.chatgpt.com/docs/agent-approvals-security.md",
+      "source_sha256": "1ff743fc616ddf46266d3e542dbc2908f636b0daf17631a7b8b7adeee5d53e45",
+      "manual_review_required": true
+    },
+    {
+      "id": "codex_019",
+      "question": "How are recurring automations configured in ChatGPT / Codex?",
+      "status": "excluded",
+      "reason": "Claimed source does not contain every keyword and reference code token",
+      "missing_keywords": [
+        "automations",
+        "cron",
+        "async"
+      ],
+      "missing_reference_tokens": []
+    },
+    {
+      "id": "codex_020",
+      "question": "What permissions can be configured for the Codex Chrome Extension?",
+      "status": "excluded",
+      "reason": "Claimed source does not contain every keyword and reference code token",
+      "missing_keywords": [
+        "console log",
+        "domain access"
+      ],
+      "missing_reference_tokens": []
+    },
+    {
+      "id": "codex_021",
+      "question": "How does Codex perform automated multi-file code reviews?",
+      "status": "excluded",
+      "reason": "Claimed source does not contain every keyword and reference code token",
+      "missing_keywords": [
+        "diffs",
+        "vulnerabilities"
+      ],
+      "missing_reference_tokens": []
+    },
+    {
+      "id": "codex_022",
+      "question": "What does the Codex Terraform provider manage?",
+      "status": "excluded",
+      "reason": "Expected one claimed source document, found 0"
+    },
+    {
+      "id": "codex_023",
+      "question": "How does Codex support secure enterprise network connectivity?",
+      "status": "excluded",
+      "reason": "Expected one claimed source document, found 0"
+    },
+    {
+      "id": "codex_024",
+      "question": "How can access to Codex endpoints be restricted to enterprise IP ranges?",
+      "status": "excluded",
+      "reason": "Expected one claimed source document, found 0"
+    },
+    {
+      "id": "codex_025",
+      "question": "What is Voice Activity Detection (VAD) in the Codex Realtime API?",
+      "status": "excluded",
+      "reason": "Expected one claimed source document, found 0"
+    },
+    {
+      "id": "codex_026",
+      "question": "What slash commands are available in the Codex terminal client?",
+      "status": "excluded",
+      "reason": "Exact duplicate question in original combined dataset"
+    },
+    {
+      "id": "codex_027",
+      "question": "How does the Codex desktop app execute shell commands on Windows?",
+      "status": "excluded",
+      "reason": "Exact duplicate question in original combined dataset"
+    },
+    {
+      "id": "codex_028",
+      "question": "Where is the main user configuration file located for Codex CLI?",
+      "status": "excluded",
+      "reason": "Exact duplicate question in original combined dataset"
+    },
+    {
+      "id": "codex_029",
+      "question": "What is a Codex Skill and how is it defined?",
+      "status": "excluded",
+      "reason": "Exact duplicate question in original combined dataset"
+    },
+    {
+      "id": "codex_030",
+      "question": "How do Codex Plugins extend agent functionality?",
+      "status": "excluded",
+      "reason": "Exact duplicate question in original combined dataset"
+    },
+    {
+      "id": "codex_031",
+      "question": "How can Codex be configured to use OpenAI models via Amazon Bedrock?",
+      "status": "excluded",
+      "reason": "Exact duplicate question in original combined dataset"
+    },
+    {
+      "id": "codex_032",
+      "question": "What document types can be created and rendered inside the ChatGPT Artifacts Viewer?",
+      "status": "excluded",
+      "reason": "Exact duplicate question in original combined dataset"
+    },
+    {
+      "id": "codex_033",
+      "question": "What sandbox modes does Codex provide for local execution?",
+      "status": "excluded",
+      "reason": "Exact duplicate question in original combined dataset"
+    },
+    {
+      "id": "codex_034",
+      "question": "How are recurring automations configured in ChatGPT / Codex?",
+      "status": "excluded",
+      "reason": "Exact duplicate question in original combined dataset"
+    },
+    {
+      "id": "codex_035",
+      "question": "What permissions can be configured for the Codex Chrome Extension?",
+      "status": "excluded",
+      "reason": "Exact duplicate question in original combined dataset"
+    },
+    {
+      "id": "codex_036",
+      "question": "How does Codex perform automated multi-file code reviews?",
+      "status": "excluded",
+      "reason": "Exact duplicate question in original combined dataset"
+    },
+    {
+      "id": "codex_037",
+      "question": "What does the Codex Terraform provider manage?",
+      "status": "excluded",
+      "reason": "Exact duplicate question in original combined dataset"
+    },
+    {
+      "id": "codex_038",
+      "question": "How does Codex support secure enterprise network connectivity?",
+      "status": "excluded",
+      "reason": "Exact duplicate question in original combined dataset"
+    },
+    {
+      "id": "codex_039",
+      "question": "How can access to Codex endpoints be restricted to enterprise IP ranges?",
+      "status": "excluded",
+      "reason": "Exact duplicate question in original combined dataset"
+    },
+    {
+      "id": "codex_040",
+      "question": "What is Voice Activity Detection (VAD) in the Codex Realtime API?",
+      "status": "excluded",
+      "reason": "Exact duplicate question in original combined dataset"
+    },
+    {
+      "id": "codex_041",
+      "question": "What slash commands are available in the Codex terminal client?",
+      "status": "excluded",
+      "reason": "Exact duplicate question in original combined dataset"
+    },
+    {
+      "id": "codex_042",
+      "question": "How does the Codex desktop app execute shell commands on Windows?",
+      "status": "excluded",
+      "reason": "Exact duplicate question in original combined dataset"
+    },
+    {
+      "id": "codex_043",
+      "question": "Where is the main user configuration file located for Codex CLI?",
+      "status": "excluded",
+      "reason": "Exact duplicate question in original combined dataset"
+    },
+    {
+      "id": "codex_044",
+      "question": "What is a Codex Skill and how is it defined?",
+      "status": "excluded",
+      "reason": "Exact duplicate question in original combined dataset"
+    },
+    {
+      "id": "codex_045",
+      "question": "How do Codex Plugins extend agent functionality?",
+      "status": "excluded",
+      "reason": "Exact duplicate question in original combined dataset"
+    },
+    {
+      "id": "codex_046",
+      "question": "How can Codex be configured to use OpenAI models via Amazon Bedrock?",
+      "status": "excluded",
+      "reason": "Exact duplicate question in original combined dataset"
+    },
+    {
+      "id": "codex_047",
+      "question": "What document types can be created and rendered inside the ChatGPT Artifacts Viewer?",
+      "status": "excluded",
+      "reason": "Exact duplicate question in original combined dataset"
+    },
+    {
+      "id": "codex_048",
+      "question": "What sandbox modes does Codex provide for local execution?",
+      "status": "excluded",
+      "reason": "Exact duplicate question in original combined dataset"
+    },
+    {
+      "id": "codex_049",
+      "question": "How are recurring automations configured in ChatGPT / Codex?",
+      "status": "excluded",
+      "reason": "Exact duplicate question in original combined dataset"
+    },
+    {
+      "id": "codex_050",
+      "question": "What permissions can be configured for the Codex Chrome Extension?",
+      "status": "excluded",
+      "reason": "Exact duplicate question in original combined dataset"
+    },
+    {
+      "id": "codex_051",
+      "question": "How does Codex perform automated multi-file code reviews?",
+      "status": "excluded",
+      "reason": "Exact duplicate question in original combined dataset"
+    },
+    {
+      "id": "codex_052",
+      "question": "What does the Codex Terraform provider manage?",
+      "status": "excluded",
+      "reason": "Exact duplicate question in original combined dataset"
+    },
+    {
+      "id": "codex_053",
+      "question": "How does Codex support secure enterprise network connectivity?",
+      "status": "excluded",
+      "reason": "Exact duplicate question in original combined dataset"
+    },
+    {
+      "id": "codex_054",
+      "question": "How can access to Codex endpoints be restricted to enterprise IP ranges?",
+      "status": "excluded",
+      "reason": "Exact duplicate question in original combined dataset"
+    },
+    {
+      "id": "codex_055",
+      "question": "What is Voice Activity Detection (VAD) in the Codex Realtime API?",
+      "status": "excluded",
+      "reason": "Exact duplicate question in original combined dataset"
+    },
+    {
+      "id": "codex_056",
+      "question": "What slash commands are available in the Codex terminal client?",
+      "status": "excluded",
+      "reason": "Exact duplicate question in original combined dataset"
+    },
+    {
+      "id": "codex_057",
+      "question": "How does the Codex desktop app execute shell commands on Windows?",
+      "status": "excluded",
+      "reason": "Exact duplicate question in original combined dataset"
+    },
+    {
+      "id": "codex_058",
+      "question": "Where is the main user configuration file located for Codex CLI?",
+      "status": "excluded",
+      "reason": "Exact duplicate question in original combined dataset"
+    },
+    {
+      "id": "codex_059",
+      "question": "What is a Codex Skill and how is it defined?",
+      "status": "excluded",
+      "reason": "Exact duplicate question in original combined dataset"
+    },
+    {
+      "id": "codex_060",
+      "question": "How do Codex Plugins extend agent functionality?",
+      "status": "excluded",
+      "reason": "Exact duplicate question in original combined dataset"
+    },
+    {
+      "id": "codex_061",
+      "question": "How can Codex be configured to use OpenAI models via Amazon Bedrock?",
+      "status": "excluded",
+      "reason": "Exact duplicate question in original combined dataset"
+    },
+    {
+      "id": "codex_062",
+      "question": "What document types can be created and rendered inside the ChatGPT Artifacts Viewer?",
+      "status": "excluded",
+      "reason": "Exact duplicate question in original combined dataset"
+    },
+    {
+      "id": "codex_063",
+      "question": "What sandbox modes does Codex provide for local execution?",
+      "status": "excluded",
+      "reason": "Exact duplicate question in original combined dataset"
+    },
+    {
+      "id": "codex_064",
+      "question": "How are recurring automations configured in ChatGPT / Codex?",
+      "status": "excluded",
+      "reason": "Exact duplicate question in original combined dataset"
+    },
+    {
+      "id": "codex_065",
+      "question": "What permissions can be configured for the Codex Chrome Extension?",
+      "status": "excluded",
+      "reason": "Exact duplicate question in original combined dataset"
+    },
+    {
+      "id": "codex_066",
+      "question": "How does Codex perform automated multi-file code reviews?",
+      "status": "excluded",
+      "reason": "Exact duplicate question in original combined dataset"
+    },
+    {
+      "id": "codex_067",
+      "question": "What does the Codex Terraform provider manage?",
+      "status": "excluded",
+      "reason": "Exact duplicate question in original combined dataset"
+    },
+    {
+      "id": "codex_068",
+      "question": "How does Codex support secure enterprise network connectivity?",
+      "status": "excluded",
+      "reason": "Exact duplicate question in original combined dataset"
+    },
+    {
+      "id": "codex_069",
+      "question": "How can access to Codex endpoints be restricted to enterprise IP ranges?",
+      "status": "excluded",
+      "reason": "Exact duplicate question in original combined dataset"
+    },
+    {
+      "id": "codex_070",
+      "question": "What is Voice Activity Detection (VAD) in the Codex Realtime API?",
+      "status": "excluded",
+      "reason": "Exact duplicate question in original combined dataset"
+    },
+    {
+      "id": "codex_071",
+      "question": "What slash commands are available in the Codex terminal client?",
+      "status": "excluded",
+      "reason": "Exact duplicate question in original combined dataset"
+    },
+    {
+      "id": "codex_072",
+      "question": "How does the Codex desktop app execute shell commands on Windows?",
+      "status": "excluded",
+      "reason": "Exact duplicate question in original combined dataset"
+    },
+    {
+      "id": "codex_073",
+      "question": "Where is the main user configuration file located for Codex CLI?",
+      "status": "excluded",
+      "reason": "Exact duplicate question in original combined dataset"
+    },
+    {
+      "id": "codex_074",
+      "question": "What is a Codex Skill and how is it defined?",
+      "status": "excluded",
+      "reason": "Exact duplicate question in original combined dataset"
+    },
+    {
+      "id": "codex_075",
+      "question": "How do Codex Plugins extend agent functionality?",
+      "status": "excluded",
+      "reason": "Exact duplicate question in original combined dataset"
+    },
+    {
+      "id": "codex_076",
+      "question": "How can Codex be configured to use OpenAI models via Amazon Bedrock?",
+      "status": "excluded",
+      "reason": "Exact duplicate question in original combined dataset"
+    },
+    {
+      "id": "codex_077",
+      "question": "What document types can be created and rendered inside the ChatGPT Artifacts Viewer?",
+      "status": "excluded",
+      "reason": "Exact duplicate question in original combined dataset"
+    },
+    {
+      "id": "codex_078",
+      "question": "What sandbox modes does Codex provide for local execution?",
+      "status": "excluded",
+      "reason": "Exact duplicate question in original combined dataset"
+    },
+    {
+      "id": "codex_079",
+      "question": "How are recurring automations configured in ChatGPT / Codex?",
+      "status": "excluded",
+      "reason": "Exact duplicate question in original combined dataset"
+    },
+    {
+      "id": "codex_080",
+      "question": "What permissions can be configured for the Codex Chrome Extension?",
+      "status": "excluded",
+      "reason": "Exact duplicate question in original combined dataset"
+    },
+    {
+      "id": "codex_081",
+      "question": "How does Codex perform automated multi-file code reviews?",
+      "status": "excluded",
+      "reason": "Exact duplicate question in original combined dataset"
+    },
+    {
+      "id": "codex_082",
+      "question": "What does the Codex Terraform provider manage?",
+      "status": "excluded",
+      "reason": "Exact duplicate question in original combined dataset"
+    },
+    {
+      "id": "codex_083",
+      "question": "How does Codex support secure enterprise network connectivity?",
+      "status": "excluded",
+      "reason": "Exact duplicate question in original combined dataset"
+    },
+    {
+      "id": "codex_084",
+      "question": "How can access to Codex endpoints be restricted to enterprise IP ranges?",
+      "status": "excluded",
+      "reason": "Exact duplicate question in original combined dataset"
+    },
+    {
+      "id": "codex_085",
+      "question": "What is Voice Activity Detection (VAD) in the Codex Realtime API?",
+      "status": "excluded",
+      "reason": "Exact duplicate question in original combined dataset"
+    },
+    {
+      "id": "codex_086",
+      "question": "What slash commands are available in the Codex terminal client?",
+      "status": "excluded",
+      "reason": "Exact duplicate question in original combined dataset"
+    },
+    {
+      "id": "codex_087",
+      "question": "How does the Codex desktop app execute shell commands on Windows?",
+      "status": "excluded",
+      "reason": "Exact duplicate question in original combined dataset"
+    },
+    {
+      "id": "codex_088",
+      "question": "Where is the main user configuration file located for Codex CLI?",
+      "status": "excluded",
+      "reason": "Exact duplicate question in original combined dataset"
+    },
+    {
+      "id": "codex_089",
+      "question": "What is a Codex Skill and how is it defined?",
+      "status": "excluded",
+      "reason": "Exact duplicate question in original combined dataset"
+    },
+    {
+      "id": "codex_090",
+      "question": "How do Codex Plugins extend agent functionality?",
+      "status": "excluded",
+      "reason": "Exact duplicate question in original combined dataset"
+    },
+    {
+      "id": "codex_091",
+      "question": "How can Codex be configured to use OpenAI models via Amazon Bedrock?",
+      "status": "excluded",
+      "reason": "Exact duplicate question in original combined dataset"
+    },
+    {
+      "id": "codex_092",
+      "question": "What document types can be created and rendered inside the ChatGPT Artifacts Viewer?",
+      "status": "excluded",
+      "reason": "Exact duplicate question in original combined dataset"
+    },
+    {
+      "id": "codex_093",
+      "question": "What sandbox modes does Codex provide for local execution?",
+      "status": "excluded",
+      "reason": "Exact duplicate question in original combined dataset"
+    },
+    {
+      "id": "codex_094",
+      "question": "How are recurring automations configured in ChatGPT / Codex?",
+      "status": "excluded",
+      "reason": "Exact duplicate question in original combined dataset"
+    },
+    {
+      "id": "codex_095",
+      "question": "What permissions can be configured for the Codex Chrome Extension?",
+      "status": "excluded",
+      "reason": "Exact duplicate question in original combined dataset"
+    },
+    {
+      "id": "codex_096",
+      "question": "How does Codex perform automated multi-file code reviews?",
+      "status": "excluded",
+      "reason": "Exact duplicate question in original combined dataset"
+    },
+    {
+      "id": "codex_097",
+      "question": "What does the Codex Terraform provider manage?",
+      "status": "excluded",
+      "reason": "Exact duplicate question in original combined dataset"
+    },
+    {
+      "id": "codex_098",
+      "question": "How does Codex support secure enterprise network connectivity?",
+      "status": "excluded",
+      "reason": "Exact duplicate question in original combined dataset"
+    },
+    {
+      "id": "codex_099",
+      "question": "How can access to Codex endpoints be restricted to enterprise IP ranges?",
+      "status": "excluded",
+      "reason": "Exact duplicate question in original combined dataset"
+    },
+    {
+      "id": "codex_100",
+      "question": "What is Voice Activity Detection (VAD) in the Codex Realtime API?",
+      "status": "excluded",
+      "reason": "Exact duplicate question in original combined dataset"
+    }
+  ]
+}

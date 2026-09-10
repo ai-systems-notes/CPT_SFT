@@ -21,17 +21,19 @@ def sha256_file(path: Path) -> str:
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--input", type=Path, required=True)
-    parser.add_argument("--fixes", type=Path, required=True)
+    parser.add_argument("--fixes", type=Path)
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--metadata", type=Path, required=True)
     parser.add_argument("--max-question-chars", type=int, default=1000)
     args = parser.parse_args()
 
     source_path = args.input.resolve()
-    fixes_path = args.fixes.resolve()
+    fixes_path = args.fixes.resolve() if args.fixes else None
     output_path = args.output.resolve()
     metadata_path = args.metadata.resolve()
-    fixes: dict[str, dict[str, Any]] = json.loads(fixes_path.read_text(encoding="utf-8"))
+    fixes: dict[str, dict[str, Any]] = (
+        json.loads(fixes_path.read_text(encoding="utf-8")) if fixes_path else {}
+    )
     seen_fixes: set[str] = set()
     rows: list[dict[str, Any]] = []
 
@@ -66,8 +68,8 @@ def main() -> None:
     metadata = {
         "source": str(source_path),
         "source_sha256": sha256_file(source_path),
-        "fixes": str(fixes_path),
-        "fixes_sha256": sha256_file(fixes_path),
+        "fixes": str(fixes_path) if fixes_path else None,
+        "fixes_sha256": sha256_file(fixes_path) if fixes_path else None,
         "applied_fix_ids": sorted(seen_fixes),
         "item_count": len(rows),
         "max_question_chars": args.max_question_chars,

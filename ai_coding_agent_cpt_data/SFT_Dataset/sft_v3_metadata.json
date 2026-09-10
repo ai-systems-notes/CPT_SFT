@@ -1,0 +1,43 @@
+{
+  "schema_version": 2,
+  "status": "rule_audited_manual_domain_review_required",
+  "experiment_name": "sft_v3_dataset",
+  "item_count": 200,
+  "breakdown": {
+    "general_tech": 150,
+    "ambiguous_qa": 20,
+    "claude_code": 15,
+    "codex": 15
+  },
+  "output_char_length_stats": {
+    "min": 66,
+    "mean": 112.59,
+    "median": 108,
+    "p95": 156,
+    "max": 197
+  },
+  "sentence_counts": {
+    "1": 43,
+    "2": 157,
+    "3": 0,
+    "3+": 0
+  },
+  "files": {
+    "sft_v3_train.jsonl": {
+      "sha256": "d05b92ce863e402c001913bf4c8a7cac18127ee182b8115f787abc45f72e5b73"
+    },
+    "sft_v3_train_chat.jsonl": {
+      "sha256": "364d63ab901fba382b8ac1a5bc90bcc3d98d144f8040b044a5ebde005af4c644"
+    },
+    "sft_v3_item_metadata.jsonl": {
+      "sha256": "96c0564e24d45cd09cb40ab4df72676a1fbb64c743e4748c9c0aa47b20557ab3"
+    },
+    "sft_v3_domain_sources.jsonl": {
+      "sha256": "5f830ae1599f67dedff7cac044cf45f5a8f90baeefa45bfee9e96c14e8fa9664"
+    },
+    "sft_v3_leakage_report.json": {
+      "sha256": "a79d50a5fe60b457d972ebf180145fba1cff18f8491b8cf0a45e9e5ce24f5fb9"
+    }
+  },
+  "prompt_template": "Answer directly and completely using only supported information.\nUse one concise sentence when sufficient and up to three sentences when necessary.\nPreserve exact commands, option names, paths, parameter values, and required conditions.\nDo not invent missing details, repeat the question, or continue with another Q&A.\nQuestion: {instruction}\nAnswer:"
+}

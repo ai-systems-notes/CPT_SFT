@@ -1,0 +1,37 @@
+{
+  "status": "ok",
+  "note": "Auxiliary generation metrics; they do not replace factual review or LLM-as-a-Judge.",
+  "items": 200,
+  "models": {
+    "base_complete_sft": {
+      "items": 200,
+      "nonempty_rate": 1.0,
+      "under_100_chars_rate": 0.04,
+      "average_answer_chars": 193.03,
+      "normalized_exact_match_rate": 0.0,
+      "keyword_recall": 0.2621527777777778,
+      "keyword_hits": 151,
+      "keyword_total": 576
+    },
+    "transformers_cpt_complete_sft": {
+      "items": 200,
+      "nonempty_rate": 1.0,
+      "under_100_chars_rate": 0.005,
+      "average_answer_chars": 201.59,
+      "normalized_exact_match_rate": 0.0,
+      "keyword_recall": 0.3090277777777778,
+      "keyword_hits": 178,
+      "keyword_total": 576
+    },
+    "unsloth_cpt_complete_sft": {
+      "items": 200,
+      "nonempty_rate": 1.0,
+      "under_100_chars_rate": 0.005,
+      "average_answer_chars": 202.58,
+      "normalized_exact_match_rate": 0.0,
+      "keyword_recall": 0.2864583333333333,
+      "keyword_hits": 165,
+      "keyword_total": 576
+    }
+  }
+}

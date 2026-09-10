@@ -88,6 +88,9 @@ def main() -> int:
     comparison_pairs = [
         ("transformers_cpt", "unsloth_cpt"),
         ("transformers_cpt_sft", "unsloth_cpt_sft"),
+        ("transformers_cpt_sft_v1", "unsloth_cpt_sft_v1"),
+        ("transformers_cpt_sft_v2", "unsloth_cpt_sft_v2"),
+        ("transformers_cpt_sft_v3", "unsloth_cpt_sft_v3"),
     ]
     for left, right in comparison_pairs:
         if left not in model_names or right not in model_names:

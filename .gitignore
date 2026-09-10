@@ -2,10 +2,13 @@
 .venv-cpt/
 .venv-unsloth/
 .cache/
+# Corpus body text is third-party documentation and is not redistributed.
+# Regenerate it locally with:
+#   ai_coding_agent_cpt_data/scripts/scrape_docs_spider.py
+#   ai_coding_agent_cpt_data/scripts/preprocess_cpt_data.py
 artifacts/
 checkpoints/
 unsloth_compiled_cache/
-cpt_training/results/current/
 __pycache__/
 *.pyc
 *.gguf

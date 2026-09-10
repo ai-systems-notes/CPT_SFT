@@ -1,0 +1,71 @@
+{
+  "status": "ok",
+  "scope": "Structural and continuation audit only; no factual correctness judgment.",
+  "qa": {
+    "rows": 200,
+    "unique_exact_question_strings": 83,
+    "duplicate_question_groups": 30,
+    "rows_in_duplicate_question_groups": 147,
+    "largest_duplicate_groups": [
+      {
+        "question": "How does Claude Code Desktop handle parallel session isolation?",
+        "count": 10
+      },
+      {
+        "question": "What features does the Claude Apps Gateway provide for enterprise deployments?",
+        "count": 8
+      },
+      {
+        "question": "How are recurring automations configured in ChatGPT / Codex?",
+        "count": 6
+      },
+      {
+        "question": "How can Codex be configured to use OpenAI models via Amazon Bedrock?",
+        "count": 6
+      },
+      {
+        "question": "How can access to Codex endpoints be restricted to enterprise IP ranges?",
+        "count": 6
+      },
+      {
+        "question": "How do Codex Plugins extend agent functionality?",
+        "count": 6
+      },
+      {
+        "question": "How does Codex perform automated multi-file code reviews?",
+        "count": 6
+      },
+      {
+        "question": "How does Codex support secure enterprise network connectivity?",
+        "count": 6
+      },
+      {
+        "question": "How does the Codex desktop app execute shell commands on Windows?",
+        "count": 6
+      },
+      {
+        "question": "What document types can be created and rendered inside the ChatGPT Artifacts Viewer?",
+        "count": 6
+      }
+    ]
+  },
+  "answers": {
+    "rows": 200,
+    "models": [
+      "base_complete_sft",
+      "transformers_cpt_complete_sft",
+      "unsloth_cpt_complete_sft"
+    ],
+    "nonempty_rows": {
+      "base_complete_sft": 200,
+      "transformers_cpt_complete_sft": 200,
+      "unsloth_cpt_complete_sft": 200
+    },
+    "question_marker_after_character_20": {
+      "base_complete_sft": 0,
+      "transformers_cpt_complete_sft": 0,
+      "unsloth_cpt_complete_sft": 0
+    },
+    "pairwise_exact_answer_matches": {}
+  }
+}
