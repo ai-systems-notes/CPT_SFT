@@ -1,0 +1,168 @@
+{
+  "status": "answers_generated_not_judged",
+  "dataset": "cpt_training/results/current/qa_complete_sft/qa_input.jsonl",
+  "item_count": 200,
+  "models": {
+    "base_complete_sft": "checkpoints/sft_complete/base/current",
+    "transformers_cpt_complete_sft": "checkpoints/sft_complete/transformers_cpt/current",
+    "unsloth_cpt_complete_sft": "checkpoints/sft_complete/unsloth_cpt/current"
+  },
+  "model_metadata": {
+    "base_complete_sft": {
+      "reference": "checkpoints/sft_complete/base/current",
+      "is_peft_adapter": true,
+      "source_model": "Qwen/Qwen3-0.6B-Base",
+      "adapter_metadata": {
+        "artifact_type": "peft_lora_adapter",
+        "source_model": "Qwen/Qwen3-0.6B-Base",
+        "source_model_revision": "da87bfb608c14b7cf20ba1ce41287e8de496c0cd",
+        "foundation_model_revision": "da87bfb608c14b7cf20ba1ce41287e8de496c0cd",
+        "sft_dataset": "ai_coding_agent_cpt_data/SFT_Dataset/sft_general_complete_train.jsonl",
+        "sft_dataset_sha256": "93bb67da9bb1e994bbc0be677fd0bed0e2ae27f14192330e78335ea28ad2137d",
+        "prompt_style": "complete",
+        "prompt_template": "Answer directly in 1 to 3 concise sentences, preferably within 300 characters. Preserve exact commands, option names, parameter values, and required conditions. Do not generate another question.\nQuestion: {instruction}\nAnswer:",
+        "hyperparameters": {
+          "learning_rate": 0.0002,
+          "epochs": 3,
+          "per_device_batch_size": 4,
+          "gradient_accumulation_steps": 4,
+          "effective_batch_size": 16,
+          "seed": 42,
+          "max_sequence_length": 512,
+          "lora_r": 16,
+          "lora_alpha": 32,
+          "lora_dropout": 0.05
+        },
+        "environment": {
+          "python": "3.12.3",
+          "torch": "2.11.0+cu128",
+          "transformers": "5.15.0",
+          "peft": "0.20.0",
+          "datasets": "5.0.1",
+          "cuda": "12.8",
+          "gpu": "NVIDIA GeForce RTX 4070",
+          "dtype": "bfloat16"
+        }
+      },
+      "dtype": "bfloat16"
+    },
+    "transformers_cpt_complete_sft": {
+      "reference": "checkpoints/sft_complete/transformers_cpt/current",
+      "is_peft_adapter": true,
+      "source_model": "checkpoints/transformers/current",
+      "adapter_metadata": {
+        "artifact_type": "peft_lora_adapter",
+        "source_model": "checkpoints/transformers/current",
+        "source_model_revision": null,
+        "foundation_model_revision": "da87bfb608c14b7cf20ba1ce41287e8de496c0cd",
+        "sft_dataset": "ai_coding_agent_cpt_data/SFT_Dataset/sft_general_complete_train.jsonl",
+        "sft_dataset_sha256": "93bb67da9bb1e994bbc0be677fd0bed0e2ae27f14192330e78335ea28ad2137d",
+        "prompt_style": "complete",
+        "prompt_template": "Answer directly in 1 to 3 concise sentences, preferably within 300 characters. Preserve exact commands, option names, parameter values, and required conditions. Do not generate another question.\nQuestion: {instruction}\nAnswer:",
+        "hyperparameters": {
+          "learning_rate": 0.0002,
+          "epochs": 3,
+          "per_device_batch_size": 4,
+          "gradient_accumulation_steps": 4,
+          "effective_batch_size": 16,
+          "seed": 42,
+          "max_sequence_length": 512,
+          "lora_r": 16,
+          "lora_alpha": 32,
+          "lora_dropout": 0.05
+        },
+        "environment": {
+          "python": "3.12.3",
+          "torch": "2.11.0+cu128",
+          "transformers": "5.15.0",
+          "peft": "0.20.0",
+          "datasets": "5.0.1",
+          "cuda": "12.8",
+          "gpu": "NVIDIA GeForce RTX 4070",
+          "dtype": "bfloat16"
+        }
+      },
+      "dtype": "bfloat16"
+    },
+    "unsloth_cpt_complete_sft": {
+      "reference": "checkpoints/sft_complete/unsloth_cpt/current",
+      "is_peft_adapter": true,
+      "source_model": "checkpoints/unsloth/current",
+      "adapter_metadata": {
+        "artifact_type": "peft_lora_adapter",
+        "source_model": "checkpoints/unsloth/current",
+        "source_model_revision": null,
+        "foundation_model_revision": "da87bfb608c14b7cf20ba1ce41287e8de496c0cd",
+        "sft_dataset": "ai_coding_agent_cpt_data/SFT_Dataset/sft_general_complete_train.jsonl",
+        "sft_dataset_sha256": "93bb67da9bb1e994bbc0be677fd0bed0e2ae27f14192330e78335ea28ad2137d",
+        "prompt_style": "complete",
+        "prompt_template": "Answer directly in 1 to 3 concise sentences, preferably within 300 characters. Preserve exact commands, option names, parameter values, and required conditions. Do not generate another question.\nQuestion: {instruction}\nAnswer:",
+        "hyperparameters": {
+          "learning_rate": 0.0002,
+          "epochs": 3,
+          "per_device_batch_size": 4,
+          "gradient_accumulation_steps": 4,
+          "effective_batch_size": 16,
+          "seed": 42,
+          "max_sequence_length": 512,
+          "lora_r": 16,
+          "lora_alpha": 32,
+          "lora_dropout": 0.05
+        },
+        "environment": {
+          "python": "3.12.3",
+          "torch": "2.11.0+cu128",
+          "transformers": "5.15.0",
+          "peft": "0.20.0",
+          "datasets": "5.0.1",
+          "cuda": "12.8",
+          "gpu": "NVIDIA GeForce RTX 4070",
+          "dtype": "bfloat16"
+        }
+      },
+      "dtype": "bfloat16"
+    }
+  },
+  "generation": {
+    "prompt_style": "complete",
+    "prompt_format": "Answer directly in 1 to 3 concise sentences, preferably within 300 characters. Preserve exact commands, option names, parameter values, and required conditions. Do not generate another question.\nQuestion: {question}\nAnswer:",
+    "decoding": "greedy",
+    "dtype": "bf16",
+    "max_new_tokens": 256,
+    "batch_size": 2,
+    "seed": 42,
+    "revision": "da87bfb608c14b7cf20ba1ce41287e8de496c0cd"
+  },
+  "runtime": {
+    "base_complete_sft": {
+      "model_load_seconds": 2.1207801380001,
+      "generation_seconds": 69.77126403600005,
+      "generated_tokens": 7932,
+      "generated_tokens_per_second": 113.68577178001686,
+      "torch_peak_allocated_mib": 1217.388671875,
+      "torch_peak_reserved_mib": 1234.0
+    },
+    "transformers_cpt_complete_sft": {
+      "model_load_seconds": 0.6899148759998752,
+      "generation_seconds": 76.43695761800018,
+      "generated_tokens": 8370,
+      "generated_tokens_per_second": 109.50200349194621,
+      "torch_peak_allocated_mib": 1222.0146484375,
+      "torch_peak_reserved_mib": 1242.0
+    },
+    "unsloth_cpt_complete_sft": {
+      "model_load_seconds": 0.7152797859998827,
+      "generation_seconds": 80.62628263399984,
+      "generated_tokens": 8572,
+      "generated_tokens_per_second": 106.31768847526173,
+      "torch_peak_allocated_mib": 1222.0146484375,
+      "torch_peak_reserved_mib": 1242.0
+    }
+  },
+  "environment": {
+    "torch": "2.11.0+cu128",
+    "transformers": "5.15.0",
+    "peft": "0.20.0",
+    "gpu": "NVIDIA GeForce RTX 4070"
+  }
+}

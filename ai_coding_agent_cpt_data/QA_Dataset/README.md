@@ -1,44 +1,36 @@
-# Provisional AI Coding Agent QA Generation Set
+# Source-grounded AI Coding Agent QA Dataset
 
-This directory contains the 200 QA rows used for the six-condition generation run in this repository.
+This directory contains the canonical QA set used for the Base/CPT/SFT ablation.
+The existing filenames are stable and are overwritten by `scripts/generate_qa_dataset.py`.
 
 ## Files
 
-- `eval_qa_claude.jsonl`: 100 Claude/Anthropic-related rows.
-- `eval_qa_codex.jsonl`: 100 Codex/OpenAI-related rows.
-- `eval_qa_combined.jsonl`: all 200 rows.
+- `eval_qa_claude.jsonl`: 35 Claude Code questions.
+- `eval_qa_codex.jsonl`: 35 Codex/ChatGPT questions.
+- `eval_qa_combined.jsonl`: all 70 questions.
 
-## Schema
+## Evaluation splits
 
-```json
-{
-  "id": "claude_001",
-  "category": "claude_code",
-  "topic": "...",
-  "question": "...",
-  "answer": "...",
-  "keywords": ["..."],
-  "source_url": "https://..."
-}
+- `sft_seen` (30): the exact 30 domain-specific SFT v3 training items. This split measures direct SFT memorization and must not be presented as held-out performance.
+- `heldout` (40): distinct questions and facts from other collected official documentation pages. This split measures whether CPT knowledge remains retrievable after SFT.
+
+The two product categories and two evaluation roles must be reported separately.
+
+## Grounding and validation
+
+Every row contains the official source URL, source-document SHA-256, required keywords, a source-derived evidence excerpt, and an evidence summary. The generator refuses to overwrite the dataset unless:
+
+- all source URLs exist in the collected official corpus;
+- all required evidence tokens occur in the claimed source document;
+- normalized questions and answers are unique;
+- the fixed counts are 30 `sft_seen` and 40 `heldout` rows.
+
+The generator performs structural and lexical source checks. Manual semantic review remains required before making factual benchmark claims.
+
+## Regenerate
+
+```bash
+python3 ai_coding_agent_cpt_data/scripts/generate_qa_dataset.py
 ```
 
-## Current validation status
-
-The model outputs have been generated, but the reference answers and source URLs have not completed a full item-by-item primary-source audit. This dataset is therefore provisional.
-
-An exact-question audit found:
-
-- 200 rows;
-- 83 unique question strings;
-- 30 duplicate-question groups;
-- 147 rows belonging to duplicate-question groups.
-
-The rows reproduce the completed experiment and are intentionally not rewritten after generation. They must not be described as 200 independent benchmark questions.
-
-- `answer` is a draft reference, not guaranteed ground truth.
-- `keywords` support lexical-overlap diagnostics only.
-- Exact match and keyword recall do not establish factual correctness.
-- No external LLM-as-a-Judge score is published.
-
-The QA rows are excluded from CPT and SFT training. The preprocessing metadata records matched QA source URLs for auditing.
-
+The older 200-row provisional dataset was replaced because it contained only 83 unique question strings and many unverified references.

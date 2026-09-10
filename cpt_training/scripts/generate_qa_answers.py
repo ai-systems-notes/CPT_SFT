@@ -21,11 +21,31 @@ REPO_ROOT = Path(__file__).resolve().parents[2]
 DEFAULT_DATASET = REPO_ROOT / "ai_coding_agent_cpt_data/QA_Dataset/eval_qa_combined.jsonl"
 DEFAULT_OUTPUT_DIR = REPO_ROOT / "cpt_training/results/current/qa"
 DEFAULT_REVISION = "da87bfb608c14b7cf20ba1ce41287e8de496c0cd"
-PROMPT_TEMPLATE = (
+SHORT_PROMPT_TEMPLATE = (
     "Answer in one short concise sentence (under 100 characters):\n"
     "Question: {question}\n"
     "Answer:"
 )
+COMPLETE_PROMPT_TEMPLATE = (
+    "Answer directly in 1 to 3 concise sentences, preferably within 300 characters. "
+    "Preserve exact commands, option names, parameter values, and required conditions. "
+    "Do not generate another question.\n"
+    "Question: {question}\n"
+    "Answer:"
+)
+V3_PROMPT_TEMPLATE = (
+    "Answer directly and completely using only supported information.\n"
+    "Use one concise sentence when sufficient and up to three sentences when necessary.\n"
+    "Preserve exact commands, option names, paths, parameter values, and required conditions.\n"
+    "Do not invent missing details, repeat the question, or continue with another Q&A.\n"
+    "Question: {question}\n"
+    "Answer:"
+)
+PROMPT_TEMPLATES = {
+    "short": SHORT_PROMPT_TEMPLATE,
+    "complete": COMPLETE_PROMPT_TEMPLATE,
+    "v3": V3_PROMPT_TEMPLATE,
+}
 
 
 def parse_args() -> argparse.Namespace:
@@ -38,6 +58,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--batch-size", type=int, default=2)
     parser.add_argument("--limit", type=int)
     parser.add_argument("--seed", type=int, default=42)
+    parser.add_argument("--prompt-style", choices=tuple(PROMPT_TEMPLATES), default="short")
     parser.add_argument("--require-model-count", type=int)
     args = parser.parse_args()
     if args.max_new_tokens <= 0 or args.batch_size <= 0:
@@ -188,12 +209,13 @@ def generate_answers(
     rows: list[dict[str, Any]],
     max_new_tokens: int,
     batch_size: int,
+    prompt_template: str,
 ) -> tuple[list[str], int]:
     answers: list[str] = []
     generated_tokens = 0
     for start in range(0, len(rows), batch_size):
         batch = rows[start : start + batch_size]
-        prompts = [PROMPT_TEMPLATE.format(question=row["question"]) for row in batch]
+        prompts = [prompt_template.format(question=row["question"]) for row in batch]
         inputs = tokenizer(prompts, return_tensors="pt", padding=True).to(model.device)
         input_width = inputs["input_ids"].shape[1]
         with torch.inference_mode():
@@ -224,6 +246,7 @@ def main() -> int:
     if args.limit is not None:
         rows = rows[: args.limit]
     models = parse_model_specs(args.models)
+    prompt_template = PROMPT_TEMPLATES[args.prompt_style]
     if args.require_model_count is not None and len(models) != args.require_model_count:
         raise ValueError(f"Expected {args.require_model_count} model specs, got {len(models)}")
 
@@ -251,7 +274,12 @@ def main() -> int:
         load_seconds = time.perf_counter() - load_started
         generation_started = time.perf_counter()
         answers, generated_tokens = generate_answers(
-            model, tokenizer, rows, args.max_new_tokens, args.batch_size
+            model,
+            tokenizer,
+            rows,
+            args.max_new_tokens,
+            args.batch_size,
+            prompt_template,
         )
         torch.cuda.synchronize()
         generation_seconds = time.perf_counter() - generation_started
@@ -286,7 +314,12 @@ def main() -> int:
         combined_rows.append(
             {
                 key: row.get(key)
-                for key in ("id", "category", "topic", "question", "answer", "keywords", "source_url")
+                for key in (
+                    "id", "split", "sft_relation", "category", "topic", "question",
+                    "answer", "keywords", "source_url", "source_title",
+                    "source_document_sha256", "evidence", "evidence_summary",
+                    "evidence_validation", "sft_v3_row_index",
+                )
                 if key in row
             }
             | {"answers": {alias: answers[index] for alias, answers in answers_by_model.items()}}
@@ -299,7 +332,8 @@ def main() -> int:
         "models": {alias: portable_path(resolve_reference(path)) for alias, path in models.items()},
         "model_metadata": model_metadata,
         "generation": {
-            "prompt_format": PROMPT_TEMPLATE,
+            "prompt_style": args.prompt_style,
+            "prompt_format": prompt_template,
             "decoding": "greedy",
             "dtype": "bf16" if torch.cuda.is_bf16_supported() else "fp16",
             "max_new_tokens": args.max_new_tokens,

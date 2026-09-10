@@ -44,8 +44,8 @@ def main() -> int:
     result_dir = args.result_dir.resolve()
     rows = read_jsonl(result_dir / "answers_combined.jsonl")
     model_labels = list(rows[0].get("answers", {}))
-    if len(model_labels) not in (3, 6):
-        raise ValueError(f"Expected 3 or 6 models, got {model_labels}")
+    if not model_labels:
+        raise ValueError("No model answers found in answers_combined.jsonl")
 
     metrics: dict[str, dict[str, float | int]] = {}
     for label in model_labels:

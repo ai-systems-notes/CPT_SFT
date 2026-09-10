@@ -15,15 +15,17 @@ import requests
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
 DEFAULT_RESULT_DIR = REPO_ROOT / "cpt_training/results/current/qa"
-MODEL_NAME = "gemini-3.7-flash"
+DEFAULT_MODEL_NAME = "gemini-3.5-flash-lite"
 MAX_WORKERS = 10
 MAX_RETRIES = 5
 REQUEST_TIMEOUT_SECONDS = 90
 
 
 def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser()
-    parser.add_argument("--result-dir", type=Path, default=DEFAULT_RESULT_DIR)
+    parser = argparse.ArgumentParser(description="Blind LLM-as-a-Judge evaluation using Gemini API.")
+    parser.add_argument("--result-dir", type=Path, default=DEFAULT_RESULT_DIR, help="Path to QA results directory.")
+    parser.add_argument("--model", type=str, default=DEFAULT_MODEL_NAME, help="Gemini model name (e.g. gemini-3.5-flash-lite).")
+    parser.add_argument("--workers", type=int, default=MAX_WORKERS, help="Parallel worker threads.")
     return parser.parse_args()
 
 
@@ -75,8 +77,8 @@ def candidate_name(letter: str) -> str:
 
 def build_prompt(item: dict[str, Any], reference: str) -> tuple[str, list[str]]:
     candidates = item.get("candidates")
-    if not isinstance(candidates, dict) or len(candidates) not in (3, 6):
-        raise ValueError(f"Item {item.get('id')} must contain exactly 3 or 6 candidates")
+    if not isinstance(candidates, dict) or len(candidates) < 2:
+        raise ValueError(f"Item {item.get('id')} must contain at least 2 candidates")
     letters = list(candidates)
     expected = [chr(ord("A") + index) for index in range(len(letters))]
     if letters != expected:
@@ -107,9 +109,10 @@ Reference Answer:
 
 Scoring rules:
 1. Score every candidate from 1 to 10 for factual correctness, lack of hallucination, and relevance.
-2. Select exactly one winner, or Tie only when the strongest answers are genuinely equal.
-3. Allowed winner values: {allowed_winners}, "Tie".
-4. Return strict JSON without Markdown and include every score key exactly once:
+2. The Reference Answer is evidence only, not a candidate. Never return "Reference Answer" as the winner.
+3. Select the best available candidate even when every candidate is partly or fully incorrect; use Tie only when the strongest candidate scores are genuinely equal.
+4. The winner must be exactly one of these values: {allowed_winners}, "Tie".
+5. Return strict JSON without Markdown and include every score key exactly once:
 {{
   "winner": "Tie",
   "scores": {{
@@ -196,12 +199,72 @@ def judge_single_item(
     return {"id": item["id"], "status": "error", "attempt_errors": errors}
 
 
+def prepare_blind_inputs_if_needed(result_dir: Path, seed: int = 20260815) -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
+    blind_path = result_dir / "gemini_judge_input_blind.jsonl"
+    map_path = result_dir / "gemini_candidate_map.jsonl"
+    meta_path = result_dir / "gemini_judge_metadata.json"
+
+    if blind_path.is_file() and map_path.is_file():
+        return read_jsonl(blind_path), read_jsonl(map_path)
+
+    import hashlib
+    import random
+    combined_path = result_dir / "answers_combined.jsonl"
+    source_rows = read_jsonl(combined_path)
+    model_labels = list(source_rows[0]["answers"])
+    candidate_names = [chr(ord("A") + index) for index in range(len(model_labels))]
+    judge_rows: list[dict[str, Any]] = []
+    map_rows: list[dict[str, Any]] = []
+    position_counts = {
+        candidate: {model: 0 for model in model_labels} for candidate in candidate_names
+    }
+
+    for row in source_rows:
+        if list(row["answers"]) != model_labels:
+            raise ValueError(f"Model labels differ for item {row['id']}")
+        seed_material = f"{seed}:{row['id']}".encode("utf-8")
+        item_seed = int.from_bytes(hashlib.sha256(seed_material).digest()[:8], "big")
+        shuffled_models = model_labels.copy()
+        random.Random(item_seed).shuffle(shuffled_models)
+        mapping = dict(zip(candidate_names, shuffled_models, strict=True))
+        candidates = {
+            candidate: row["answers"][model] for candidate, model in mapping.items()
+        }
+        for candidate, model in mapping.items():
+            position_counts[candidate][model] += 1
+        judge_rows.append(
+            {
+                key: value for key, value in row.items() if key != "answers"
+            } | {"candidates": candidates}
+        )
+        map_rows.append({"id": row["id"], "candidate_to_model": mapping})
+
+    write_jsonl_atomic(blind_path, judge_rows)
+    write_jsonl_atomic(map_path, map_rows)
+    metadata = {
+        "status": "judge_input_prepared_not_judged",
+        "source": str(combined_path.resolve()),
+        "items": len(judge_rows),
+        "seed": seed,
+        "shuffle": "per-item deterministic SHA-256-derived seed",
+        "model_labels": model_labels,
+        "position_counts": position_counts,
+        "instruction": "Send the judge input to Gemini without the mapping file; use the mapping only after judging.",
+    }
+    write_text_atomic(meta_path, json.dumps(metadata, ensure_ascii=False, indent=2) + "\n")
+    print(f"Auto-prepared {len(judge_rows)} blind judge items at {result_dir}")
+    return judge_rows, map_rows
+
+
 def main() -> int:
     args = parse_args()
     result_dir = args.result_dir.resolve()
+    model_name = args.model
+    max_workers = args.workers
+
     combined_rows = read_jsonl(result_dir / "answers_combined.jsonl")
-    blind_items = read_jsonl(result_dir / "gemini_judge_input_blind.jsonl")
-    map_rows = read_jsonl(result_dir / "gemini_candidate_map.jsonl")
+    blind_items, map_rows = prepare_blind_inputs_if_needed(result_dir)
+
     if len(combined_rows) != len(blind_items) or len(blind_items) != len(map_rows):
         raise ValueError("Combined answers, blind input, and candidate map row counts differ")
 
@@ -213,8 +276,8 @@ def main() -> int:
     if set(reference_map) != {row["id"] for row in blind_items} or set(reference_map) != set(candidate_map):
         raise ValueError("Combined answers, blind input, and candidate map IDs differ")
     model_labels = list(combined_rows[0].get("answers", {}))
-    if len(model_labels) not in (3, 6):
-        raise ValueError(f"Expected 3 or 6 model labels, got {model_labels}")
+    if len(model_labels) < 2:
+        raise ValueError(f"Expected at least 2 model labels, got {model_labels}")
     for row in combined_rows:
         if list(row.get("answers", {})) != model_labels:
             raise ValueError(f"Model labels differ at item {row.get('id')}")
@@ -223,14 +286,14 @@ def main() -> int:
     api_key = os.getenv("GEMINI_API_KEY")
     if not api_key:
         raise SystemExit("GEMINI_API_KEY was not found in the environment or .env files")
-    endpoint = f"https://generativelanguage.googleapis.com/v1beta/models/{MODEL_NAME}:generateContent"
+    endpoint = f"https://generativelanguage.googleapis.com/v1beta/models/{model_name}:generateContent"
 
-    print(f"Judge model: {MODEL_NAME}")
+    print(f"Judge model: {model_name}")
     print(f"Candidates per item: {len(model_labels)}")
-    print(f"Starting {MAX_WORKERS}-parallel evaluation for {len(blind_items)} items")
+    print(f"Starting {max_workers}-parallel evaluation for {len(blind_items)} items")
     started = time.perf_counter()
     results: dict[str, dict[str, Any]] = {}
-    with ThreadPoolExecutor(max_workers=MAX_WORKERS) as executor:
+    with ThreadPoolExecutor(max_workers=max_workers) as executor:
         futures = {
             executor.submit(
                 judge_single_item, item, reference_map[item["id"]], endpoint, api_key
@@ -308,13 +371,13 @@ def main() -> int:
             f"| `{label}` | {wins[label]} | {wins[label] / total * 100:.1f}% | {total_scores[label] / total:.2f} |"
         )
     table_rows.append(f"| `Tie` | {wins['Tie']} | {wins['Tie'] / total * 100:.1f}% | - |")
-    summary = f"""# Gemini 3.7 Flash LLM-as-a-Judge Summary
+    summary = f"""# Gemini LLM-as-a-Judge Summary ({model_name})
 
-- Judge model: `{MODEL_NAME}`
+- Judge model: `{model_name}`
 - QA items: {total}
 - Candidates per item: {len(model_labels)}
 - Evaluation time: {elapsed:.2f} seconds
-- Parallel workers: {MAX_WORKERS}
+- Parallel workers: {max_workers}
 - Items with retry/error events: {len(api_events)}
 
 | Model | Wins | Win rate | Average score |
@@ -326,17 +389,18 @@ def main() -> int:
     (result_dir / "gemini_judge_results.errors.jsonl").unlink(missing_ok=True)
 
     metadata_path = result_dir / "metadata.json"
-    metadata = json.loads(metadata_path.read_text(encoding="utf-8"))
-    metadata["status"] = "judged"
-    metadata["judge"] = {
-        "model": MODEL_NAME,
-        "workers": MAX_WORKERS,
-        "max_retries": MAX_RETRIES,
-        "elapsed_seconds": elapsed,
-        "api_event_items": len(api_events),
-        "candidate_count": len(model_labels),
-    }
-    write_text_atomic(metadata_path, json.dumps(metadata, ensure_ascii=False, indent=2) + "\n")
+    if metadata_path.is_file():
+        metadata = json.loads(metadata_path.read_text(encoding="utf-8"))
+        metadata["status"] = "judged"
+        metadata["judge"] = {
+            "model": model_name,
+            "workers": max_workers,
+            "max_retries": MAX_RETRIES,
+            "elapsed_seconds": elapsed,
+            "api_event_items": len(api_events),
+            "candidate_count": len(model_labels),
+        }
+        write_text_atomic(metadata_path, json.dumps(metadata, ensure_ascii=False, indent=2) + "\n")
     print(f"Complete: {result_dir / 'gemini_judge_summary.md'}")
     return 0
 

@@ -1,0 +1,13 @@
+{
+  "source": "/home/ubuntu/Desktop/CPT_LoRA/ai_coding_agent_cpt_data/QA_Dataset/eval_qa_combined.jsonl",
+  "source_sha256": "239813d9c8ada00195fc023bb2520fd18c01e351dc905cf898361b58a8ef03dc",
+  "fixes": "/home/ubuntu/Desktop/CPT_LoRA/cpt_training/configs/qa_generation_fixes.json",
+  "fixes_sha256": "c5c48aac2ad5506c283cdcb3f09e7ce9ab2088d4d25d289c7e665c4461e0e93b",
+  "applied_fix_ids": [
+    "claude_054"
+  ],
+  "item_count": 200,
+  "max_question_chars": 1000,
+  "output": "/home/ubuntu/Desktop/CPT_LoRA/cpt_training/results/current/qa_sft_v3/qa_input.jsonl",
+  "output_sha256": "b21cd8dd159b286e7555e294375cc8737d5027f7ec8149687d66702a62323cd9"
+}

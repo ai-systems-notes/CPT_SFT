@@ -1,0 +1,130 @@
+{
+  "metadata": {
+    "judge": "three independent gpt-5.6-terra subagents (fresh rerun)",
+    "evaluated_at": "2026-08-22T14:10:05+09:00",
+    "external_api_used": false,
+    "gemini_used": false,
+    "blind": true,
+    "candidate_order": "deterministically randomized per item",
+    "partitioning": "stratified by split and category across three judges",
+    "rubric": {
+      "correctness": 4,
+      "relevance_and_completeness": 3,
+      "clarity_and_conciseness": 2,
+      "instruction_following": 1
+    },
+    "qa_sha256": "d1978eb0f672ba2dab3847888934e239c0ca4acdfb788b6d6feed10a2408b655",
+    "answers_sha256": "468533ea0d7bb5f0711401c888cf1bdc8a35dd9fb2edf66a3eec869ae016f98e",
+    "item_count": 70,
+    "model_count": 12
+  },
+  "item_count": 70,
+  "reference_quality": {
+    "good": 70
+  },
+  "ranking": [
+    "unsloth_cpt_sft_v3",
+    "transformers_cpt_sft_v3",
+    "base_sft_v3",
+    "transformers_cpt",
+    "unsloth_cpt",
+    "unsloth_cpt_sft_v2",
+    "unsloth_cpt_sft_v1",
+    "transformers_cpt_sft_v2",
+    "transformers_cpt_sft_v1",
+    "base",
+    "base_sft_v2",
+    "base_sft_v1"
+  ],
+  "models": {
+    "base": {
+      "average_score": 2.5,
+      "good_reference_average": 2.5,
+      "wins_ties_included": 16,
+      "unique_wins": 1
+    },
+    "transformers_cpt": {
+      "average_score": 3.3,
+      "good_reference_average": 3.3,
+      "wins_ties_included": 19,
+      "unique_wins": 0
+    },
+    "unsloth_cpt": {
+      "average_score": 3.2857,
+      "good_reference_average": 3.2857,
+      "wins_ties_included": 19,
+      "unique_wins": 0
+    },
+    "base_sft_v1": {
+      "average_score": 2.0429,
+      "good_reference_average": 2.0429,
+      "wins_ties_included": 13,
+      "unique_wins": 1
+    },
+    "transformers_cpt_sft_v1": {
+      "average_score": 3.0286,
+      "good_reference_average": 3.0286,
+      "wins_ties_included": 20,
+      "unique_wins": 0
+    },
+    "unsloth_cpt_sft_v1": {
+      "average_score": 3.0714,
+      "good_reference_average": 3.0714,
+      "wins_ties_included": 22,
+      "unique_wins": 1
+    },
+    "base_sft_v2": {
+      "average_score": 2.4429,
+      "good_reference_average": 2.4429,
+      "wins_ties_included": 16,
+      "unique_wins": 3
+    },
+    "transformers_cpt_sft_v2": {
+      "average_score": 3.0571,
+      "good_reference_average": 3.0571,
+      "wins_ties_included": 22,
+      "unique_wins": 0
+    },
+    "unsloth_cpt_sft_v2": {
+      "average_score": 3.1571,
+      "good_reference_average": 3.1571,
+      "wins_ties_included": 24,
+      "unique_wins": 1
+    },
+    "base_sft_v3": {
+      "average_score": 3.3286,
+      "good_reference_average": 3.3286,
+      "wins_ties_included": 23,
+      "unique_wins": 9
+    },
+    "transformers_cpt_sft_v3": {
+      "average_score": 3.3429,
+      "good_reference_average": 3.3429,
+      "wins_ties_included": 21,
+      "unique_wins": 0
+    },
+    "unsloth_cpt_sft_v3": {
+      "average_score": 3.4,
+      "good_reference_average": 3.4,
+      "wins_ties_included": 21,
+      "unique_wins": 0
+    }
+  },
+  "sft_delta_vs_source": {
+    "v1": {
+      "base_sft_v1": -0.4571,
+      "transformers_cpt_sft_v1": -0.2714,
+      "unsloth_cpt_sft_v1": -0.2143
+    },
+    "v2": {
+      "base_sft_v2": -0.0571,
+      "transformers_cpt_sft_v2": -0.2429,
+      "unsloth_cpt_sft_v2": -0.1286
+    },
+    "v3": {
+      "base_sft_v3": 0.8286,
+      "transformers_cpt_sft_v3": 0.0429,
+      "unsloth_cpt_sft_v3": 0.1143
+    }
+  }
+}
