@@ -30,7 +30,7 @@ CPT後には、Baseと2種類のCPT checkpointへ同じ汎用データでPEFT Lo
 ### 検証の到達点
 
 - 70問すべてに出典URL、出典本文のSHA-256、根拠抜粋、自動検証結果を記録しています。自動検証は70/70が「必要キーワードが単一の公式文書内に揃う」で通過し、Judgeによる参照回答の品質評価も70/70がgoodでした。
-- **未解決が2件あります。** `seen_codex_013` と `seen_codex_014` は、主張している出典URLが収集コーパスに存在しません。この2件は一次情報での裏取りができていない状態です。
+- **2件は出典が学習コーパスに入っていません。** `seen_codex_013` と `seen_codex_014` の出典 `codex-manual.md` は、収集はできている実在の公式ページ（HTTP 200）ですが、1,062,687文字の集約ページのため前処理で `aggregate_document` として除外しました。参照回答自体はこの公式ページに根拠を持ちます。この2件は `sft_seen`（SFTへ直接収録した知識の暗記対照群）にあり、CPT想起の測定には使っていません。2件を除くと `base → base_sft_v3` は +1.767 から +1.893 に上がるため、残したまま報告するほうが保守的です。
 - 判定は独立した2系統で行い、840スコアの相関はPearson r = 0.8688、有意判定は25件中24件が一致しました。
 - 数値の再生成は `python3 cpt_training/scripts/analyze_blog_claims.py` で行えます。詳細は [`cpt_training/results/published/qa70_dual_judge/`](cpt_training/results/published/qa70_dual_judge/) を参照してください。
 

@@ -30,7 +30,7 @@ The goal is not to publish a production model. The goal is to preserve reproduci
 ### How far the validation goes
 
 - Every one of the 70 questions records a source URL, the source document's SHA-256, an evidence excerpt and an automated validation result. All 70 pass "all required keywords present in a single official document", and the judges rated all 70 reference answers `good`.
-- **Two items remain unresolved.** `seen_codex_013` and `seen_codex_014` claim a source URL that is absent from the collected corpus, so their references are not backed by primary source.
+- **Two items cite a document that never entered training.** The source for `seen_codex_013` and `seen_codex_014`, `codex-manual.md`, is a real official page (HTTP 200) that was collected and then dropped in preprocessing as an `aggregate_document`: at 1,062,687 characters it is the whole manual on one page. The references are still grounded in that page. Both sit in `sft_seen`, the memorisation control, so they never enter the CPT-recall measurement. Excluding them raises `base → base_sft_v3` from +1.767 to +1.893, so reporting them is the conservative choice.
 - Scoring used two independent judges: Pearson r = 0.8688 across 840 scores, with 24 of 25 significance calls matching.
 - Regenerate every number with `python3 cpt_training/scripts/analyze_blog_claims.py`; see [`cpt_training/results/published/qa70_dual_judge/`](cpt_training/results/published/qa70_dual_judge/).
 

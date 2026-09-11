@@ -13,7 +13,7 @@ Completed:
 Completed since:
 
 - the question set rebuilt to 70 primary-source-backed items, each recording a source URL, the source document's SHA-256 and an evidence excerpt;
-- primary-source validation of the references (70/70 pass automated validation; `seen_codex_013` and `seen_codex_014` remain unresolved because their claimed source URL is absent from the collected corpus);
+- primary-source validation of the references (70/70 pass automated validation; the source for `seen_codex_013` and `seen_codex_014`, `codex-manual.md`, is a real official page that preprocessing dropped as an aggregate, so it never entered the training corpus);
 - external LLM-as-a-Judge, two independent runs (`gpt-5.6-terra` ×3 and `gemini-3.5-flash-lite`) over 12 conditions × 70 questions = 840 answers;
 - paired effect sizes with 95% bootstrap confidence intervals.
 
